@@ -3,7 +3,7 @@ import Home from './views/home'
 import System from './views/system'
 import Project from './views/project'
 import BaseStyles from './components/base-styles'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import projects from './data'
 
 class App extends Component {
