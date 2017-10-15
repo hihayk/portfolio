@@ -3,13 +3,15 @@ import Text from '../components/text'
 import Distribute from '../components/distribute'
 import Spacer from '../components/spacer'
 import Dropdown from '../components/dropdown'
+import CustomLink from '../components/custom-link'
 import Header from '../components/header'
 
 const System = () => {
   return(
     <div>
       <Header />
-      
+      <Spacer bottom={24} />
+
       <Spacer left={8} top={7}>
         <Distribute vertical space={8}>
           <div>
@@ -20,9 +22,20 @@ const System = () => {
           </div>
 
           <Dropdown
-            triggerContent='triggerContent'
+            triggerContent='Dropdown'
           >
+            Content
           </Dropdown>
+
+          <div>
+            <CustomLink>Link on hover</CustomLink>
+            <br />
+            <CustomLink primary>Link on hover primary</CustomLink>
+            <br />
+            <CustomLink lineOnHover={false}>Link</CustomLink>
+            <br />
+            <CustomLink primary lineOnHover={false}>Link primary</CustomLink>
+          </div>
         </Distribute>
       </Spacer>
     </div>

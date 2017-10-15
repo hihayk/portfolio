@@ -5,30 +5,38 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
-  padding: 56px 64px;
+  ${props => props.noPadding ? '' : 'padding: 56px 64px'};
+  ${props => props.large ? 'font-size: 24px; line-height: 32px' : ''};
+  ${props => props.notFixed ? '' : 'position: fixed'};
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  top: 0;
 `
 const MainSection = styled.div`
-
+  flex-grow: 1;
 `
 const MenuSection = styled.div`
-  width: 50%;
+  flex-grow: 1;
 `
 
-const Header = () => {
+const Header = (props) => {
   return(
-    <HeaderWrapper>
-      <MainSection>
-        <Link to='/'>
-          <CustomLink
-            tag='span'
-            lineOnHover
-          >
-            Hayk An
-          </CustomLink>
-        </Link>
-      </MainSection>
+    <HeaderWrapper noPadding={props.noPadding} large={props.large} notFixed={props.notFixed}>
+      {props.hideName
+        ? null
+        : <MainSection>
+          <Link to='/'>
+            <CustomLink
+              tag='span'
+              lineOnHover
+              primary={props.primary}
+            >
+              Hayk An
+            </CustomLink>
+          </Link>
+        </MainSection>
+      }
 
       <MenuSection>
         <Spread>
@@ -36,6 +44,7 @@ const Header = () => {
             <CustomLink
               tag='span'
               lineOnHover
+              primary={props.primary}
             >
               Projects
             </CustomLink>
@@ -44,6 +53,7 @@ const Header = () => {
             <CustomLink
               tag='span'
               lineOnHover
+              primary={props.primary}
             >
               A
             </CustomLink>
@@ -52,6 +62,7 @@ const Header = () => {
             <CustomLink
               tag='span'
               lineOnHover
+              primary={props.primary}
             >
               C
             </CustomLink>

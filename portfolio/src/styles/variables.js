@@ -1,8 +1,11 @@
 const variables = {
-	colors: {
-		red: '#C25353'
-	}
+  unit: 8,
+
+  colors: {
+    red: 'rgb(194, 83, 83)',
+		redLight: 'rgba(194, 83, 83, .4)',
+		body: '#666666'
+  },
 }
 
-
-export default variables
+module.exports = variables

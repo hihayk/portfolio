@@ -1,6 +1,5 @@
 import styled, { injectGlobal } from 'styled-components'
-
-const red = '#C25353'
+import { colors } from '../styles/variables'
 
 injectGlobal`
 	body {
@@ -9,12 +8,12 @@ injectGlobal`
   }
 
   ::-moz-selection {
-  	color: ${red};
-  	background-color: ${red};
+  	color: ${colors.red};
+  	background-color: ${colors.red};
   }
 	::selection {
-		color: ${red};
-		background-color: ${red};
+		color: ${colors.red};
+		background-color: ${colors.red};
 	}
 `
 const BaseStyles = styled.div`

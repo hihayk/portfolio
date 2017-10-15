@@ -5,7 +5,6 @@ import Project from './views/project'
 import BaseStyles from './components/base-styles'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import projects from './data'
-import Menu from './components/menu'
 
 class App extends Component {
   render() {
@@ -20,6 +19,7 @@ class App extends Component {
   						<Route path={project.path} key={index} render={(props) => (
                 <Project
                   title={project.title}
+                  subtitle={project.subtitle}
                   description={project.description}
                   link={project.link}
                 >

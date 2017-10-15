@@ -10,7 +10,7 @@ const MenuWrapper = styled.div`
   box-shadow: 0 0 100px 50px white;
 `
 
-const Menu = () => {
+const ProjectsMenu = () => {
   return(
     <MenuWrapper>
       <Distribute space={1} vertical>
@@ -20,7 +20,7 @@ const Menu = () => {
             <CustomLink
               size='size3'
               tag='span'
-              lineOnHover
+              tickLine
             >
               {project.title}
             </CustomLink>
@@ -32,4 +32,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default ProjectsMenu

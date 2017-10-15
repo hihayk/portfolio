@@ -4,12 +4,11 @@ import Text from '../components/text'
 import Container from '../components/container'
 import CustomLink from '../components/custom-link'
 import Distribute from '../components/distribute'
-import Spread from '../components/spread'
+import Header from '../components/header'
 import { Link } from 'react-router-dom'
 import projects from '../data'
+import { colors } from '../styles/variables'
 
-const red = 'rgb(194, 83, 83)'
-const redLight = 'rgba(194, 83, 83, .4)'
 const circleWidth = '240'
 
 const MainContainer = styled.div`
@@ -21,7 +20,7 @@ const MainContainer = styled.div`
 `
 const MainSection = styled.div`
 	position: relative;
-	background-color: ${red};
+	background-color: ${colors.red};
 	height: 100vh;
 	flex-shrink: 0;
 	flex-grow: 1;
@@ -78,7 +77,7 @@ const ProjectsSection = styled.div`
 		width: ${circleWidth / 2}px;
 		height: ${circleWidth}px;
 		border-radius: ${circleWidth}px 0 0 ${circleWidth}px;
-		background-color: ${red};
+		background-color: ${colors.red};
 	}
 `
 const Intro = styled.div`
@@ -91,7 +90,7 @@ const Home = () => {
 			<MainSection>
 				<Intro>
 					<Text size='size3' weight='bold'>Hayk An</Text>
-					<Text size='size3'>— designer & developer</Text>
+					<Text size='size3'>— design & code</Text>
 
 					<Container top={2} width='lg'>
 						<Text dimmed>
@@ -103,17 +102,7 @@ const Home = () => {
 
 			<ProjectsSection>
 
-				<Spread>
-					<Text size='size1' color={red}>
-						Projects
-					</Text>
-					<CustomLink size='size1' color={red}>
-						A
-					</CustomLink>
-					<CustomLink size='size1' color={red}>
-						C
-					</CustomLink>
-				</Spread>
+				<Header hideName noPadding large notFixed primary/>
 
 				<Distribute space={1} vertical>
 
@@ -121,10 +110,10 @@ const Home = () => {
 						<Link to={project.path} key={index}>
 							<CustomLink
 								size='size3'
-								color={red}
 								tag='span'
-								underlineColor={redLight}
 								lineOnHover
+								tickLine
+								primary
 						  >
 								{project.title}
 							</CustomLink>

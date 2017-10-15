@@ -3,7 +3,7 @@ import Container from '../components/container'
 import Text from '../components/text'
 import Spacer from '../components/spacer'
 import CustomLink from '../components/custom-link'
-import Menu from '../components/menu'
+import ProjectsMenu from '../components/projects-menu'
 import Dropdown from '../components/dropdown'
 import Header from '../components/header'
 
@@ -15,14 +15,15 @@ const ProjectsDropdownTrigger = () => {
 
 const Project = (props) => {
 	return(
-		<div>
+		<Spacer bottom={16}>
 			<Header />
+			<Spacer bottom={32} />
 
-			<Container contain>
-				<Spacer bottom={1} top={16}>
+			<Container fullPage>
+				<Spacer bottom={1}>
 					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
 						<Spacer top={1}>
-							<Menu />
+							<ProjectsMenu />
 						</Spacer>
 					</Dropdown>
 				</Spacer>
@@ -30,6 +31,9 @@ const Project = (props) => {
 				<Spacer bottom={2}>
 					<Text size='size3' weight='bold'>
 						{props.title}
+					</Text>
+          <Text size='size3' dimmed>
+						{props.subtitle}
 					</Text>
 				</Spacer>
 
@@ -40,17 +44,14 @@ const Project = (props) => {
 						</Text>
 					</Spacer>
 
-					<CustomLink href={'https://' + props.link} target='_blank'>{props.link}</CustomLink>
+					<Spacer bottom={16}>
+						<CustomLink href={'https://' + props.link} target='_blank' lineOnHover={false}>{props.link}</CustomLink>
+					</Spacer>
 				</Container>
 			</Container>
 
-			<br />
-			<br />
-			<br />
-			<br />
-
 			{props.children}
-		</div>
+		</Spacer>
 	)
 }
 

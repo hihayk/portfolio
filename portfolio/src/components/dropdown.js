@@ -1,8 +1,41 @@
 import React from 'react'
 import styled from 'styled-components'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 const DropdownWrapper = styled.div`
 	position: relative;
+
+  .dropdown-enter {
+    opacity: 0.01;
+    transform: translateY(-20px);
+  }
+  .dropdown-enter.dropdown-enter-active {
+    opacity: 1;
+    transition: 300ms;
+    transform: translateY(0);
+  }
+  .dropdown-leave {
+    opacity: 1;
+  }
+  .dropdown-leave.dropdown-leave-active {
+    opacity: 0.01;
+    transition: 300ms;
+  }
+
+  .backdrop-enter {
+    opacity: 0.01;
+  }
+  .backdrop-enter.backdrop-enter-active {
+    opacity: 1;
+    transition: 300ms;
+  }
+  .backdrop-leave {
+    opacity: 1;
+  }
+  .backdrop-leave.backdrop-leave-active {
+    opacity: 0.01;
+    transition: 300ms;
+  }
 `
 const DropdownTrigger = styled.div`
 	cursor: pointer;
@@ -20,6 +53,7 @@ const Backdrop = styled.div`
 	background-color: rgba(255,255,255,.7);
 	left: 0;
 	top: 0;
+  z-index: 100;
 `
 
 class Dropdown extends React.Component {
@@ -41,13 +75,25 @@ class Dropdown extends React.Component {
 					{this.props.triggerContent}
 				</DropdownTrigger>
 
-				{this.state.open &&
-					<DropdownMenu>{this.props.children}</DropdownMenu>
-				}
+        <ReactCSSTransitionGroup
+          transitionName='dropdown'
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {this.state.open &&
+            <DropdownMenu>{this.props.children}</DropdownMenu>
+          }
+        </ReactCSSTransitionGroup>
 
-				{this.state.open &&
-					<Backdrop onClick={() => this.handleOpen()}/>
-				}
+        <ReactCSSTransitionGroup
+          transitionName='backdrop'
+          transitionEnterTimeout={300}
+          transitionLeaveTimeout={300}
+        >
+          {this.state.open &&
+  					<Backdrop onClick={() => this.handleOpen()}/>
+  				}
+        </ReactCSSTransitionGroup>
 			</DropdownWrapper>
 		)
 	}
