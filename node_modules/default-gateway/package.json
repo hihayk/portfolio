@@ -1,0 +1,48 @@
+{
+  "name": "default-gateway",
+  "version": "2.6.1",
+  "description": "Get the default network gateway, cross-platform.",
+  "author": "silverwind <me@silverwind.io>",
+  "repository": "silverwind/default-gateway",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "test": "make test"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "dependencies": {
+    "execa": "^0.8.0",
+    "ip-regex": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0"
+  },
+  "os": [
+    "android",
+    "darwin",
+    "freebsd",
+    "linux",
+    "openbsd",
+    "sunos",
+    "win32"
+  ],
+  "files": [
+    "index.js",
+    "android.js",
+    "darwin.js",
+    "freebsd.js",
+    "linux.js",
+    "openbsd.js",
+    "sunos.js",
+    "win32.js"
+  ],
+  "keywords": [
+    "default gateway",
+    "network",
+    "default",
+    "gateway",
+    "routing",
+    "route"
+  ]
+}
