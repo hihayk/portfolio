@@ -6,6 +6,22 @@ import CustomLink from '../components/custom-link'
 import ProjectsMenu from '../components/projects-menu'
 import Dropdown from '../components/dropdown'
 import Header from '../components/header'
+import styled, {keyframes} from 'styled-components'
+
+const projectSlide = keyframes`
+	0% {
+		transform: translateY(32px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+    opacity: 1;
+	}
+`
+const ProjectsWrapper = styled.div`
+  will-change: transform, opacity;
+	animation: ${projectSlide} .8s cubic-bezier(0,0,0,1);
+`
 
 const ProjectsDropdownTrigger = () => {
   return(
@@ -19,38 +35,40 @@ const Project = (props) => {
 			<Header />
 			<Spacer bottom={32} />
 
-			<Container fullPage>
-				<Spacer bottom={1}>
-					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
-						<Spacer top={1}>
-							<ProjectsMenu />
-						</Spacer>
-					</Dropdown>
-				</Spacer>
+      <ProjectsWrapper>
+  			<Container fullPage>
+  				<Spacer bottom={1}>
+  					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
+  						<Spacer top={1}>
+  							<ProjectsMenu />
+  						</Spacer>
+  					</Dropdown>
+  				</Spacer>
 
-				<Spacer bottom={2}>
-					<Text size='size3' weight='bold'>
-						{props.title}
-					</Text>
-          <Text size='size3' dimmed>
-						{props.subtitle}
-					</Text>
-				</Spacer>
+  				<Spacer bottom={2}>
+  					<Text size='size3' weight='bold'>
+  						{props.title}
+  					</Text>
+            <Text size='size3' dimmed>
+  						{props.subtitle}
+  					</Text>
+  				</Spacer>
 
-				<Container width='lg'>
-					<Spacer bottom={4}>
-						<Text>
-							{props.description}
-						</Text>
-					</Spacer>
+  				<Container width='lg'>
+  					<Spacer bottom={4}>
+  						<Text>
+  							{props.description}
+  						</Text>
+  					</Spacer>
 
-					<Spacer bottom={16}>
-						<CustomLink href={'https://' + props.link} target='_blank' lineOnHover={false}>{props.link}</CustomLink>
-					</Spacer>
-				</Container>
-			</Container>
+  					<Spacer bottom={16}>
+  						<CustomLink href={'https://' + props.link} target='_blank' lineOnHover={false}>{props.link}</CustomLink>
+  					</Spacer>
+  				</Container>
+  			</Container>
 
-			{props.children}
+  			{props.children}
+      </ProjectsWrapper>
 		</Spacer>
 	)
 }

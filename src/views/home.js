@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Text from '../components/text'
 import Container from '../components/container'
 import CustomLink from '../components/custom-link'
@@ -80,8 +80,32 @@ const ProjectsSection = styled.div`
 		background-color: ${colors.red};
 	}
 `
+const introSlide = keyframes`
+	0% {
+		transform: translateY(-32px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+	}
+`
 const Intro = styled.div`
 	color: white;
+	will-change: transform, opacity;
+	animation: ${introSlide} 1s cubic-bezier(0,0,0,1);
+`
+const projectsSlide = keyframes`
+	0% {
+		transform: translateY(32px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0);
+	}
+`
+const ProjectsWrapper = styled.div`
+	will-change: transform, opacity;
+	animation: ${projectsSlide} 1s cubic-bezier(0,0,0,1);
 `
 
 const Home = () => {
@@ -104,6 +128,7 @@ const Home = () => {
 
 				<Header hideName noPadding large notFixed primary/>
 
+				<ProjectsWrapper>
 				<Distribute space={1} vertical>
 
 					{projects.map((project, index) => (
@@ -121,6 +146,7 @@ const Home = () => {
 					))}
 
 				</Distribute>
+				</ProjectsWrapper>
 
 				<Text size='size1'>&nbsp;</Text>
 
