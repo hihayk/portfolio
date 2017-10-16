@@ -12,6 +12,7 @@ const HeaderWrapper = styled.div`
   justify-content: space-between;
   width: 100%;
   top: 0;
+  z-index: 80;
 `
 const MainSection = styled.div`
   flex-grow: 1;

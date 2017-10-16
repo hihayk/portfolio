@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, {keyframes} from 'styled-components'
+import styled from 'styled-components'
 import Text from '../components/text'
 import Container from '../components/container'
 import CustomLink from '../components/custom-link'

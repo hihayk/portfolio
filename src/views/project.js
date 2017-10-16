@@ -7,7 +7,6 @@ import ProjectsMenu from '../components/projects-menu'
 import Dropdown from '../components/dropdown'
 import Header from '../components/header'
 import Animate from '../components/animate'
-import styled, {keyframes} from 'styled-components'
 
 const ProjectsDropdownTrigger = () => {
   return(
