@@ -6,22 +6,8 @@ import CustomLink from '../components/custom-link'
 import ProjectsMenu from '../components/projects-menu'
 import Dropdown from '../components/dropdown'
 import Header from '../components/header'
+import Animate from '../components/animate'
 import styled, {keyframes} from 'styled-components'
-
-const projectSlide = keyframes`
-	0% {
-		transform: translateY(32px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-    opacity: 1;
-	}
-`
-const ProjectsWrapper = styled.div`
-  will-change: transform, opacity;
-	animation: ${projectSlide} .8s cubic-bezier(0,0,0,1);
-`
 
 const ProjectsDropdownTrigger = () => {
   return(
@@ -35,7 +21,7 @@ const Project = (props) => {
 			<Header />
 			<Spacer bottom={32} />
 
-      <ProjectsWrapper>
+      <Animate duration={0.8}>
   			<Container fullPage>
   				<Spacer bottom={1}>
   					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
@@ -68,7 +54,7 @@ const Project = (props) => {
   			</Container>
 
   			{props.children}
-      </ProjectsWrapper>
+      </Animate>
 		</Spacer>
 	)
 }

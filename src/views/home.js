@@ -5,6 +5,7 @@ import Container from '../components/container'
 import CustomLink from '../components/custom-link'
 import Distribute from '../components/distribute'
 import Header from '../components/header'
+import Animate from '../components/animate'
 import { Link } from 'react-router-dom'
 import projects from '../data'
 import { colors } from '../styles/variables'
@@ -80,73 +81,51 @@ const ProjectsSection = styled.div`
 		background-color: ${colors.red};
 	}
 `
-const introSlide = keyframes`
-	0% {
-		transform: translateY(-32px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-	}
-`
 const Intro = styled.div`
 	color: white;
-	will-change: transform, opacity;
-	animation: ${introSlide} 1s cubic-bezier(0,0,0,1);
-`
-const projectsSlide = keyframes`
-	0% {
-		transform: translateY(32px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0);
-	}
-`
-const ProjectsWrapper = styled.div`
-	will-change: transform, opacity;
-	animation: ${projectsSlide} 1s cubic-bezier(0,0,0,1);
 `
 
 const Home = () => {
 	return(
 		<MainContainer>
 			<MainSection>
-				<Intro>
-					<Text size='size3' weight='bold'>Hayk An</Text>
-					<Text size='size3'>— design & code</Text>
+				<Animate down>
+					<Intro>
+						<Text size='size3' weight='bold'>Hayk An</Text>
+						<Text size='size3'>— design & code</Text>
 
-					<Container top={2} width='lg'>
-						<Text dimmed>
-							Product designer focused on... dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
-						</Text>
-					</Container>
-				</Intro>
+						<Container top={2} width='lg'>
+							<Text dimmed>
+								Product designer focused on... dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+							</Text>
+						</Container>
+					</Intro>
+				</Animate>
 			</MainSection>
 
 			<ProjectsSection>
 
 				<Header hideName noPadding large notFixed primary/>
 
-				<ProjectsWrapper>
-				<Distribute space={1} vertical>
+				<Animate>
+					<Distribute space={1} vertical>
 
-					{projects.map((project, index) => (
-						<Link to={project.path} key={index}>
-							<CustomLink
-								size='size3'
-								tag='span'
-								lineOnHover
-								tickLine
-								primary
-						  >
-								{project.title}
-							</CustomLink>
-						</Link>
-					))}
+						{projects.map((project, index) => (
+							<Link to={project.path} key={index}>
+								<CustomLink
+									size='size3'
+									tag='span'
+									lineOnHover
+									tickLine
+									primary
+							  >
+									{project.title}
+								</CustomLink>
+							</Link>
+						))}
 
-				</Distribute>
-				</ProjectsWrapper>
+					</Distribute>
+				</Animate>
 
 				<Text size='size1'>&nbsp;</Text>
 
