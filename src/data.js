@@ -3,7 +3,11 @@ import Shot from './components/shot'
 import ShotGroup from './components/shot-group'
 
 import unit1 from './assets/images/unit1-hayk-an-design.png'
-import modulator1 from './assets/images/modulator1-hayk-an-design.png'
+
+import modulator3 from './assets/images/modulator3-hayk-an-design.png'
+import modulator2 from './assets/images/modulator2-hayk-an-design.gif'
+import modulator4 from './assets/images/modulator4-hayk-an-design.gif'
+
 import travelperk2 from './assets/images/travelperk2-hayk-an-design.png'
 import travelperk6 from './assets/images/travelperk6-hayk-an-design.png'
 import travelperk7 from './assets/images/travelperk7-hayk-an-design.png'
@@ -35,7 +39,11 @@ const projects = [
     link: 'hihayk.github.io/modulator',
     content: (
       <div>
-        <Shot src={modulator1} alt={'Modulator' + altAfter} />
+        <Shot src={modulator3} alt={'Modulator' + altAfter} />
+				<Shot src={modulator2} alt={'Modulator' + altAfter} />
+				<Shot src={modulator4} alt={'Modulator' + altAfter}
+					caption='Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat'
+				/>
       </div>
     )
   },
@@ -49,14 +57,14 @@ const projects = [
 		subtitle: 'Design system and product design and development',
 		content: (
       <div>
-        <Shot src={travelperk2} alt={'Travelperk' + altAfter} noShadow />
+        <Shot src={travelperk2} alt={'Travelperk' + altAfter} noShadow boxedBg='#f2f2f2' />
 				<ShotGroup spaced>
-					<Shot src={travelperk6} alt={'Travelperk' + altAfter} spaced={false} boxed={false} />
-					<Shot src={travelperk8} alt={'Travelperk' + altAfter} spaced={false} boxed={false} />
+					<Shot src={travelperk6} alt={'Travelperk' + altAfter} boxed={false} />
+					<Shot src={travelperk8} alt={'Travelperk' + altAfter} boxed={false} />
 				</ShotGroup>
 				<ShotGroup spaced>
-					<Shot src={travelperk7} alt={'Travelperk' + altAfter} spaced={false} boxed={false} />
-					<Shot src={travelperk9} alt={'Travelperk' + altAfter} spaced={false} boxed={false} />
+					<Shot src={travelperk7} alt={'Travelperk' + altAfter} boxed={false} />
+					<Shot src={travelperk9} alt={'Travelperk' + altAfter} boxed={false} />
 				</ShotGroup>
 				<Shot src={travelperk10} alt={'Travelperk' + altAfter} />
 				<Shot src={travelperk11} alt={'Travelperk' + altAfter} />

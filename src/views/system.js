@@ -15,10 +15,11 @@ const System = () => {
       <Spacer left={8} top={7}>
         <Distribute vertical space={8}>
           <div>
-            <Text size='size3'>40/48 — size 3</Text>
-            <Text size='size2'>32/40 — size 2</Text>
-            <Text size='size1'>24/32 — size 1</Text>
-            <Text size='size0'>18/24 — size 0</Text>
+            <Text size='size3'>40/48 — size3</Text>
+            <Text size='size2'>32/40 — size2</Text>
+            <Text size='size1'>24/32 — size1</Text>
+            <Text size='size0'>18/24 — size0</Text>
+            <Text size='sizeN1'>14/20 — sizeN1</Text>
           </div>
 
           <Dropdown

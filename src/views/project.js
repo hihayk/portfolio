@@ -18,7 +18,7 @@ const Project = (props) => {
 	return(
 		<Spacer bottom={16}>
 			<Header />
-			<Spacer bottom={32} />
+			<Spacer bottom={32} smBottom={16} />
 
       <Animate duration={0.8}>
   			<Container fullPage>
@@ -46,9 +46,12 @@ const Project = (props) => {
   						</Text>
   					</Spacer>
 
-  					<Spacer bottom={16}>
-  						<CustomLink href={'https://' + props.link} target='_blank' lineOnHover={false}>{props.link}</CustomLink>
-  					</Spacer>
+            {props.link
+              ? <Spacer bottom={16} smBottom={8}>
+    						<CustomLink href={'https://' + props.link} target='_blank' lineOnHover={false}>{props.link}</CustomLink>
+    					</Spacer>
+              : null
+            }
   				</Container>
   			</Container>
 
