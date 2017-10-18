@@ -21,6 +21,7 @@ const CustomLinkWrapper = styled.span`
 	color: ${props => props.primary ? colors.red : colors.body};
 	text-decoration: none;
 	${props => !props.lineOnHover ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-2px'} 0 ${props.primary ? colors.redLight : 'rgba(0,0,0,.2)'}` : ''};
+	${props => props.dimmed ? 'opacity: .7' : ''};
 
 	&:hover {
 		${props => props.lineOnHover && props.underlineColor ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-2px'} 0 ${props.underlineColor}` : ''};
@@ -36,6 +37,7 @@ const CustomLink = (props) => {
 	return(
 		<CustomLinkWrapper
 			size={props.size}
+			dimmed={props.dimmed}
 			primary={props.primary}
 			block={props.block}
 			tag={props.tag}

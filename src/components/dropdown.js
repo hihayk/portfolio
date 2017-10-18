@@ -41,6 +41,7 @@ const DropdownTrigger = styled.div`
 	cursor: pointer;
 	position: relative;
 	z-index: 120;
+	display: inline-block;
 `
 const DropdownMenu = styled.div`
 	position: absolute;

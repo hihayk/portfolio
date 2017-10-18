@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 const MenuWrapper = styled.div`
-  background-color: white;
-  box-shadow: 0 0 100px 50px white;
 `
 
 const ProjectsMenu = () => {

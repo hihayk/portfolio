@@ -1,7 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import Text from '../components/text'
-import Container from '../components/container'
 
 const boxedStyles = css`
 	background-color: ${props => props.boxedBg ? props.boxedBg : '#F5F5F5'};
@@ -31,7 +30,7 @@ const ShotWrapper = styled.div`
 	}
 `
 const Image = styled.img`
-	${props => props.noShadow ? '' : 'box-shadow: 0 2px 6px 0 rgba(0,0,0,.10), 0 11px 54px 0 rgba(0,0,0,.05)'};
+	${props => props.noShadow ? '' : 'box-shadow: 0 2px 5px 0 rgba(0,0,0,.04), 0 10px 30px 0 rgba(0,0,0,.03), 0 20px 54px 0 rgba(0,0,0,.02)'};
 	border-radius: 4px;
 	display: block;
 	margin: 0 auto;
@@ -42,6 +41,10 @@ const Caption = styled(Text)`
 const CaptionWrapper = styled.div`
 	margin: 64px auto 0 auto;
 	max-width: 1280px;
+
+	@media (max-width: 1200px) {
+		margin: 32px auto 0 auto;
+	}
 `
 
 const Shot = (props) => {

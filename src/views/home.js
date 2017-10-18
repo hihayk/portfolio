@@ -15,7 +15,7 @@ const circleWidth = '240'
 const MainContainer = styled.div`
 	display: flex;
 
-	@media (max-width: 640px) {
+	@media (max-width: 1150px) {
 		flex-direction: column;
 	}
 `
@@ -28,6 +28,10 @@ const MainSection = styled.div`
 	display: flex;
 	align-items: flex-end;
 	padding: 56px 64px;
+
+	@media (max-width: 1200px) {
+		padding: 32px;
+	}
 
 	&:after {
 		content: '';
@@ -42,6 +46,11 @@ const MainSection = styled.div`
 		height: ${circleWidth}px;
 		border-radius: 50%;
 		background-color: white;
+
+		@media (max-width: 720px) {
+			top: 56px;
+			bottom: auto;
+		}
 	}
 
 	*::-moz-selection {
@@ -63,8 +72,14 @@ const ProjectsSection = styled.div`
 	padding: 56px 64px;
 	width: 50%;
 
-	@media (max-width: 1280px) {
+	@media (max-width: 1200px) {
+		padding: 24px 32px;
 		max-width: 480px;
+	}
+
+	@media (max-width: 1150px) {
+		width: 100%;
+		max-width: 100%;
 	}
 
 	&:after {
@@ -105,7 +120,7 @@ const Home = () => {
 
 			<ProjectsSection>
 
-				<Header hideName noPadding large notFixed primary/>
+				<Header hideName disableProjects noPadding size='size1' notFixed primary/>
 
 				<Animate>
 					<Distribute space={1} vertical>

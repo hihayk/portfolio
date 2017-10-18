@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../styles/variables'
 
 const Text = styled.div`
 	${props => props.size === 'sizeN1' ? 'font-size: 14px; line-height: 20px' : ''};
@@ -18,6 +19,7 @@ const Text = styled.div`
 	${props => props.weight === 'bold' ? 'font-weight: 700' : ''};
 	${props => props.color ? `color: ${props.color}` : ''};
 	${props => props.dimmed ? 'opacity: .7' : ''};
+	${props => props.primary ? `color: ${colors.red}` : ''};
 `
 
 Text.defaultProps = {

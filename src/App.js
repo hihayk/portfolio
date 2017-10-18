@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 import Home from './views/home'
 import System from './views/system'
+import Contact from './views/contact'
 import Project from './views/project'
 import BaseStyles from './components/base-styles'
+import ScrollToTop from './components/scroll-to-top'
 import { HashRouter as Router, Route } from 'react-router-dom'
 import projects from './data'
 
@@ -11,12 +13,13 @@ class App extends Component {
     return (
       <BaseStyles>
         <Router>
-          <div>
+          <ScrollToTop>
             <Route exact path="/" component={Home} />
             <Route exact path="/system" component={System} />
+            <Route exact path="/contact" component={Contact} />
 
             {projects.map((project, index) => (
-  						<Route path={project.path} key={index} render={(props) => (
+  						<Route exact path={project.path} key={index} render={(props) => (
                 <Project
                   title={project.title}
                   subtitle={project.subtitle}
@@ -27,7 +30,7 @@ class App extends Component {
                 </Project>
               )} />
   					))}
-          </div>
+          </ScrollToTop>
         </Router>
       </BaseStyles>
     )
