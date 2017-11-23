@@ -46,15 +46,25 @@ const CaptionWrapper = styled.div`
 		margin: 32px auto 0 auto;
 	}
 `
+const Iframe = styled.iframe`
+	height: 85vh;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.04), 0 10px 30px 0 rgba(0,0,0,.03), 0 20px 54px 0 rgba(0,0,0,.02);
+	border-radius: 40px;
+`
 
 const Shot = (props) => {
 	return(
-		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg} >
-			<Image src={props.src} noShadow={props.noShadow} />
+		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg}>
+			<Image src={props.src} alt={props.alt} noShadow={props.noShadow} />
+
+			{props.iframeSrc
+				? <Iframe width="100%" src={props.iframeSrc} frameBorder="0" allowfullscreen></Iframe>
+				: null
+			}
 
 			{props.caption
 				? <CaptionWrapper>
-					<Caption dimmed size='sizeN1' >
+					<Caption dimmed size='sizeN1' tag='p'>
 						{props.caption}
 					</Caption>
 				</CaptionWrapper>

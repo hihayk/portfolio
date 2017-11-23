@@ -39,6 +39,12 @@ injectGlobal`
 		color: ${colors.red};
 		background-color: ${colors.red};
 	}
+
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
 `
 const BaseStyles = styled.div`
 	font-family: 'GraphikWeb', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -48,12 +54,6 @@ const BaseStyles = styled.div`
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	*,
-	*:before,
-	*:after {
-		box-sizing: border-box;
-	}
 
 	img {
 		max-width: 100%;

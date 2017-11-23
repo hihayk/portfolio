@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const ShotGroup = styled.div`
 	display: flex;
 	align-items: flex-start;
+	justify-content: center;
 	${props => props.spaced ? 'margin: 0 64px' : ''};
 
 	@media (max-width: 1200px) {

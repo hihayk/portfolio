@@ -10,6 +10,8 @@ const Container = styled.div`
 	${props => props.contain ? 'max-width: 1216px; padding: 0 32px; margin: 0 auto' : ''};
 	${props => props.fullPage ? 'padding: 0 64px' : ''};
 
+	${props => props.bgColor ? `background-color: ${props.bgColor}` : ''};
+
 	@media (max-width: 1200px) {
 		${props => props.fullPage ? 'padding: 0 32px' : ''};
 	}

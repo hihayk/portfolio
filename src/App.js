@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Home from './views/home'
-import System from './views/system'
+import About from './views/about'
 import Contact from './views/contact'
 import Project from './views/project'
 import BaseStyles from './components/base-styles'
@@ -15,7 +15,7 @@ class App extends Component {
         <Router>
           <ScrollToTop>
             <Route exact path="/" component={Home} />
-            <Route exact path="/system" component={System} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/contact" component={Contact} />
 
             {projects.map((project, index) => (
@@ -25,6 +25,7 @@ class App extends Component {
                   subtitle={project.subtitle}
                   description={project.description}
                   link={project.link}
+                  role={project.role}
                 >
                   {project.content}
                 </Project>

@@ -33,6 +33,10 @@ const MainSection = styled.div`
 		padding: 32px;
 	}
 
+	@media (min-width: 1200px) {
+		min-width: 800px;
+	}
+
 	&:after {
 		content: '';
 		left: 0;
@@ -106,12 +110,17 @@ const Home = () => {
 			<MainSection>
 				<Animate down>
 					<Intro>
-						<Text size='size3' weight='bold'>Hayk An</Text>
-						<Text size='size3'>— design & code</Text>
+						<Text size='size3' tag='h1'>
+							<Text size='size3' tag='span' weight='bold'>Hayk An</Text>
+							<br />
+							— design & code
+						</Text>
 
 						<Container top={2} width='lg'>
-							<Text dimmed>
-								Product designer focused on... dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci
+							<Text size='size0'>
+								Product designer focused on
+								<br />
+								modular design and development
 							</Text>
 						</Container>
 					</Intro>

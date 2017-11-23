@@ -63,7 +63,7 @@ const Header = (props) => {
             : null
           }
 
-          <Link to='/system'>
+          <Link to='/about'>
             <CustomLink
               tag='span'
               primary={props.primary}
