@@ -4,6 +4,7 @@ import Text from '../components/text'
 
 const boxedStyles = css`
 	background-color: ${props => props.boxedBg ? props.boxedBg : '#F5F5F5'};
+	border-radius: 8px;
 	margin-left: 64px;
 	margin-right: 64px;
 	padding-left: 64px;

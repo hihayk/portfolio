@@ -5,6 +5,7 @@ const Spacer = styled.div`
 	${props => props.bottom ? `padding-bottom: ${props.bottom * 8}px` : ''};
 	${props => props.left ? `padding-left: ${props.left * 8}px` : ''};
 	${props => props.right ? `padding-right: ${props.right * 8}px` : ''};
+	${props => props.inline ? `display: inline-block` : ''};
 
 	@media (max-width: 1200px) {
 		${props => props.smTop ? `padding-top: ${props.smTop * 8}px` : ''};

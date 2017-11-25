@@ -28,6 +28,7 @@ const Text = ({children, ...other}) => {
 			${props => props.color ? `color: ${props.color}` : ''};
 			${props => props.dimmed ? 'opacity: .7' : ''};
 			${props => props.primary ? `color: ${colors.red}` : ''};
+			${props => props.huge ? `font-size: 144px; line-height: 1; opacity: .2` : ''};
 
 			margin: 0;
 		`
