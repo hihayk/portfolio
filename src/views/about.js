@@ -8,7 +8,6 @@ import Dropdown from '../components/dropdown'
 import CustomLink from '../components/custom-link'
 import Header from '../components/header'
 import Animate from '../components/animate'
-import { colors } from '../styles/variables'
 
 const About = (props) => {
   return(

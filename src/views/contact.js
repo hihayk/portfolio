@@ -5,13 +5,6 @@ import Spacer from '../components/spacer'
 import Container from '../components/container'
 import Animate from '../components/animate'
 import Header from '../components/header'
-import styled from 'styled-components'
-
-const BigLetter = styled.div`
-  font-size: 144px;
-  line-height: 1;
-  opacity: .2;
-`
 
 const System = () => {
   return(

@@ -32,6 +32,7 @@ const CustomLinkWrapper = styled.span`
 const A = styled.a`
 	color: inherit;
 	text-decoration: none;
+	display: inline-block;
 `
 const Arrow = styled.svg`
 	position: absolute;

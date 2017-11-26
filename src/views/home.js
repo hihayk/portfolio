@@ -29,6 +29,10 @@ const MainSection = styled.div`
 	align-items: flex-end;
 	padding: 56px 64px;
 
+	@media (max-width: 728px) {
+		height: 92vh;
+	}
+
 	@media (max-width: 1200px) {
 		padding: 32px;
 	}
@@ -52,7 +56,7 @@ const MainSection = styled.div`
 		background-color: white;
 
 		@media (max-width: 720px) {
-			top: 56px;
+			top: 32px;
 			bottom: auto;
 		}
 	}
