@@ -15,7 +15,7 @@ const System = () => {
       <Animate duration={0.8}>
         <Container fullPage>
           <Text dimmed huge>
-            A
+            C
           </Text>
 
           <Text size='size3' weight='bold' tag='h1'>
