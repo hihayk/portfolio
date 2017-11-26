@@ -1,5 +1,6 @@
 import React from 'react'
 import Text from '../components/text'
+import CustomLink from '../components/custom-link'
 import Spacer from '../components/spacer'
 import Container from '../components/container'
 import Animate from '../components/animate'
@@ -35,6 +36,23 @@ const System = () => {
             say@hihayk.com
           </Text>
         </Container>
+
+        <Container fullPage>
+          <Container width='lg'>
+            <Spacer bottom={8} />
+            <Text size='size1' weight='bold' tag='h2'>
+              Find me on
+            </Text>
+            <CustomLink size='size1' dimmed href='https://dribbble.com/hihayk' target='_blank'>dribbble</CustomLink>
+            <br />
+            <CustomLink size='size1' dimmed href='https://ello.co/hihayk' target='_blank'>ello</CustomLink>
+            <br />
+            <CustomLink size='size1' dimmed href='https://www.designspiration.net/hayk/' target='_blank'>designspiration</CustomLink>
+            <br />
+            <CustomLink size='size1' dimmed href='https://www.facebook.com/hihayk' target='_blank'>facebook</CustomLink>
+          </Container>
+        </Container>
+
       </Animate>
     </div>
   )

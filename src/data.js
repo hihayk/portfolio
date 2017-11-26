@@ -40,6 +40,7 @@ const projects = [
     path: '/modulator',
     title: 'Modulator',
 		subtitle: 'Spacing tool for design systems',
+		description: 'I created Modulator to experiment with spacing. Modulator helps designers to define a base unit size and create predefined spaces.',
     link: 'https://hihayk.github.io/modulator',
     content: (
       <div>
@@ -56,7 +57,14 @@ const projects = [
 		description: 'Currently building a design system for Typeform',
 		content: (
 			<Shot src={catWip} alt='wip' style={{maxWidth: 200}} />
-    )
+    ),
+		role: (
+			<div>
+				Design a modular product
+				<br />
+				Develop with React
+			</div>
+		),
   },
 	{
     path: '/travelperk',
@@ -64,9 +72,9 @@ const projects = [
 		subtitle: 'Design system and product design',
 		role: (
 			<div>
-				Design system design and development
+				Create a modular design
 				<br />
-				Product design
+				Develop with React
 			</div>
 		),
 		content: (

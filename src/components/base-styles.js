@@ -47,7 +47,7 @@ injectGlobal`
 	}
 `
 const BaseStyles = styled.div`
-	font-family: 'GraphikWeb', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-family: 'GraphikWeb', -apple-system, BlinkMacSystemFont, sans-serif;
 	color: #666;
 	font-size: 18px;
 	line-height: 24px;
