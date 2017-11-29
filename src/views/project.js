@@ -65,7 +65,7 @@ const Project = (props) => {
 
                 {props.role
                   ? <Spacer bottom={2}>
-        						<Text dimmed>my role:</Text>
+        						<Text dimmed>my role {props.inTeam ? ' (in team)' : 'fgh'}:</Text>
         						<Text>{props.role}</Text>
         					</Spacer>
                   : null

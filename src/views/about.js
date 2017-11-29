@@ -32,18 +32,37 @@ const About = (props) => {
               I design and develop modular products
             </Text>
 
-            <Spacer bottom={8} />
           </Container>
 
-          <Spacer bottom={8} smBottom={4} />
         </Container>
+
+        <Spacer bottom={4} smBottom={2} />
 
         <Container fullPage>
           <Container width='lg'>
             <Container width='lg'>
-              <Spacer bottom={8} />
               <Text size='size1' weight='bold' tag='h2'>
-                About this website
+                Also...
+              </Text>
+              <Text size='size1' dimmed>
+                Occasionally I teach code
+              </Text>
+              <Text size='size1' dimmed>
+                And talk about design
+              </Text>
+            </Container>
+          </Container>
+
+          <Spacer bottom={8} smBottom={4} />
+
+          <Text dimmed huge>
+            A/m
+          </Text>
+
+          <Container width='lg'>
+            <Container width='lg'>
+              <Text size='size1' weight='bold' tag='h2'>
+                The modules that form this website
               </Text>
               <Text size='size1' dimmed>
                 This website is build with a small design system and developed with React, here are some of it's components:

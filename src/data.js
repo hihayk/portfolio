@@ -21,6 +21,7 @@ import travelperk14 from './assets/images/travelperk14-hayk-an-design.png'
 
 import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
+import bicefal3 from './assets/images/bicefal3-hayk-an-design.png'
 
 import catWip from './assets/images/cat-wip2.gif'
 
@@ -40,7 +41,7 @@ const projects = [
     path: '/modulator',
     title: 'Modulator',
 		subtitle: 'Spacing tool for design systems',
-		description: 'I created Modulator to experiment with spacing. Modulator helps designers to define a base unit size and create predefined spaces.',
+		description: 'I created Modulator to experiment with spacing in my design systems. Modulator helps designers define a base unit size and create preset spaces.',
     link: 'https://hihayk.github.io/modulator',
     content: (
       <div>
@@ -58,11 +59,12 @@ const projects = [
 		content: (
 			<Shot src={catWip} alt='wip' style={{maxWidth: 200}} />
     ),
+		inTeam: true,
 		role: (
 			<div>
-				Design a modular product
+				Create and mantain the design system
 				<br />
-				Develop with React
+				Develop the design system with React
 			</div>
 		),
   },
@@ -70,11 +72,14 @@ const projects = [
     path: '/travelperk',
     title: 'Travelperk',
 		subtitle: 'Design system and product design',
+		inTeam: true,
 		role: (
 			<div>
-				Create a modular design
+				Create and mantain the design system
 				<br />
-				Develop with React
+				Develop the design system with React
+				<br />
+				Design the product
 			</div>
 		),
 		content: (
@@ -107,6 +112,7 @@ const projects = [
       <div>
         <Shot src={bicefal2} alt={'Bicefal' + altAfter} noBg />
         <Shot src={bicefal1} alt={'Bicefal' + altAfter} noBg />
+        <Shot src={bicefal3} alt={'Bicefal' + altAfter} noBg />
       </div>
     )
   }

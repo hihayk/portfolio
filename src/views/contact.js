@@ -46,6 +46,8 @@ const System = () => {
           </Container>
         </Container>
 
+        <Spacer bottom={8} />
+
       </Animate>
     </div>
   )
