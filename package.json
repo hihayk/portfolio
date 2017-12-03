@@ -1,6 +1,6 @@
 {
-  "homepage": "https://hihayk.com/",
-  "name": "hihayk",
+  "homepage": "https://hihayk.github.io/portfolio/",
+  "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
