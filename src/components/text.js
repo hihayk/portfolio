@@ -29,6 +29,7 @@ const Text = ({children, ...other}) => {
 				${props => props.size === 'size2' ? 'font-size: 24px; line-height: 32px' : ''};
 				${props => props.size === 'size3' ? 'font-size: 32px; line-height: 36px; letter-spacing: 0' : ''};
 				${props => props.huge ? `font-size: 144px; line-height: 1; opacity: .2; letter-spacing: -0.05em` : ''};
+				${props => props.huge ? `font-size: 114px; line-height: 1; opacity: .2; letter-spacing: -0.05em` : ''};
 			}
 
 			margin: 0;
