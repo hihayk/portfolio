@@ -31,6 +31,7 @@ const MainSection = styled.div`
 
 	@media (max-width: 728px) {
 		height: 92vh;
+		max-height: 512px;
 	}
 
 	@media (max-width: 1200px) {
