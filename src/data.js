@@ -18,6 +18,7 @@ import travelperk11 from './assets/images/travelperk11-hayk-an-design.png'
 import travelperk12 from './assets/images/travelperk12-hayk-an-design.png'
 import travelperk13 from './assets/images/travelperk13-hayk-an-design.png'
 import travelperk14 from './assets/images/travelperk14-hayk-an-design.png'
+import travelperk15 from './assets/images/travelperk15-hayk-an-design.png'
 
 import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
@@ -94,6 +95,7 @@ const projects = [
 					<Shot src={travelperk9} alt={'Travelperk' + altAfter} boxed={false} />
 				</ShotGroup>
 				<Shot src={travelperk10} alt={'Travelperk' + altAfter} />
+				<Shot src={travelperk15} alt={'Travelperk' + altAfter} />
 				<Shot src={travelperk11} alt={'Travelperk' + altAfter} />
 				<ShotGroup spaced>
 					<Shot src={travelperk12} alt={'Travelperk' + altAfter} boxed={false} />
