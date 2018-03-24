@@ -36,13 +36,11 @@ const System = () => {
             <Text size='size1' weight='bold' tag='h2'>
               Find me on
             </Text>
+            <CustomLink size='size1' dimmed href='https://github.com/hihayk' target='_blank'>github</CustomLink>
+            <br />
             <CustomLink size='size1' dimmed href='https://dribbble.com/hihayk' target='_blank'>dribbble</CustomLink>
             <br />
-            <CustomLink size='size1' dimmed href='https://ello.co/hihayk' target='_blank'>ello</CustomLink>
-            <br />
             <CustomLink size='size1' dimmed href='https://www.designspiration.net/hayk/' target='_blank'>designspiration</CustomLink>
-            <br />
-            <CustomLink size='size1' dimmed href='https://www.facebook.com/hihayk' target='_blank'>facebook</CustomLink>
           </Container>
         </Container>
 
