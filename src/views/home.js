@@ -137,7 +137,7 @@ const Home = () => {
 				<Header hideName disableProjects noPadding size='size1' notFixed primary/>
 
 				<Animate>
-					<Distribute space={1} vertical>
+					<Distribute space={1} vertical id='projectLinksWrapper'>
 
 						{projects.map((project, index) => (
 							<Link to={project.path} key={index}>

@@ -6,7 +6,19 @@ import Dropdown from '../components/dropdown'
 import Text from '../components/text'
 import Spacer from '../components/spacer'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
+import styled, { injectGlobal, keyframes } from 'styled-components'
+
+const highlightProjectLinksAnimation = keyframes`
+  35% {
+    transform: translateX(-8px)
+  }
+`
+
+injectGlobal`
+  .highlightProjectLinksWrapper {
+    animation: ${highlightProjectLinksAnimation} .3s ease-in-out
+  }
+`
 
 const HeaderWrapper = styled.div`
   ${props => props.noPadding ? '' : 'padding: 56px 64px'};
@@ -28,8 +40,17 @@ const MenuSection = styled.div`
   flex-grow: 1;
 `
 
+const highlightProjectLinks = () => {
+  const projectLinkClassList = document.getElementById('projectLinksWrapper').classList
+
+  projectLinkClassList.add('highlightProjectLinksWrapper')
+  setTimeout(() => {
+    projectLinkClassList.remove('highlightProjectLinksWrapper')
+  }, 300)
+}
+
 const Header = (props) => {
-  return(
+  return (
     <HeaderWrapper noPadding={props.noPadding} size={props.size} notFixed={props.notFixed}>
       {props.hideName
         ? null
@@ -52,7 +73,13 @@ const Header = (props) => {
           {!props.hideProjects
             ? <div>
               {props.disableProjects
-                ? <Text primary={props.primary} size={props.size}>Projects</Text>
+                ? <Text
+                  primary={props.primary}
+                  size={props.size}
+                  onClick={() => highlightProjectLinks()}
+                >
+                  Projects
+                </Text>
                 : <Dropdown triggerContent={(<CustomLink tag='span' primary={props.primary} dimmed={props.dimmed}>{props.projectsLabel}</CustomLink>)}>
                   <Spacer top={1}>
                     <ProjectsMenu />
