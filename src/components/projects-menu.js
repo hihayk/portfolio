@@ -42,6 +42,8 @@ const ProjectsMenu = () => {
       <CustomLink href='http://css2sass.herokuapp.com/' target='_blank'>CSS2SASS</CustomLink>
       <br />
       <CustomLink href='http://dromnu.com/' target='_blank'>Drömnu</CustomLink>
+      <br />
+      <CustomLink href='https://hihayk.github.io/granularsynths/' target='_blank'>Granular Synths</CustomLink>
     </MenuWrapper>
   )
 }
