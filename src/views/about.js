@@ -45,10 +45,10 @@ const About = (props) => {
                 Also...
               </Text>
               <Text size='size1' dimmed>
-                Occasionally I teach code
+                occasionally I teach front-end
               </Text>
               <Text size='size1' dimmed>
-                And talk about design
+                and talk about design
               </Text>
             </Container>
           </Container>
@@ -65,7 +65,7 @@ const About = (props) => {
                 The modules that form this website
               </Text>
               <Text size='size1' dimmed>
-                This website is build with a small design system and developed with React, here are some of it's components:
+                This website is built with a small design system and developed with React, here are some of it's components:
               </Text>
             </Container>
           </Container>
