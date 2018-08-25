@@ -24,6 +24,21 @@ import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
 import bicefal3 from './assets/images/bicefal3-hayk-an-design.png'
 
+import aylevs1 from './assets/images/aylevs1-hayk-an-design.png'
+import aylevs2 from './assets/images/aylevs2-hayk-an-design.png'
+import aylevs3 from './assets/images/aylevs3-hayk-an-design.png'
+
+import scale1 from './assets/images/scale1-hayk-an-design.png'
+import scale2 from './assets/images/scale2-hayk-an-design.png'
+import scale3 from './assets/images/scale3-hayk-an-design.gif'
+import scale4 from './assets/images/scale4-hayk-an-design.gif'
+import scale5 from './assets/images/scale5-hayk-an-design.gif'
+import scale6 from './assets/images/scale6-hayk-an-design.gif'
+
+import wheel1 from './assets/images/wheel1-hayk-an-design.png'
+import wheel2 from './assets/images/wheel2-hayk-an-design.gif'
+import wheel3 from './assets/images/wheel3-hayk-an-design.gif'
+
 import catWip from './assets/images/cat-wip2.gif'
 
 const altAfter = ' - Hayk An'
@@ -115,6 +130,46 @@ const projects = [
         <Shot src={bicefal2} alt={'Bicefal' + altAfter} noBg />
         <Shot src={bicefal1} alt={'Bicefal' + altAfter} noBg />
         <Shot src={bicefal3} alt={'Bicefal' + altAfter} noBg />
+      </div>
+    )
+  },
+	// {
+ //    path: '/aylevs',
+ //    title: 'Aylevs',
+ //    subtitle: '',
+	// 	content: (
+ //      <div>
+ //        <Shot src={aylevs1} alt={'Aylevs' + altAfter} maxWidth='480px' />
+ //        <Shot src={aylevs2} alt={'Aylevs' + altAfter} maxWidth='480px' />
+ //      </div>
+ //    )
+ //  },
+	{
+    path: '/scale',
+    title: 'Scale',
+    link: 'https://hihayk.github.io/scale',
+    subtitle: 'Playful color scales generator',
+		content: (
+      <div>
+        <Shot src={scale1} alt={'Scale' + altAfter} />
+        <Shot src={scale2} alt={'Scale' + altAfter} />
+        <Shot src={scale6} alt={'Scale' + altAfter} />
+        <Shot src={scale3} alt={'Scale' + altAfter} />
+        <Shot src={scale4} alt={'Scale' + altAfter} />
+        <Shot src={scale5} alt={'Scale' + altAfter} />
+      </div>
+    )
+  },
+	{
+    path: '/wheel',
+    title: 'Wheel',
+    link: 'https://hihayk.github.io/wheel',
+    subtitle: 'Playful color wheel generator',
+		content: (
+      <div>
+        <Shot src={wheel1} alt={'Wheel' + altAfter} />
+        <Shot src={wheel2} alt={'Wheel' + altAfter} />
+        <Shot src={wheel3} alt={'Wheel' + altAfter} />
       </div>
     )
   }
