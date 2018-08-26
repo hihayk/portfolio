@@ -38,6 +38,8 @@ const System = () => {
             </Text>
             <CustomLink size='size1' dimmed href='https://github.com/hihayk' target='_blank'>github</CustomLink>
             <br />
+            <CustomLink size='size1' dimmed href='https://twitter.com/hihayk' target='_blank'>twitter</CustomLink>
+            <br />
             <CustomLink size='size1' dimmed href='https://dribbble.com/hihayk' target='_blank'>dribbble</CustomLink>
             <br />
             <CustomLink size='size1' dimmed href='https://www.designspiration.net/hayk/' target='_blank'>designspiration</CustomLink>
