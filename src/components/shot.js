@@ -35,7 +35,10 @@ const Image = styled.img`
 	border-radius: 4px;
 	display: block;
 	margin: 0 auto;
-	max-width: ${props => props.maxWidth};
+`
+const ImageWrapper = styled.div`
+	max-width: 1280px;
+	margin: 0 auto;
 `
 const ImageRow = styled.div`
   display: flex;
@@ -64,13 +67,17 @@ const Shot = (props) => {
 	return(
 		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg}>
 			{props.src && (
-				<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} maxWidth='1280px' />
+				<ImageWrapper>
+					<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} />
+				</ImageWrapper>
 			)}
 
       <ImageRow>
         {props.srcList && props.srcList.map(( srcListItem, index ) => (
           <div key={index}>
-            <Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} maxWidth='100%' />
+						<ImageWrapper>
+            	<Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} />
+						</ImageWrapper>
           </div>
         ))}
       </ImageRow>
