@@ -9,17 +9,18 @@ import modulator3 from './assets/images/modulator3-hayk-an-design.png'
 import modulator2 from './assets/images/modulator2-hayk-an-design.gif'
 import modulator4 from './assets/images/modulator4-hayk-an-design.gif'
 
-import travelperk2 from './assets/images/travelperk2-hayk-an-design.png'
-import travelperk6 from './assets/images/travelperk6-hayk-an-design.png'
-import travelperk7 from './assets/images/travelperk7-hayk-an-design.png'
-import travelperk8 from './assets/images/travelperk8-hayk-an-design.png'
-import travelperk9 from './assets/images/travelperk9-hayk-an-design.png'
 import travelperk10 from './assets/images/travelperk10-hayk-an-design.gif'
 import travelperk11 from './assets/images/travelperk11-hayk-an-design.png'
 import travelperk12 from './assets/images/travelperk12-hayk-an-design.png'
 import travelperk13 from './assets/images/travelperk13-hayk-an-design.png'
 import travelperk14 from './assets/images/travelperk14-hayk-an-design.png'
 import travelperk15 from './assets/images/travelperk15-hayk-an-design.png'
+import travelperk18 from './assets/images/travelperk18-hayk-an-design.png'
+import travelperk19 from './assets/images/travelperk19-hayk-an-design.png'
+import travelperk21 from './assets/images/travelperk21-hayk-an-design.png'
+import travelperk22 from './assets/images/travelperk22-hayk-an-design.png'
+import travelperk23 from './assets/images/travelperk23-hayk-an-design.png'
+import travelperk24 from './assets/images/travelperk24-hayk-an-design.png'
 
 import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
@@ -155,14 +156,17 @@ const projects = [
 			</div>
 		),
 		content: (
-      <div>
-        <Shot src={travelperk2} noShadow boxedBg='#f2f2f2' />
+      <div>        
+        <Shot srcList={[ travelperk18, travelperk21, travelperk19, travelperk22, travelperk23, travelperk24 ]} rows={3} />
         
-        <Shot srcList={[ travelperk6, travelperk8, travelperk7, travelperk9 ]} rows={2} />
-
 				<Shot src={travelperk10} />
 				<Shot src={travelperk15} />
-				<Shot src={travelperk11} />
+        
+        <ShotText>
+          Travelperk product built with the design system
+        </ShotText>
+				
+        <Shot src={travelperk11} />
 				
         <Shot srcList={[ travelperk12, travelperk13 ]} />
 
