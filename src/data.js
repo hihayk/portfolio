@@ -1,6 +1,5 @@
 import React from 'react'
 import Shot from './components/shot'
-import ShotGroup from './components/shot-group'
 import ShotText from './components/shot-text'
 import CustomLink from './components/custom-link'
 
@@ -26,10 +25,6 @@ import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
 import bicefal3 from './assets/images/bicefal3-hayk-an-design.png'
 
-import aylevs1 from './assets/images/aylevs1-hayk-an-design.png'
-import aylevs2 from './assets/images/aylevs2-hayk-an-design.png'
-import aylevs3 from './assets/images/aylevs3-hayk-an-design.png'
-
 import scale1 from './assets/images/scale1-hayk-an-design.png'
 import scale2 from './assets/images/scale2-hayk-an-design.png'
 import scale3 from './assets/images/scale3-hayk-an-design.gif'
@@ -41,7 +36,6 @@ import wheel1 from './assets/images/wheel1-hayk-an-design.png'
 import wheel2 from './assets/images/wheel2-hayk-an-design.gif'
 import wheel3 from './assets/images/wheel3-hayk-an-design.gif'
 
-import catWip from './assets/images/cat-wip2.gif'
 import typeform2 from './assets/images/typeform2-hayk-an-design.png'
 import typeform1 from './assets/images/typeform1-hayk-an-design.png'
 import typeform3 from './assets/images/typeform3-hayk-an-design.png'
@@ -49,7 +43,6 @@ import typeform4 from './assets/images/typeform4-hayk-an-design.png'
 import typeform5 from './assets/images/typeform5-hayk-an-design.png'
 import typeform6 from './assets/images/typeform6-hayk-an-design.png'
 import typeform7 from './assets/images/typeform7-hayk-an-design.png'
-import typeform8 from './assets/images/typeform8-hayk-an-design.png'
 import typeform9 from './assets/images/typeform9-hayk-an-design.png'
 import typeform10 from './assets/images/typeform10-hayk-an-design.png'
 import typeform11 from './assets/images/typeform11-hayk-an-design.png'
@@ -164,21 +157,15 @@ const projects = [
 		content: (
       <div>
         <Shot src={travelperk2} noShadow boxedBg='#f2f2f2' />
-				<ShotGroup spaced>
-					<Shot src={travelperk6} boxed={false} />
-					<Shot src={travelperk8} boxed={false} />
-				</ShotGroup>
-				<ShotGroup spaced>
-					<Shot src={travelperk7} boxed={false} />
-					<Shot src={travelperk9} boxed={false} />
-				</ShotGroup>
+        
+        <Shot srcList={[ travelperk6, travelperk8, travelperk7, travelperk9 ]} rows={2} />
+
 				<Shot src={travelperk10} />
 				<Shot src={travelperk15} />
 				<Shot src={travelperk11} />
-				<ShotGroup spaced>
-					<Shot src={travelperk12} boxed={false} />
-					<Shot src={travelperk13} boxed={false} />
-				</ShotGroup>
+				
+        <Shot srcList={[ travelperk12, travelperk13 ]} />
+
 				<Shot src={travelperk14} />
       </div>
     )
@@ -196,17 +183,6 @@ const projects = [
       </div>
     )
   },
-	// {
- //    path: '/aylevs',
- //    title: 'Aylevs',
- //    subtitle: '',
-	// 	content: (
- //      <div>
- //        <Shot src={aylevs1} maxWidth='480px' />
- //        <Shot src={aylevs2} maxWidth='480px' />
- //      </div>
- //    )
- //  },
 	{
     path: '/scale',
     title: 'Scale',

@@ -23,7 +23,7 @@ const boxedStyles = css`
 `
 
 const ShotWrapper = styled.div`
-	${props => props.boxed ? boxedStyles : ''};
+	${props => props.boxed && boxedStyles};
 	margin-bottom: 64px;
 
 	@media (max-width: 1200px) {
@@ -41,15 +41,15 @@ const ImageWrapper = styled.div`
 	margin: 0 auto;
 `
 const ImageRow = styled.div`
-  display: flex;
+  display: grid;
+	grid-template-columns: repeat(${props => props.rows}, 1fr);
+	grid-gap: 32px;
 
-  & > *:not(:last-child) {
-    margin-right: 32px;
-
-    @media (max-width: 1200px) {
-      margin-right: 16px;
-    }
-  }
+	@media (max-width: 1200px) {
+		grid-gap: 16px;
+	}
+`
+const ImageColumn = styled.div`
 `
 const Caption = styled(Text)`
 	max-width: 640px;
@@ -64,21 +64,27 @@ const CaptionWrapper = styled.div`
 `
 
 const Shot = (props) => {
+	const srcListAmount = () => {
+		if(props.srcList) {
+			return props.srcList.length
+		} else {
+			return null
+		}
+	}
+
 	return(
-		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg}>
+		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg} srcList={props.srcList}>
 			{props.src && (
 				<ImageWrapper>
 					<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} />
 				</ImageWrapper>
 			)}
 
-      <ImageRow>
+      <ImageRow rows={props.rows || srcListAmount()}>
         {props.srcList && props.srcList.map(( srcListItem, index ) => (
-          <div key={index}>
-						<ImageWrapper>
-            	<Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} />
-						</ImageWrapper>
-          </div>
+					<ImageColumn rows={props.rows || srcListAmount()} key={index}>
+						<Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} />
+					</ImageColumn>
         ))}
       </ImageRow>
 
