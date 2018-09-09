@@ -45,6 +45,14 @@ injectGlobal`
 	*:after {
 		box-sizing: border-box;
 	}
+
+	img {
+		width: 100%;
+	}
+
+	p {
+    margin: 0;
+	}
 `
 const BaseStyles = styled.div`
 	font-family: 'GraphikWeb', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -54,10 +62,6 @@ const BaseStyles = styled.div`
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-
-	img {
-		max-width: 100%;
-	}
 `
 
 export default BaseStyles

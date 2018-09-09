@@ -35,33 +35,45 @@ const Image = styled.img`
 	border-radius: 4px;
 	display: block;
 	margin: 0 auto;
+	max-width: ${props => props.maxWidth};
+`
+const ImageRow = styled.div`
+  display: flex;
+
+  & > *:not(:last-child) {
+    margin-right: 32px;
+
+    @media (max-width: 1200px) {
+      margin-right: 16px;
+    }
+  }
 `
 const Caption = styled(Text)`
 	max-width: 640px;
 `
 const CaptionWrapper = styled.div`
-	margin: 64px auto 0 auto;
+	margin: 32px auto 0 auto;
 	max-width: 1280px;
 
 	@media (max-width: 1200px) {
-		margin: 32px auto 0 auto;
+		margin: 16px auto 0 auto;
 	}
-`
-const Iframe = styled.iframe`
-	height: 85vh;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.04), 0 10px 30px 0 rgba(0,0,0,.03), 0 20px 54px 0 rgba(0,0,0,.02);
-	border-radius: 40px;
 `
 
 const Shot = (props) => {
 	return(
 		<ShotWrapper boxed={props.boxed} boxedBg={props.boxedBg}>
-			<Image src={props.src} alt={props.alt} noShadow={props.noShadow} />
+			{props.src && (
+				<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} maxWidth='1280px' />
+			)}
 
-			{props.iframeSrc
-				? <Iframe width="100%" src={props.iframeSrc} frameBorder="0" allowfullscreen></Iframe>
-				: null
-			}
+      <ImageRow>
+        {props.srcList && props.srcList.map(( srcListItem, index ) => (
+          <div key={index}>
+            <Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} maxWidth='100%' />
+          </div>
+        ))}
+      </ImageRow>
 
 			{props.caption
 				? <CaptionWrapper>

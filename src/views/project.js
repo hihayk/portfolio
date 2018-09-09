@@ -13,6 +13,14 @@ const ProjectContainer = styled.div`
   min-height: 70vh;
 `
 
+const PageContainer = styled.div`
+  padding: 0 64px;
+
+  @media (max-width: 1200px) {
+    padding: 0 32px;
+	}
+`
+
 const ProjectsDropdownTrigger = () => {
   return(
     <CustomLink lineOnHover>Projects /</CustomLink>
@@ -69,7 +77,20 @@ const Project = (props) => {
         						<Text>{props.role}</Text>
         					</Spacer>
                   : null
-                }
+								}
+
+
+
+                {props.contributors && (
+									<Text dimmed>main contributors:</Text>
+								)}
+								
+								{props.contributors && props.contributors.map(( contributor ) => (
+									<Spacer>
+										<CustomLink target='_blank' href={'https://github.com/' + contributor.githubUsername}>@{contributor.githubUsername}</CustomLink> — <Text tag='span' dimmed>{contributor.role}</Text>
+									</Spacer>
+								))}
+
                 {props.link
                   ? <CustomLink href={props.link} target='_blank' lineOnHover={false} withArrow>{visibleUrl}</CustomLink>
                   : null
@@ -78,7 +99,13 @@ const Project = (props) => {
             </Spacer>
     			</Container>
 
-    			{props.children}
+					{props.children}
+					
+					<PageContainer>
+						<Spacer top={8} bottom={8}>
+							<ProjectsMenu />
+						</Spacer>
+					</PageContainer>
 
         </Animate>
   		</ProjectContainer>

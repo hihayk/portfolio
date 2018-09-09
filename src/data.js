@@ -1,6 +1,8 @@
 import React from 'react'
 import Shot from './components/shot'
 import ShotGroup from './components/shot-group'
+import ShotText from './components/shot-text'
+import CustomLink from './components/custom-link'
 
 import unit1 from './assets/images/unit1-hayk-an-design.png'
 
@@ -40,8 +42,20 @@ import wheel2 from './assets/images/wheel2-hayk-an-design.gif'
 import wheel3 from './assets/images/wheel3-hayk-an-design.gif'
 
 import catWip from './assets/images/cat-wip2.gif'
-
-const altAfter = ' - Hayk An'
+import typeform2 from './assets/images/typeform2-hayk-an-design.png'
+import typeform1 from './assets/images/typeform1-hayk-an-design.png'
+import typeform3 from './assets/images/typeform3-hayk-an-design.png'
+import typeform4 from './assets/images/typeform4-hayk-an-design.png'
+import typeform5 from './assets/images/typeform5-hayk-an-design.png'
+import typeform6 from './assets/images/typeform6-hayk-an-design.png'
+import typeform7 from './assets/images/typeform7-hayk-an-design.png'
+import typeform8 from './assets/images/typeform8-hayk-an-design.png'
+import typeform9 from './assets/images/typeform9-hayk-an-design.png'
+import typeform10 from './assets/images/typeform10-hayk-an-design.png'
+import typeform11 from './assets/images/typeform11-hayk-an-design.png'
+import typeform12 from './assets/images/typeform12-hayk-an-design.png'
+import typeform13 from './assets/images/typeform13-hayk-an-design.png'
+import typeform14 from './assets/images/typeform14-hayk-an-design.png'
 
 const projects = [
 	{
@@ -50,7 +64,7 @@ const projects = [
     subtitle: 'Minimal design system',
 		link: 'https://hihayk.github.io/unit',
     content: (
-			<Shot src={unit1} alt={'Unit' + altAfter} />
+			<Shot src={unit1} />
     )
   },
 	{
@@ -61,19 +75,68 @@ const projects = [
     link: 'https://hihayk.github.io/modulator',
     content: (
       <div>
-        <Shot src={modulator3} alt={'Modulator' + altAfter} />
-				<Shot src={modulator2} alt={'Modulator' + altAfter} />
-				<Shot src={modulator4} alt={'Modulator' + altAfter} />
+        <Shot src={modulator3} />
+				<Shot src={modulator2} />
+				<Shot src={modulator4} />
       </div>
     )
   },
 	{
     path: '/typeform',
     title: 'Typeform',
-    subtitle: 'Design system — work in progress',
-		description: 'Currently building a design system for Typeform',
+    subtitle: 'Design system',
+    contributors: [
+      {
+        githubUsername: 'terrencewwong',
+        role: 'previous team member',
+      },
+      {
+        githubUsername: 'jeremenichelli',
+        role: 'current team member',
+      }
+    ],
 		content: (
-			<Shot src={catWip} alt='wip' style={{maxWidth: 200}} />
+      <div>
+        <Shot src={typeform1} />
+        <Shot srcList={[ typeform12, typeform11, typeform13 ]} />
+        
+        <ShotText>
+          <b>Visual guide:</b> domunentation that helps designers to take elemental decisions like spacing, typograpghy, color, shadows and more.
+        </ShotText>
+        <Shot srcList={[ typeform2, typeform3, typeform4 ]} />
+
+        <ShotText>
+          Components are collected in Storybook with use cases and code snippets
+        </ShotText>
+
+			  <Shot src={typeform5} />
+        <Shot src={typeform9} />
+        <Shot src={typeform14} />
+
+        <ShotText>
+          Custom icon set
+        </ShotText>
+
+        <Shot src={typeform7} />
+
+        <ShotText>
+          Typeform product built with the design system
+        </ShotText>
+			  
+        <Shot
+          src={typeform6}
+          caption={
+            <span>Page built with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink></span>
+          }
+        />
+        <Shot
+          src={typeform10}
+          caption={
+            <span>Page built with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink></span>
+          }
+        />
+
+      </div>
     ),
 		inTeam: true,
 		role: (
@@ -100,23 +163,23 @@ const projects = [
 		),
 		content: (
       <div>
-        <Shot src={travelperk2} alt={'Travelperk' + altAfter} noShadow boxedBg='#f2f2f2' />
+        <Shot src={travelperk2} noShadow boxedBg='#f2f2f2' />
 				<ShotGroup spaced>
-					<Shot src={travelperk6} alt={'Travelperk' + altAfter} boxed={false} />
-					<Shot src={travelperk8} alt={'Travelperk' + altAfter} boxed={false} />
+					<Shot src={travelperk6} boxed={false} />
+					<Shot src={travelperk8} boxed={false} />
 				</ShotGroup>
 				<ShotGroup spaced>
-					<Shot src={travelperk7} alt={'Travelperk' + altAfter} boxed={false} />
-					<Shot src={travelperk9} alt={'Travelperk' + altAfter} boxed={false} />
+					<Shot src={travelperk7} boxed={false} />
+					<Shot src={travelperk9} boxed={false} />
 				</ShotGroup>
-				<Shot src={travelperk10} alt={'Travelperk' + altAfter} />
-				<Shot src={travelperk15} alt={'Travelperk' + altAfter} />
-				<Shot src={travelperk11} alt={'Travelperk' + altAfter} />
+				<Shot src={travelperk10} />
+				<Shot src={travelperk15} />
+				<Shot src={travelperk11} />
 				<ShotGroup spaced>
-					<Shot src={travelperk12} alt={'Travelperk' + altAfter} boxed={false} />
-					<Shot src={travelperk13} alt={'Travelperk' + altAfter} boxed={false} />
+					<Shot src={travelperk12} boxed={false} />
+					<Shot src={travelperk13} boxed={false} />
 				</ShotGroup>
-				<Shot src={travelperk14} alt={'Travelperk' + altAfter} />
+				<Shot src={travelperk14} />
       </div>
     )
   },
@@ -127,9 +190,9 @@ const projects = [
     link: 'http://bicefal.org',
 		content: (
       <div>
-        <Shot src={bicefal2} alt={'Bicefal' + altAfter} noBg />
-        <Shot src={bicefal1} alt={'Bicefal' + altAfter} noBg />
-        <Shot src={bicefal3} alt={'Bicefal' + altAfter} noBg />
+        <Shot src={bicefal2} noBg />
+        <Shot src={bicefal1} noBg />
+        <Shot src={bicefal3} noBg />
       </div>
     )
   },
@@ -139,8 +202,8 @@ const projects = [
  //    subtitle: '',
 	// 	content: (
  //      <div>
- //        <Shot src={aylevs1} alt={'Aylevs' + altAfter} maxWidth='480px' />
- //        <Shot src={aylevs2} alt={'Aylevs' + altAfter} maxWidth='480px' />
+ //        <Shot src={aylevs1} maxWidth='480px' />
+ //        <Shot src={aylevs2} maxWidth='480px' />
  //      </div>
  //    )
  //  },
@@ -151,12 +214,12 @@ const projects = [
     subtitle: 'Playful color scales generator',
 		content: (
       <div>
-        <Shot src={scale1} alt={'Scale' + altAfter} />
-        <Shot src={scale2} alt={'Scale' + altAfter} />
-        <Shot src={scale6} alt={'Scale' + altAfter} />
-        <Shot src={scale3} alt={'Scale' + altAfter} />
-        <Shot src={scale4} alt={'Scale' + altAfter} />
-        <Shot src={scale5} alt={'Scale' + altAfter} />
+        <Shot src={scale1} />
+        <Shot src={scale2} />
+        <Shot src={scale6} />
+        <Shot src={scale3} />
+        <Shot src={scale4} />
+        <Shot src={scale5} />
       </div>
     )
   },
@@ -167,9 +230,9 @@ const projects = [
     subtitle: 'Playful color wheel generator',
 		content: (
       <div>
-        <Shot src={wheel1} alt={'Wheel' + altAfter} />
-        <Shot src={wheel2} alt={'Wheel' + altAfter} />
-        <Shot src={wheel3} alt={'Wheel' + altAfter} />
+        <Shot src={wheel1} />
+        <Shot src={wheel2} />
+        <Shot src={wheel3} />
       </div>
     )
   }
