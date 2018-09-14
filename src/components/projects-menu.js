@@ -44,6 +44,8 @@ const ProjectsMenu = () => {
       <CustomLink href='http://dromnu.com/' target='_blank'>Drömnu</CustomLink>
       <br />
       <CustomLink href='https://hihayk.github.io/granularsynths/' target='_blank'>Granular Synths</CustomLink>
+      <br />
+      <CustomLink href='https://hihayk.github.io/ride/' target='_blank'>Ride</CustomLink>
     </MenuWrapper>
   )
 }
