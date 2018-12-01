@@ -95,7 +95,7 @@ const projects = [
         <Shot srcList={[ typeform12, typeform11, typeform13 ]} />
         
         <ShotText>
-          <b>Visual guide:</b> domunentation that helps designers to take elemental decisions like spacing, typograpghy, color, shadows and more.
+          <b>Visual guide:</b> documentation that helps designers to take elemental decisions like spacing, typograpghy, color, shadows and more.
         </ShotText>
         <Shot srcList={[ typeform2, typeform3, typeform4 ]} />
 
