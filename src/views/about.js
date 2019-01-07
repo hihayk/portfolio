@@ -65,7 +65,7 @@ const About = (props) => {
                 The modules that form this website
               </Text>
               <Text size='size1' dimmed>
-                This website is built with a small design system and developed with React, here are some of it's components:
+                This website is built with a small design system and developed with React, here are some of its components:
               </Text>
             </Container>
           </Container>
