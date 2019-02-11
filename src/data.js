@@ -3,7 +3,9 @@ import Shot from './components/shot'
 import ShotText from './components/shot-text'
 import CustomLink from './components/custom-link'
 
-import unit1 from './assets/images/unit1-hayk-an-design.png'
+import sequence1 from './assets/images/sequence1-hayk-an-design.png'
+import sequence2 from './assets/images/sequence2-hayk-an-design.png'
+import sequence4 from './assets/images/sequence4-hayk-an-design.png'
 
 import modulator3 from './assets/images/modulator3-hayk-an-design.png'
 import modulator2 from './assets/images/modulator2-hayk-an-design.gif'
@@ -52,13 +54,32 @@ import typeform13 from './assets/images/typeform13-hayk-an-design.png'
 import typeform14 from './assets/images/typeform14-hayk-an-design.png'
 
 const projects = [
+  {
+    path: '/scale',
+    title: 'Scale',
+    link: 'https://hihayk.github.io/scale',
+    subtitle: 'Playful color scales generator',
+		content: (
+      <div>
+        <Shot src={scale1} />
+        <Shot src={scale2} />
+        <Shot src={scale6} />
+        <Shot src={scale3} />
+        <Shot src={scale4} />
+        <Shot src={scale5} />
+      </div>
+    )
+  },
 	{
-    path: '/unit',
-    title: 'Unit',
-    subtitle: 'Minimal design system',
-		link: 'https://hihayk.github.io/unit',
+    path: '/sequence',
+    title: 'Sequence',
+    subtitle: 'Project manager',
     content: (
-			<Shot src={unit1} />
+      <div>
+        <Shot src={sequence1} />
+			  <Shot src={sequence2} />
+			  <Shot src={sequence4} />
+      </div>
     )
   },
 	{
@@ -184,22 +205,6 @@ const projects = [
         <Shot src={bicefal2} noBg />
         <Shot src={bicefal1} noBg />
         <Shot src={bicefal3} noBg />
-      </div>
-    )
-  },
-	{
-    path: '/scale',
-    title: 'Scale',
-    link: 'https://hihayk.github.io/scale',
-    subtitle: 'Playful color scales generator',
-		content: (
-      <div>
-        <Shot src={scale1} />
-        <Shot src={scale2} />
-        <Shot src={scale6} />
-        <Shot src={scale3} />
-        <Shot src={scale4} />
-        <Shot src={scale5} />
       </div>
     )
   },
