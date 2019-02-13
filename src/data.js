@@ -5,7 +5,9 @@ import CustomLink from './components/custom-link'
 
 import sequence1 from './assets/images/sequence1-hayk-an-design.png'
 import sequence2 from './assets/images/sequence2-hayk-an-design.png'
+import sequence3 from './assets/images/sequence3-hayk-an-design.png'
 import sequence4 from './assets/images/sequence4-hayk-an-design.png'
+import sequence5 from './assets/images/sequence5-hayk-an-design.png'
 
 import modulator3 from './assets/images/modulator3-hayk-an-design.png'
 import modulator2 from './assets/images/modulator2-hayk-an-design.gif'
@@ -77,7 +79,7 @@ const projects = [
     content: (
       <div>
         <Shot src={sequence1} />
-			  <Shot src={sequence2} />
+			  <Shot srcList={[ sequence3, sequence5 ]} />
 			  <Shot src={sequence4} />
       </div>
     )
