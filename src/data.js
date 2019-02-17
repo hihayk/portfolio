@@ -25,6 +25,8 @@ import travelperk21 from './assets/images/travelperk21-hayk-an-design.png'
 import travelperk22 from './assets/images/travelperk22-hayk-an-design.png'
 import travelperk23 from './assets/images/travelperk23-hayk-an-design.png'
 import travelperk24 from './assets/images/travelperk24-hayk-an-design.png'
+import travelperk25 from './assets/images/travelperk25-hayk-an-design.png'
+import travelperk26 from './assets/images/travelperk26-hayk-an-design.png'
 
 import bicefal1 from './assets/images/bicefal1-hayk-an-design.png'
 import bicefal2 from './assets/images/bicefal2-hayk-an-design.png'
@@ -182,14 +184,15 @@ const projects = [
       <div>        
         <Shot srcList={[ travelperk18, travelperk21, travelperk19, travelperk22, travelperk23, travelperk24 ]} rows={3} />
         
-				<Shot src={travelperk10} />
-				<Shot src={travelperk15} />
+				<Shot srcList={[travelperk10, travelperk15]} />
         
         <ShotText>
           Travelperk product built with the design system
         </ShotText>
 				
         <Shot src={travelperk11} />
+        <Shot src={travelperk26} />
+        <Shot src={travelperk25} />
 				
         <Shot srcList={[ travelperk12, travelperk13 ]} />
 
