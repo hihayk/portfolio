@@ -4,7 +4,6 @@ import ShotText from './components/shot-text'
 import CustomLink from './components/custom-link'
 
 import sequence1 from './assets/images/sequence1-hayk-an-design.png'
-import sequence2 from './assets/images/sequence2-hayk-an-design.png'
 import sequence3 from './assets/images/sequence3-hayk-an-design.png'
 import sequence4 from './assets/images/sequence4-hayk-an-design.png'
 import sequence5 from './assets/images/sequence5-hayk-an-design.png'

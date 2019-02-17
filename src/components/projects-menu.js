@@ -33,6 +33,8 @@ const ProjectsMenu = () => {
         <Text dimmed>Other</Text>
       </Spacer>
 
+      <CustomLink href='https://hihayk.github.io/poco/' target='_blank'>Poco</CustomLink>
+      <br />
       <CustomLink href='http://versalversal.com/' target='_blank'>Versal</CustomLink>
       <br />
       <CustomLink href='http://elenaguilar.com/' target='_blank'>Elena Aguilar</CustomLink>
