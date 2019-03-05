@@ -9,6 +9,7 @@ import Animate from '../components/animate'
 import { Link } from 'react-router-dom'
 import projects from '../data'
 import { colors } from '../styles/variables'
+import Spacer from '../components/spacer'
 
 const circleWidth = '240'
 
@@ -121,12 +122,22 @@ const Home = () => {
 							— design & code
 						</Text>
 
-						<Container top={2} width='lg'>
+						<Container top={1} width='lg'>
 							<Text size='size0'>
 								Product designer focused on
 								<br />
 								modular design and development
+								<br />
 							</Text>
+							<Spacer top={1}>
+								<Text size='size0' dimmed>
+									Previously I designed products and built
+									<br />
+									design systems for Typeform and Travelperk.
+									<br />
+									Currently I'm <CustomLink href='https://www.linkedin.com/in/hihayk' target='_blank' color='white'>open for new opportunities.</CustomLink>
+								</Text>
+							</Spacer>
 						</Container>
 					</Intro>
 				</Animate>
