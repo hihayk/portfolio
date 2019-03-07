@@ -13,6 +13,10 @@ const ProjectContainer = styled.div`
   min-height: 70vh;
 `
 
+const SubtitleWrapper = styled.div`
+  max-width: 664px;
+`
+
 const PageContainer = styled.div`
   padding: 0 64px;
 
@@ -57,11 +61,13 @@ const Project = (props) => {
 
       				<Spacer bottom={2}>
       					<Text size='size3' weight='bold' tag='h1'>
-      						{props.title}
+									{props.title}
       					</Text>
-                <Text size='size3' dimmed tag='h2'>
+								<SubtitleWrapper>								
+                <Text size='size2' dimmed tag='h2'>
       						{props.subtitle}
       					</Text>
+								</SubtitleWrapper>
       				</Spacer>
 
       				<Container width='lg'>
@@ -73,8 +79,8 @@ const Project = (props) => {
 
                 {props.role
                   ? <Spacer bottom={2}>
-        						<Text dimmed>my role {props.inTeam ? ' (in team)' : 'fgh'}:</Text>
-        						<Text>{props.role}</Text>
+        							<Text dimmed>my role {props.inTeam ? ' (in team)' : ''}:</Text>
+        							<Text>{props.role}</Text>
         					</Spacer>
                   : null
 								}

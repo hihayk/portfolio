@@ -55,8 +55,8 @@ injectGlobal`
 	}
 `
 const BaseStyles = styled.div`
-	font-family: 'GraphikWeb', -apple-system, BlinkMacSystemFont, sans-serif;
-	color: #666;
+	font-family: 'Atlas grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+	color: rgba(40, 40, 40, 1);
 	font-size: 18px;
 	line-height: 24px;
 
