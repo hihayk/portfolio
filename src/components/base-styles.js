@@ -1,28 +1,22 @@
 import styled, { injectGlobal } from 'styled-components'
 import { colors } from '../styles/variables'
 
-import Graphik400Eot from '../assets/fonts/Graphik-400.eot'
-import Graphik400Woff from '../assets/fonts/Graphik-400.woff'
-import Graphik400Woff2 from '../assets/fonts/Graphik-400.woff2'
-import Graphik700Eot from '../assets/fonts/Graphik-700.eot'
-import Graphik700Woff from '../assets/fonts/Graphik-700.woff'
-import Graphik700Woff2 from '../assets/fonts/Graphik-700.woff2'
+import AtlasGrotesk400Woff from '../assets/fonts/AtlasGrotesk-400.woff'
+import AtlasGrotesk400Woff2 from '../assets/fonts/AtlasGrotesk-400.woff2'
+import AtlasGrotesk700Woff from '../assets/fonts/AtlasGrotesk-700.woff'
+import AtlasGrotesk700Woff2 from '../assets/fonts/AtlasGrotesk-700.woff2'
 
 injectGlobal`
 	@font-face {
-		font-family: 'GraphikWeb';
-		src: url('${Graphik400Eot}');
-		src: url('${Graphik400Eot}?#iefix') format('embedded-opentype'),
-				 url('${Graphik400Woff2}') format('woff2'),
-				 url('${Graphik400Woff}') format('woff');
+		font-family: 'AtlasGrotesk';
+		src: url('${AtlasGrotesk400Woff2}') format('woff2'),
+				 url('${AtlasGrotesk400Woff}') format('woff');
 		font-weight: 400;
 	}
 	@font-face {
-		font-family: 'GraphikWeb';
-		src: url('${Graphik700Eot}');
-		src: url('${Graphik700Eot}?#iefix') format('embedded-opentype'),
-				 url('${Graphik700Woff2}') format('woff2'),
-				 url('${Graphik700Woff}') format('woff');
+		font-family: 'AtlasGrotesk';
+		src: url('${AtlasGrotesk700Woff2}') format('woff2'),
+				 url('${AtlasGrotesk700Woff}') format('woff');
 		font-weight: 700;
 	}
 
@@ -55,7 +49,7 @@ injectGlobal`
 	}
 `
 const BaseStyles = styled.div`
-	font-family: 'Atlas grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+	font-family: 'AtlasGrotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 	color: rgba(40, 40, 40, 1);
 	font-size: 18px;
 	line-height: 24px;
