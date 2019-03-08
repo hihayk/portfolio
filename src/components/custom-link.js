@@ -1,22 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, textSizesStyles } from '../styles/variables'
 
 const CustomLinkWrapper = styled.span`
-	${props => props.size === 'sizeN1' ? 'font-size: 14px; line-height: 20px' : ''};
-	${props => props.size === 'size0' ? 'font-size: 18px; line-height: 24px' : ''};
-	${props => props.size === 'size1' ? 'font-size: 24px; line-height: 32px' : ''};
-	${props => props.size === 'size2' ? 'font-size: 32px; line-height: 40px' : ''};
-	${props => props.size === 'size3' ? 'font-size: 40px; line-height: 48px; letter-spacing: -0.03em' : ''};
-
-	@media (max-width: 1200px) {
-		${props => props.size === 'sizeN1' ? 'font-size: 12px; line-height: 18px' : ''};
-		${props => props.size === 'size0' ? 'font-size: 14px; line-height: 20px' : ''};
-		${props => props.size === 'size1' ? 'font-size: 18px; line-height: 24px' : ''};
-		${props => props.size === 'size2' ? 'font-size: 24px; line-height: 32px' : ''};
-		${props => props.size === 'size3' ? 'font-size: 32px; line-height: 40px; letter-spacing: 0' : ''};
-	}
-
+	${props => textSizesStyles[props.size]};
 	display: ${props => props.block ? 'block' : 'inline-block'};
 	position: relative;
 	color: ${props => props.primary ? colors.red : props.color};

@@ -14,7 +14,7 @@ const System = () => {
 
       <Animate duration={0.8}>
         <Container fullPage>
-          <Text dimmed huge>
+          <Text size='huge'>
             C
           </Text>
 

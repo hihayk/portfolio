@@ -85,6 +85,7 @@ const ProjectsSection = styled.div`
 	@media (max-width: 1200px) {
 		padding: 24px 32px;
 		max-width: 480px;
+		height: 75vh;
 	}
 
 	@media (max-width: 1150px) {

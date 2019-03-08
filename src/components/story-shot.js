@@ -1,15 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
-import Text from '../components/text'
 
 const ShotWrapper = styled.div`
 	margin-top: 32px;
-	margin-bottom: 64px;
-
-	@media (max-width: 1200px) {
-		margin-top: 32px;
-		margin-bottom: 64px;
-	}
+	margin-bottom: 32px;
 `
 const Image = styled.img`
 	display: block;

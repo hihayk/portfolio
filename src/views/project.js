@@ -64,14 +64,14 @@ const Project = (props) => {
 									{props.title}
       					</Text>
 								<SubtitleWrapper>								
-                <Text size='size2' dimmed tag='h2'>
+                <Text size='size3' dimmed tag='h2'>
       						{props.subtitle}
       					</Text>
 								</SubtitleWrapper>
       				</Spacer>
 
       				<Container width='lg'>
-      					<Spacer bottom={4}>
+      					<Spacer bottom={2}>
       						<Text tag='p'>
       							{props.description}
       						</Text>
@@ -79,7 +79,7 @@ const Project = (props) => {
 
                 {props.role
                   ? <Spacer bottom={2}>
-        							<Text dimmed>my role {props.inTeam ? ' (in team)' : ''}:</Text>
+        							<Text dimmed>my role{props.inTeam ? ' (in team)' : ''}:</Text>
         							<Text>{props.role}</Text>
         					</Spacer>
                   : null

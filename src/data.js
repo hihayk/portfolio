@@ -105,14 +105,15 @@ const projects = [
 	{
     path: '/typeform',
     title: 'Typeform',
-    subtitle: 'Typeform is a tool to create surveys that are beautiful and fun to complete. Every month its users built and share millions of surveys.',
+    subtitle: 'Design System',
+    description: 'Typeform is a tool to create surveys that are beautiful and fun to complete. Every month its users built and share millions of surveys.',
 		content: (
       <div>
         <StorySection>
 
           <h2>The challenge</h2>
           <p>
-            The main challenge was to create a unified design language and provide tools and assets to designers and developers so that they can further evolve the product. This language would be the one that designers use every day so they would need to contribute to its definition. I personally wanted to build all this without slowing down any other projects.
+            The main challenge was to create a unified design language and provide tools and assets to designers and developers so that they can further evolve the product. This language would be used by designers every day so they would need to contribute to its definition. I personally wanted to build all this without slowing down any other projects.
           </p>
           
           <h3>Constraints</h3>
@@ -127,12 +128,12 @@ const projects = [
           
           <h2>The first steps</h2>
           <p>
-            Before planning and designing, it was important to understand how the design team works, what their current workflow, what is working and what is not. I organized 1-1 meetings with designers to answer this question. Each designer was working on a small team and was responsible for a specific part of the product. This means a greater focus on less amount of problems but also a disconnection from the overall design.
+            Before planning and designing, it was important to understand how the design team works, what's their current workflow, what's working and what's not. I organized 1-1 meetings with designers to answer these questions. Each designer was working on a small team and was responsible for a specific part of the product. This meant a greater focus on less amount of problems but also a disconnection from the overall design.
           </p>
           <h2>Designing the system</h2>
           <h3>Variables</h3>
           <p>
-            It can be tempting to start designing components in Sketch/Figma but components are composed of tiny decisions that first need to be defined. When building UI libraries I like to start by defining the variables: text sizes, colors, shadows, etc. To create variables for this design system, I analyzed all the design files and extracted patterns.
+            It can be tempting to start designing components right away in Sketch/Figma, but components are composed of tiny decisions that first need to be defined. When building UI libraries I like to start by defining the variables: text sizes, colors, shadows, etc. To create variables for this design system, I analyzed all the design files and extracted patterns. 
           </p>
 
           <ImageSection imgSrc={require('./assets/images/typeform/unit.png')}>
@@ -163,29 +164,38 @@ const projects = [
           />
           
           <h3>Icons</h3>
+          <p>
+            We had an icon library with inconsistent styles and multiple sizes per icon. There was an opportunity to unify the style and create one size that works for all use cases.
+          </p>
 
+          <StoryShot
+            srcList={[
+              require('./assets/images/typeform/icons-preview.svg'),
+            ]}
+            rows={1}
+          />
           <StoryShot
             srcList={[
               require('./assets/images/typeform/icons.png'),
             ]}
-            caption='Visual Guide page.'
+            caption='Custom icon set.'
             rows={1}
           />
           
           <h3>Choosing a Typeface</h3>
           <p>
-            We needed a typeface that was functional but still had character. After some exploration and testing, we chose the wonderful GT America by Grilli Type.
+            We needed a typeface that is functional but still has character. After some exploration and testing, we chose the wonderful GT America by Grilli Type.
           </p>
           <StoryShot
             srcList={[
-              require('./assets/images/typeform/type.png'),
+              require('./assets/images/typeform/type.svg'),
             ]}
             rows={1}
           />
 
           <h3>Components</h3>
           <p>
-            The components had to be as agnostic as possible to cover many use cases. Having the variables defined it was much easier to make design decisions. For instance, a button component should use variables to define its text size, height, border radius, text color and background color. It's like all components are attached by invisible strings to variables. This produces consistency and makes it easier to scale. It makes visual decision making less arbitrary.
+            The components had to be as agnostic as possible to cover many use cases. Having the variables defined it was much easier to make design decisions. For instance, a button component should uses variables to define its text size, height, border radius, text color and background color. It's like all components are attached by invisible strings to variables. This produces consistency and makes it easier to scale. It makes visual decision making less arbitrary.
           </p>
           <StoryShot
             srcList={[
@@ -200,15 +210,15 @@ const projects = [
 
           <h2>Developing the system</h2>
           <p>
-            As soon as I defined the first variables, I started developing the system in React. It was important to write the code almost in parallel to the design process to make sure the design made sense from the development perspective. Also, I find it much easier to connect variables to components and test them much faster in code then in design tools.
+            As soon as I defined the first variables, I started developing the system in React. It was important to write the code almost in parallel to the design process to make sure the design made sense from the development perspective. Also, I find it much easier to connect variables to components using code.
           </p>
           <h3>Using React.js</h3>
           <p>
-            Building design systems with React feels just right to me. It is great for component scoping and defining custom properties. For this project, I used styled components and thankfully this led to the migration of all our team's projects to styled components.
+            Building design systems with React makes a lot of sense to me. It's great for component scoping and defining custom properties. For this project, I used styled components and thankfully this led to the migration of all our team's projects to styled components.
           </p>
           <h3>Storybook</h3>
           <p>
-            Storybook is great for components development but it lacks tools for documentation, granted it's not made for that purpose. Building a documentation tool was overkill at this stage so we customized our Storybook to provide some documentation.
+            Storybook is great for component development but it lacks tools for documentation, granted it's not made for that purpose. Building a documentation tool was overkill in the initial stage so we customized our Storybook to provide some documentation.
           </p>
           <StoryShot
             srcList={[
@@ -221,34 +231,29 @@ const projects = [
           <h2>Granular adoption</h2>
 
           <p>
-            No matter how amazing a design system is, it's hard to stop and spend time adopting it. So I decided to make adoption granular. If I knew a team is working on a login screen, I would provide the necessary components before they started the development. They would only need to import and use. This resulted in less work for the team and design system adoption.
+            No matter how amazing a design system is, it's hard to stop and spend time adopting it. So I decided to make adoption granular. If I knew a team is working on a login screen, I would provide the necessary components before they started the development. They would only need to import and use components from the system. This resulted in less work for the team and higher design system adoption.
           </p>
 
           <StoryShot
             srcList={[
-              require('./assets/images/typeform/ds-process.png'),
+              require('./assets/images/typeform/ds-process.svg'),
             ]}
             rows={1}
           />
 
-          <h3>Redesigning</h3>
-          <p>
-            To prove that the design system was useful I redesigned parts of the interface with our new variables and components. Not only it helped to sell the design system but also to test it.
-          </p>
-
           <h3>Refactoring</h3>
           <p>
-            In general, developers understand the concept of modularity, especially when they are writing in a library like React. I regularly did pull requests in their repositories refactoring and replacing parts of the interface with design system components. It was important to me to be on both sides of the development: as a component developer and user.
+            In general, developers understand the concept of modularity, especially when they use a library like React. I regularly did pull requests in repositories that used the design system, refactoring and replacing parts of the interface with components. To me, it was important to be on both sides of the development: as a component developer and user.
           </p>
 
           <h3>Seduction vs imposition</h3>
           <p>
-            Being just another teammate I had no power to impose the use of the design system, so I had to work much harder to seduce them. It had to solve actual everyday problems and speed up the overall projects. It had to speak the design language of the design team and It had to be straight forward for developers to understand.
+            Being just another teammate I had no power to impose the use of the design system, so I had to work much harder to convince my teammates. The system needed to solve actual everyday problems and speed up all projects. It had to speak the design language of the design team and It had to be straight forward for developers to understand.
           </p>
 
           <h2>The design system team</h2>
           <p>
-            As I was building a tool for developers I needed to be confident that I'm providing the best code quality but I'm more a designer than a developer so I needed a developer partner. I thought that the design system project should be scoped in a team. After some conversation with development, design and product management we established a team and hired a front-end developer. He pushed the code to a more mature state introducing documentation, testing and tools.
+            As I was building a tool for developers I needed to be confident that I'm providing the best code quality but I'm more a designer than a developer so I needed a developer partner. I thought that the design system project should be scoped in a team. After some conversation with development, design and product management we established a team and incorporated a front-end developer. He pushed the code to a more mature state introducing documentation, testing and tools.
           </p>
 
         </StorySection>
@@ -263,7 +268,7 @@ const projects = [
             rows={1}
             caption={
               <span>
-                Page built with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink>
+                Integration screen with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink>
               </span>
             }
           />
@@ -274,7 +279,29 @@ const projects = [
             rows={1}
             caption={
               <span>
-                Page built with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink>
+                Share screen with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink>
+              </span>
+            }
+          />
+          <StoryShot
+            srcList={[
+              require('./assets/images/typeform/unsplash.png'),
+            ]}
+            rows={1}
+            caption={
+              <span>
+                Unsplash integration built with the design system by <CustomLink href='https://github.com/josepmartins' target='_blank' size='sizeN1'>@josepmartins</CustomLink>
+              </span>
+            }
+          />
+          <StoryShot
+            srcList={[
+              require('./assets/images/typeform/settings.png'),
+            ]}
+            rows={1}
+            caption={
+              <span>
+                Settings built with the design system by <CustomLink href='http://lucian.es' target='_blank' size='sizeN1'>@lucian</CustomLink>
               </span>
             }
           />

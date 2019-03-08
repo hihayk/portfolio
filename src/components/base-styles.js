@@ -1,5 +1,5 @@
 import styled, { injectGlobal } from 'styled-components'
-import { colors } from '../styles/variables'
+import { colors, textSizesStyles } from '../styles/variables'
 
 import AtlasGrotesk400Woff from '../assets/fonts/AtlasGrotesk-400.woff'
 import AtlasGrotesk400Woff2 from '../assets/fonts/AtlasGrotesk-400.woff2'
@@ -50,9 +50,8 @@ injectGlobal`
 `
 const BaseStyles = styled.div`
 	font-family: 'AtlasGrotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-	color: rgba(40, 40, 40, 1);
-	font-size: 18px;
-	line-height: 24px;
+	color: ${colors.body};
+	${textSizesStyles.size0};
 
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;

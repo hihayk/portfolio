@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-
+import { textSizesStyles, textColorStyles } from '../styles/variables'
 
 const StorySectionWrapper = styled.div`
   padding: 64px 64px 128px 64px;
   background-color: ${props => props.section === 'result' ? '#EAEAEA' : '#282828'};
 
+  ${props => props.section === 'result' ? textColorStyles.lightThene : textColorStyles.darkTheme};
+  
   @media (max-width: 1200px) {
     padding: 32px 32px 64px 32px;
 	}
   
+
   h2,
   h3,
   h4,
@@ -18,35 +21,33 @@ const StorySectionWrapper = styled.div`
   }
 
   h2 {
-    margin: 64px 0 0 0;
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -0.04em;
-    color: ${props => props.section === 'result' ? 'rgba(40, 40, 40, 1)' : 'rgba(255, 255, 255, 1)'};
+    margin: 0;
+    padding-top: 64px;
+    ${textSizesStyles.size2};
+
+    @media (max-width: 1200px) {
+      padding-top: 32px;
+    }
   }
   
   h3 {
-    margin: 32px 0 0 0;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: -0.04em;
-    color: ${props => props.section === 'result' ? 'rgba(40, 40, 40, 1)' : 'rgba(255, 255, 255, 1)'};
-  }
-  
-  h4 {
-    margin: 32px 0 0 0;
-    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    padding-top: 32px;
+    ${textSizesStyles.size1};
+
+    @media (max-width: 1200px) {
+      padding-top: 16px;
+    }
   }
   
   p {
-    margin: 8px 0 0 0;
-    font-size: 18px;
-    line-height: 28px;
-    color: ${props => props.section === 'result' ? 'rgba(40, 40, 40, 0.7)' : 'rgba(255, 255, 255, 0.7)'};
+    margin: 0;
+    padding-top: 8px;
+    opacity: 0.7;
   }
   
   figcaption {
-    color: ${props => props.section === 'result' ? 'rgba(40, 40, 40, 0.5)' : 'rgba(255, 255, 255, 0.5)'};
+    opacity: 0.5;
   }
 `
 

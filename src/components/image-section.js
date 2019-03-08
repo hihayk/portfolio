@@ -4,7 +4,10 @@ import styled from 'styled-components'
 const ImageSectionWrapper = styled.div`
   display: flex;
   align-items: flex-start;
-  padding: 32px 0;
+
+  @media (min-width: 1200px) {
+    padding: 32px 0;
+  }
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -12,7 +15,9 @@ const ImageSectionWrapper = styled.div`
 `
 
 const ChildrenWrapper = styled.div`
-  padding-right: 32px;
+  @media (min-width: 1200px) {
+		padding-right: 32px;
+	}
 `
 
 const Image = styled.img`

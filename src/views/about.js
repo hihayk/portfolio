@@ -17,7 +17,7 @@ const About = (props) => {
 
       <Animate duration={0.8}>
         <Container fullPage>
-          <Text dimmed huge>
+          <Text size='huge'>
             A
           </Text>
 
@@ -55,7 +55,7 @@ const About = (props) => {
 
           <Spacer bottom={8} smBottom={4} />
 
-          <Text dimmed huge>
+          <Text size='huge'>
             A/m
           </Text>
 
