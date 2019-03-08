@@ -108,14 +108,30 @@ export const typeformData = {
         </p>
         <StoryShot
           srcList={[
-            require('../assets/images/typeform/ci-text.png'),
-            require('../assets/images/typeform/ci-form.png'),
-            require('../assets/images/typeform/ci-overlay.png'),
-            require('../assets/images/typeform/ci-graphic.png'),
+            require('../assets/images/typeform/components-mix.png'),
+
           ]}
-          rows={2}
+          rows={1}
+        />
+        <StoryShot
+          srcList={[
+            require('../assets/images/typeform/components.png'),
+          ]}
+          rows={1}
           caption='Components index page.'
-          />
+        />
+
+        
+        
+        <ImageSection imgSrc={require('../assets/images/typeform/layouts.png')}>
+        <h3>Composition</h3>
+        <p>
+          When developers compose a design with components most of the time they solve recurrent problems like defining the spacing between elements or laying down content in columns. To handle these repeated tasks I created layout components that manage layout and spacing without the need for writing custom styles. Here are some examples:
+        </p>
+        <p><strong>Spacer</strong> adds space between any 2 elements. 
+        <strong> Distribute</strong> adds consistent spacing between multiple elements.
+        <strong> Split</strong> creates complex layouts with configurable columns.</p>
+        </ImageSection>
 
         <h2>Developing the system</h2>
         <p>
