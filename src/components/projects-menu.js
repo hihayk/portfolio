@@ -1,5 +1,5 @@
 import React from 'react'
-import projects from '../data'
+import projects from '../data/data'
 import CustomLink from '../components/custom-link'
 import Text from '../components/text'
 import Spacer from '../components/spacer'

@@ -6,7 +6,7 @@ import Project from './views/project'
 import BaseStyles from './components/base-styles'
 import ScrollToTop from './components/scroll-to-top'
 import { HashRouter as Router, Route } from 'react-router-dom'
-import projects from './data'
+import projects from './data/data'
 
 class App extends Component {
   render() {

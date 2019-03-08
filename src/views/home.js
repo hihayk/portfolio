@@ -7,7 +7,7 @@ import Distribute from '../components/distribute'
 import Header from '../components/header'
 import Animate from '../components/animate'
 import { Link } from 'react-router-dom'
-import projects from '../data'
+import projects from '../data/data'
 import { colors } from '../styles/variables'
 import Spacer from '../components/spacer'
 
