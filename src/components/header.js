@@ -21,9 +21,9 @@ injectGlobal`
 `
 
 const HeaderWrapper = styled.div`
-  ${props => props.noPadding ? '' : 'padding: 56px 64px'};
+  ${props => props.noPadding ? '' : 'padding: 56px 64px 0 64px'};
   @media (max-width: 1200px) {
-    ${props => props.noPadding ? '' : 'padding: 24px 32px'};
+    ${props => props.noPadding ? '' : 'padding: 24px 32px 0 32px'};
   }
   /*${props => props.large ? 'font-size: 24px; line-height: 32px' : ''};*/
   ${props => props.notFixed ? '' : 'position: fixed'};

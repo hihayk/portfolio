@@ -4,6 +4,8 @@ import styled from 'styled-components'
 const ShotWrapper = styled.div`
 	margin-top: 32px;
 	margin-bottom: 32px;
+	${props => props.backgroundImage && `background-image: url(${props.backgroundImage})`};
+	background-size: 100%;
 `
 const Image = styled.img`
 	display: block;
@@ -47,7 +49,7 @@ const StoryShot = (props) => {
 	}
 
 	return(
-		<ShotWrapper className='ShotWrapper' srcList={props.srcList}>
+		<ShotWrapper className='ShotWrapper' srcList={props.srcList} backgroundImage={props.backgroundImage}>
 			{props.src && (
 				<ImageWrapper>
 					<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} />

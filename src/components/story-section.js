@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { textSizesStyles, textColorStyles } from '../styles/variables'
+import Tabs from '../components/tabs'
 
 const StorySectionWrapper = styled.div`
   padding: 64px 64px 128px 64px;
@@ -11,7 +12,6 @@ const StorySectionWrapper = styled.div`
   @media (max-width: 1200px) {
     padding: 32px 32px 64px 32px;
 	}
-  
 
   h2,
   h3,
@@ -48,6 +48,14 @@ const StorySectionWrapper = styled.div`
   
   figcaption {
     opacity: 0.5;
+  }
+
+  .TabsWrapper {
+    padding-top: 32px;
+    
+    @media (max-width: 1200px) {
+      padding-top: 16px;
+    }
   }
 `
 

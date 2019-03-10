@@ -3,6 +3,26 @@ import StorySection from '../components/story-section'
 import ImageSection from '../components/image-section'
 import StoryShot from '../components/story-shot'
 import CustomLink from '../components/custom-link'
+import Tabs from '../components/tabs'
+
+const specTabs = [
+  {
+    tabName: 'Space',
+    tabContent: <StoryShot srcList={[ require('../assets/images/typeform/sp-space.png') ]} backgroundImage={require('../assets/images/typeform/sp-bg.png')} />
+  },
+  {
+    tabName: 'Layout',
+    tabContent: <StoryShot srcList={[ require('../assets/images/typeform/sp-layout.png') ]} backgroundImage={require('../assets/images/typeform/sp-bg.png')} />
+  },
+  {
+    tabName: 'Typography',
+    tabContent: <StoryShot srcList={[ require('../assets/images/typeform/sp-typography.png') ]} backgroundImage={require('../assets/images/typeform/sp-bg.png')} />
+  },
+  {
+    tabName: 'Components',
+    tabContent: <StoryShot srcList={[ require('../assets/images/typeform/sp-components.png') ]} backgroundImage={require('../assets/images/typeform/sp-bg.png')} />
+  }
+]
 
 export const typeformData = {
   path: '/typeform',
@@ -176,11 +196,15 @@ export const typeformData = {
           Being just another teammate I had no power to impose the use of the design system, so I had to work much harder to convince my teammates. The system needed to solve actual everyday problems and speed up all projects. It had to speak the design language of the design team and It had to be straight forward for developers to understand.
         </p>
 
+        <h2>The system applied</h2>
+
+        <Tabs tabsObject={specTabs} />
+
         <h2>The design system team</h2>
         <p>
           As I was building a tool for developers I needed to be confident that I'm providing the best code quality but I'm more a designer than a developer so I needed a developer partner. I thought that the design system project should be scoped in a team. After some conversation with development, design and product management we established a team and incorporated a front-end developer. He pushed the code to a more mature state introducing documentation, testing and tools.
         </p>
-
+        
       </StorySection>
       
       <StorySection section='result'>
