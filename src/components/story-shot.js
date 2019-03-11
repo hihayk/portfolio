@@ -1,11 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
+import { breakpoints, textSizesStyles } from '../styles/variables'
 
 const ShotWrapper = styled.div`
-	margin-top: 32px;
-	margin-bottom: 32px;
+	margin-top: 24px;
+	margin-bottom: 24px;
 	${props => props.backgroundImage && `background-image: url(${props.backgroundImage})`};
 	background-size: 100%;
+
+	@media (max-width: ${breakpoints.sm}) {
+		margin-top: 16px;
+	}
 `
 const Image = styled.img`
 	display: block;
@@ -19,7 +24,7 @@ const ImageRow = styled.div`
 	grid-template-columns: repeat(${props => props.rows}, 1fr);
 	grid-gap: 4px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		grid-gap: 4px;
 	}
 `
@@ -27,14 +32,13 @@ const ImageColumn = styled.div`
 `
 const Caption = styled.figcaption`
 	max-width: 640px;
-  font-size: 14px;
-  line-height: 20px;
+  ${textSizesStyles.sizeN1};
 `
 const CaptionWrapper = styled.div`
 	margin: 16px auto 0 auto;
 	max-width: 1280px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		margin: 16px auto 0 auto;
 	}
 `

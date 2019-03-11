@@ -8,7 +8,7 @@ import Header from '../components/header'
 import Animate from '../components/animate'
 import { Link } from 'react-router-dom'
 import projects from '../data/data'
-import { colors } from '../styles/variables'
+import { colors, breakpoints } from '../styles/variables'
 import Spacer from '../components/spacer'
 
 const circleWidth = '240'
@@ -30,16 +30,16 @@ const MainSection = styled.div`
 	align-items: flex-end;
 	padding: 56px 64px;
 
-	@media (max-width: 728px) {
+	@media (max-width: ${breakpoints.sm}) {
 		height: 92vh;
 		max-height: 512px;
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		padding: 32px;
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: ${breakpoints.md}) {
 		min-width: 800px;
 	}
 
@@ -57,7 +57,7 @@ const MainSection = styled.div`
 		border-radius: 50%;
 		background-color: white;
 
-		@media (max-width: 720px) {
+		@media (max-width: ${breakpoints.sm}) {
 			top: 32px;
 			bottom: auto;
 		}
@@ -82,7 +82,7 @@ const ProjectsSection = styled.div`
 	padding: 56px 64px;
 	width: 50%;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		padding: 24px 32px;
 		max-width: 480px;
 		height: 75vh;

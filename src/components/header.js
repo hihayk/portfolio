@@ -7,6 +7,7 @@ import Text from '../components/text'
 import Spacer from '../components/spacer'
 import { Link } from 'react-router-dom'
 import styled, { injectGlobal, keyframes } from 'styled-components'
+import { breakpoints } from '../styles/variables'
 
 const highlightProjectLinksAnimation = keyframes`
   35% {
@@ -22,7 +23,7 @@ injectGlobal`
 
 const HeaderWrapper = styled.div`
   ${props => props.noPadding ? '' : 'padding: 56px 64px 0 64px'};
-  @media (max-width: 1200px) {
+  @media (max-width: ${breakpoints.sm}) {
     ${props => props.noPadding ? '' : 'padding: 24px 32px 0 32px'};
   }
   /*${props => props.large ? 'font-size: 24px; line-height: 32px' : ''};*/

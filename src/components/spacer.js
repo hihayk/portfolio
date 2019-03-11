@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../styles/variables'
 
 const Spacer = styled.div`
 	${props => props.top ? `padding-top: ${props.top * 8}px` : ''};
@@ -7,7 +8,7 @@ const Spacer = styled.div`
 	${props => props.right ? `padding-right: ${props.right * 8}px` : ''};
 	${props => props.inline ? `display: inline-block` : ''};
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.sm}) {
 		${props => props.smTop ? `padding-top: ${props.smTop * 8}px` : ''};
 		${props => props.smBottom ? `padding-bottom: ${props.smBottom * 8}px` : ''};
 		${props => props.smLeft ? `padding-left: ${props.smLeft * 8}px` : ''};

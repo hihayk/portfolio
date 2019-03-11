@@ -1,6 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import Text from '../components/text'
+import { breakpoints } from '../styles/variables'
 
 const boxedStyles = css`
 	background-color: ${props => props.boxedBg ? props.boxedBg : '#F5F5F5'};
@@ -12,7 +13,7 @@ const boxedStyles = css`
 	padding-top: 64px;
 	padding-bottom: 64px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		margin-left: 0;
 		margin-right: 0;
 		padding-left: 32px;
@@ -26,7 +27,7 @@ const ShotWrapper = styled.div`
 	${props => props.boxed && boxedStyles};
 	margin-bottom: 64px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		margin-bottom: 32px;
 	}
 `
@@ -45,7 +46,7 @@ const ImageRow = styled.div`
 	grid-template-columns: repeat(${props => props.rows}, 1fr);
 	grid-gap: 32px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		grid-gap: 16px;
 	}
 `
@@ -58,7 +59,7 @@ const CaptionWrapper = styled.div`
 	margin: 32px auto 0 auto;
 	max-width: 1280px;
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.md}) {
 		margin: 16px auto 0 auto;
 	}
 `

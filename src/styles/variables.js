@@ -2,6 +2,11 @@ import { css } from 'styled-components'
 
 export const unit = 8
 
+export const breakpoints = {
+  sm: '720px',
+  md: '1200px',
+}
+
 export const colors = {
   grey05: 'rgba(0,0,0,.05)',
   red: 'rgb(194, 83, 83)',
@@ -77,7 +82,7 @@ export const textSizesStyles = {
     font-size: ${textSizes.sizeN1.mediumScreen.fontSize};
     line-height: ${textSizes.sizeN1.mediumScreen.lineHeight};
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.sizeN1.smallScreen.fontSize};
       line-height: ${textSizes.sizeN1.smallScreen.lineHeight};
     }
@@ -86,7 +91,7 @@ export const textSizesStyles = {
     font-size: ${textSizes.size0.mediumScreen.fontSize};
     line-height: ${textSizes.size0.mediumScreen.lineHeight};
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.size0.smallScreen.fontSize};
       line-height: ${textSizes.size0.smallScreen.lineHeight};
     }
@@ -96,7 +101,7 @@ export const textSizesStyles = {
     line-height: ${textSizes.size1.mediumScreen.lineHeight};
     letter-spacing: -0.02em;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.size1.smallScreen.fontSize};
       line-height: ${textSizes.size1.smallScreen.lineHeight};
     }
@@ -106,7 +111,7 @@ export const textSizesStyles = {
     line-height: ${textSizes.size2.mediumScreen.lineHeight};
     letter-spacing: -0.03em;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.size2.smallScreen.fontSize};
       line-height: ${textSizes.size2.smallScreen.lineHeight};
     }
@@ -116,7 +121,7 @@ export const textSizesStyles = {
     line-height: ${textSizes.size3.mediumScreen.lineHeight};
     letter-spacing: -0.03em;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.size3.smallScreen.fontSize};
       line-height: ${textSizes.size3.smallScreen.lineHeight};
     }
@@ -127,7 +132,7 @@ export const textSizesStyles = {
     letter-spacing: -0.05em;
     opacity: .2;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.sm}) {
       font-size: ${textSizes.huge.smallScreen.fontSize};
       line-height: ${textSizes.huge.smallScreen.lineHeight};
     }

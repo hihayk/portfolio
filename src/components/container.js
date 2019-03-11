@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { breakpoints } from '../styles/variables';
 
 const Container = styled.div`
 	${props => props.top ? `margin-top: ${props.top * 8}px` : ''};
@@ -12,7 +13,7 @@ const Container = styled.div`
 
 	${props => props.bgColor ? `background-color: ${props.bgColor}` : ''};
 
-	@media (max-width: 1200px) {
+	@media (max-width: ${breakpoints.sm}) {
 		${props => props.fullPage ? 'padding: 0 32px' : ''};
 	}
 `

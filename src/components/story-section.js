@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { textSizesStyles, textColorStyles } from '../styles/variables'
-import Tabs from '../components/tabs'
+import { textSizesStyles, textColorStyles, breakpoints } from '../styles/variables'
 
 const StorySectionWrapper = styled.div`
   padding: 64px 64px 128px 64px;
@@ -9,7 +8,7 @@ const StorySectionWrapper = styled.div`
 
   ${props => props.section === 'result' ? textColorStyles.lightThene : textColorStyles.darkTheme};
   
-  @media (max-width: 1200px) {
+  @media (max-width: ${breakpoints.sm}) {
     padding: 32px 32px 64px 32px;
 	}
 
@@ -25,7 +24,7 @@ const StorySectionWrapper = styled.div`
     padding-top: 64px;
     ${textSizesStyles.size2};
 
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.md}) {
       padding-top: 32px;
     }
   }
@@ -35,8 +34,8 @@ const StorySectionWrapper = styled.div`
     padding-top: 32px;
     ${textSizesStyles.size1};
 
-    @media (max-width: 1200px) {
-      padding-top: 16px;
+    @media (max-width: ${breakpoints.sm}) {
+      padding-top: 24px;
     }
   }
   
@@ -53,7 +52,7 @@ const StorySectionWrapper = styled.div`
   .TabsWrapper {
     padding-top: 32px;
     
-    @media (max-width: 1200px) {
+    @media (max-width: ${breakpoints.md}) {
       padding-top: 16px;
     }
   }
