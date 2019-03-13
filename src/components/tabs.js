@@ -27,6 +27,10 @@ const Tab = styled.div`
   }
 `
 
+const TabContentWrapper = styled.div`
+  ${props => !props.isVisible && `display: none`};
+`
+
 class Tabs extends React.Component {
   constructor(props) {
     super(props);
@@ -43,7 +47,6 @@ class Tabs extends React.Component {
     console.log(this.state.activeTab)
   }
   
-  
   render () {
     return (
       <div>
@@ -57,9 +60,9 @@ class Tabs extends React.Component {
 
         {Object.values(this.props.tabsObject).map((specTab, index) => {
           return (
-            <div key={index}>
-              {specTab.tabName === this.state.activeTab && specTab.tabContent}
-            </div>
+            <TabContentWrapper key={index} isVisible={specTab.tabName === this.state.activeTab}>
+              {specTab.tabContent}
+            </TabContentWrapper>
           )
         })}
       </div>
