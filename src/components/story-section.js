@@ -4,7 +4,7 @@ import { textSizesStyles, textColorStyles, breakpoints } from '../styles/variabl
 
 const StorySectionWrapper = styled.div`
   padding: 64px 64px 128px 64px;
-  background-color: ${props => props.section === 'result' ? '#EAEAEA' : '#282828'};
+  background-color: ${props => props.section === 'result' ? props.backgroundColor : '#282828'};
 
   ${props => props.section === 'result' ? textColorStyles.lightThene : textColorStyles.darkTheme};
   
@@ -58,13 +58,17 @@ const StorySectionWrapper = styled.div`
   }
 `
 
+StorySectionWrapper.defaultProps = {
+  backgroundColor: '#EAEAEA',
+}
+
 const StoryContent = styled.div`
   max-width: 1128px;
   margin: 0 auto;
 `
 
-const StorySection = ({ children, section }) => (
-  <StorySectionWrapper section={section}>
+const StorySection = ({ children, section, backgroundColor }) => (
+  <StorySectionWrapper section={section} backgroundColor={backgroundColor}>
     <StoryContent>
       {children}
     </StoryContent>
