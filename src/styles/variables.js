@@ -5,6 +5,7 @@ export const unit = 8
 export const breakpoints = {
   sm: '720px',
   md: '1200px',
+  lg: '1440px',
 }
 
 export const colors = {

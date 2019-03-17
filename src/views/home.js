@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Text from '../components/text'
 import Container from '../components/container'
 import CustomLink from '../components/custom-link'
-import Distribute from '../components/distribute'
 import Header from '../components/header'
 import Animate from '../components/animate'
 import { Link } from 'react-router-dom'
@@ -12,35 +11,34 @@ import { colors, breakpoints } from '../styles/variables'
 import Spacer from '../components/spacer'
 
 const circleWidth = '240'
+const homeBreakpoint = '1080px'
 
 const MainContainer = styled.div`
 	display: flex;
 
-	@media (max-width: 1150px) {
+	@media (max-width: ${homeBreakpoint}) {
 		flex-direction: column;
 	}
 `
 const MainSection = styled.div`
 	position: relative;
 	background-color: ${colors.red};
-	height: 100vh;
 	flex-shrink: 0;
 	flex-grow: 1;
 	display: flex;
 	align-items: flex-end;
 	padding: 56px 64px;
-
-	@media (max-width: ${breakpoints.sm}) {
-		height: 92vh;
-		max-height: 512px;
+	
+	@media (min-width: ${homeBreakpoint}) {
+		height: 100vh;
 	}
-
-	@media (max-width: ${breakpoints.md}) {
-		padding: 32px;
+	
+	@media (min-width: ${breakpoints.lg}) {
+		width: 50%;
 	}
-
-	@media (min-width: ${breakpoints.md}) {
-		min-width: 800px;
+	
+	@media (max-width: ${homeBreakpoint}) {
+		padding: ${circleWidth * 1 + 96}px 32px 32px 32px;
 	}
 
 	&:after {
@@ -57,7 +55,7 @@ const MainSection = styled.div`
 		border-radius: 50%;
 		background-color: white;
 
-		@media (max-width: ${breakpoints.sm}) {
+		@media (max-width: ${homeBreakpoint}) {
 			top: 32px;
 			bottom: auto;
 		}
@@ -74,23 +72,22 @@ const MainSection = styled.div`
 `
 const ProjectsSection = styled.div`
 	position: relative;
-	height: 100vh;
-	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 56px 64px;
-	width: 50%;
-
-	@media (max-width: ${breakpoints.md}) {
-		padding: 24px 32px;
-		max-width: 480px;
-		height: 75vh;
+	
+	@media (min-width: ${breakpoints.lg}) {
+		width: 50%;
+		flex-shrink: 0;
 	}
-
-	@media (max-width: 1150px) {
-		width: 100%;
-		max-width: 100%;
+	
+	@media (max-width: ${homeBreakpoint}) {
+		padding: 32px;
+	}
+	
+	@media (min-width: ${homeBreakpoint}) {
+		height: 100vh;
 	}
 
 	&:after {
@@ -105,10 +102,28 @@ const ProjectsSection = styled.div`
 		height: ${circleWidth}px;
 		border-radius: ${circleWidth}px 0 0 ${circleWidth}px;
 		background-color: ${colors.red};
+
+		@media (max-width: ${homeBreakpoint}) {
+			bottom: 0;
+			top: auto;
+			left: 0;
+			right: 0;
+			width: ${circleWidth}px;
+			height: ${circleWidth / 2}px;
+			border-radius: ${circleWidth}px ${circleWidth}px 0 0;
+		}
 	}
 `
 const Intro = styled.div`
 	color: white;
+`
+
+const ProjectsList = styled.div`
+	padding: ${circleWidth / 2}px 0 ${circleWidth / 2 + 32}px 0;
+
+	@media (min-width: ${homeBreakpoint}) {
+		padding: 0 ${circleWidth / 2}px 0 0;
+	}
 `
 
 const Home = () => {
@@ -124,7 +139,7 @@ const Home = () => {
 						</Text>
 
 						<Container top={1} width='lg'>
-							<Text size='size0'>
+							<Text size='size1'>
 								Product designer focused on
 								<br />
 								modular design and development
@@ -149,23 +164,26 @@ const Home = () => {
 				<Header hideName disableProjects noPadding size='size1' notFixed primary/>
 
 				<Animate>
-					<Distribute space={1} vertical id='projectLinksWrapper'>
+					<ProjectsList id='projectLinksWrapper'>
 
 						{projects.map((project, index) => (
-							<Link to={project.path} key={index}>
-								<CustomLink
-									size='size3'
-									tag='span'
-									lineOnHover
-									tickLine
-									primary
-							  >
-									{project.title}
-								</CustomLink>
-							</Link>
+							<Spacer bottom={projects.length === index + 1 ? 0 : 1}>
+								{console.log(projects.length, index + 1)}
+								<Link to={project.path} key={index}>
+									<CustomLink
+										size='size3'
+										tag='span'
+										lineOnHover
+										tickLine
+										primary
+										>
+										{project.title}
+									</CustomLink>
+								</Link>
+							</Spacer>
 						))}
 
-					</Distribute>
+					</ProjectsList>
 				</Animate>
 
 				<Text size='size1'>&nbsp;</Text>
