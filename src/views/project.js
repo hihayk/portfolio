@@ -32,17 +32,21 @@ const ProjectsDropdownTrigger = () => {
   )
 }
 
+let getVisibleUrl = (url) => {
+	let finalUrl
+
+	if (url && url.includes('http://')) {
+		finalUrl = url.replace('http://', '')
+	} else if (url && url.includes('https://')) {
+		finalUrl = url.replace('https://', '')
+	} else {
+		finalUrl = url
+	}
+
+	return finalUrl
+}
+
 const Project = (props) => {
-
-  let visibleUrl
-  if (props.link && props.link.includes('http://')) {
-    visibleUrl = props.link.replace('http://', '')
-  } else if (props.link && props.link.includes('https://')) {
-    visibleUrl = props.link.replace('https://', '')
-  } else {
-    visibleUrl = props.link
-  }
-
 	return(
     <div>
   		<ProjectContainer>
@@ -99,9 +103,20 @@ const Project = (props) => {
 								))}
 
                 {props.link
-                  ? <CustomLink href={props.link} target='_blank' lineOnHover={false} withArrow>{visibleUrl}</CustomLink>
+                  ? <CustomLink href={props.link} target='_blank' lineOnHover={false} withArrow>{getVisibleUrl(props.link)}</CustomLink>
                   : null
-                }
+								}
+								
+								{props.links && (
+									<div>
+										{props.links.map((item, index) => (
+											<div>
+												<CustomLink href={item} key={index} target='_blank' lineOnHover={false} withArrow>{getVisibleUrl(item)}</CustomLink>
+												<br />
+											</div>
+										))}
+									</div>
+								)}
       				</Container>
             </Spacer>
     			</Container>

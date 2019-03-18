@@ -139,12 +139,3 @@ export const textSizesStyles = {
     }
   `,
 }
-
-export const textColorStyles = {
-  darkTheme: css`
-    color: white;
-  `,
-  lightThene: css`
-    color: ${colors.body};
-  `,
-}

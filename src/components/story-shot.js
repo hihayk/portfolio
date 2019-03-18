@@ -4,7 +4,7 @@ import { breakpoints, textSizesStyles } from '../styles/variables'
 
 const ShotWrapper = styled.div`
 	margin-top: 24px;
-	margin-bottom: 24px;
+	margin-bottom: 64px;
 	${props => props.backgroundImage && `background-image: url(${props.backgroundImage})`};
 	background-size: 100%;
 

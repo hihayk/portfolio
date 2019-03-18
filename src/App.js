@@ -25,6 +25,7 @@ class App extends Component {
                   subtitle={project.subtitle}
                   description={project.description}
                   link={project.link}
+                  links={project.links}
                   role={project.role}
                   inTeam={project.inTeam}
                   contributors={project.contributors}

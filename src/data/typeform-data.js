@@ -38,7 +38,7 @@ export const typeformData = {
   ),
   content: (
     <div>
-      <StorySection>
+      <StorySection theme='dark'>
 
         <h2>The challenge</h2>
         <p>
@@ -183,6 +183,7 @@ export const typeformData = {
           srcList={[
             require('../assets/images/typeform/ds-process.svg'),
           ]}
+          align='left'
           rows={1}
         />
 
@@ -207,7 +208,7 @@ export const typeformData = {
         
       </StorySection>
       
-      <StorySection section='result'>
+      <StorySection theme='light'>
         <h2>The system in the wild</h2>
 
         <StoryShot

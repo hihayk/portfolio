@@ -1,12 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import { textSizesStyles, textColorStyles, breakpoints } from '../styles/variables'
+import { textSizesStyles, breakpoints, colors } from '../styles/variables'
+
+export const themeStyles = {
+  dark: {
+    color: 'white',
+    backgroundColor: '#282828',
+  },
+  light: {
+    color: colors.body,
+    backgroundColor: '#EAEAEA',
+  },
+}
 
 const StorySectionWrapper = styled.div`
   padding: 64px 64px 128px 64px;
-  background-color: ${props => props.section === 'result' ? props.backgroundColor : '#282828'};
-
-  ${props => props.section === 'result' ? textColorStyles.lightThene : textColorStyles.darkTheme};
+  
+  color: ${props => themeStyles[props.theme].color};
+  background-color: ${props => props.backgroundColor || themeStyles[props.theme].backgroundColor};
   
   @media (max-width: ${breakpoints.sm}) {
     padding: 32px 32px 64px 32px;
@@ -59,7 +70,7 @@ const StorySectionWrapper = styled.div`
 `
 
 StorySectionWrapper.defaultProps = {
-  backgroundColor: '#EAEAEA',
+  theme: 'dark',
 }
 
 const StoryContent = styled.div`
@@ -67,8 +78,12 @@ const StoryContent = styled.div`
   margin: 0 auto;
 `
 
-const StorySection = ({ children, section, backgroundColor }) => (
-  <StorySectionWrapper section={section} backgroundColor={backgroundColor}>
+export const StorySections = styled.div`
+  
+`
+
+const StorySection = ({ children, section, backgroundColor, theme }) => (
+  <StorySectionWrapper section={section} backgroundColor={backgroundColor} theme={theme}>
     <StoryContent>
       {children}
     </StoryContent>

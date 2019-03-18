@@ -50,16 +50,16 @@ export const travelperkData = {
         <p>There were some visual guidelines created by my teammates but there was dedicated time to building a design system. Understanding React and how it affects to modularization helped me to translate the visual guidelines to variables and to better align components.</p>
         
         <StoryShot srcList={[ travelperk18, travelperk21, travelperk24, travelperk22, travelperk23 ]} rows={5} />
-        
-        <StoryShot srcList={[travelperk10, travelperk15, travelperk12, travelperk13]} rows={2} />
    
       </StorySection>
 
-      <StorySection section='result' backgroundColor='#dee2e7'>
-        <StoryShot src={travelperk11} />
-        <StoryShot src={travelperk26} />
-        <StoryShot src={travelperk25} />
-        <StoryShot src={travelperk14} />
+      <StorySection theme='light' backgroundColor='#dee2e7'>
+        <h2>The product</h2>
+        <StoryShot src={travelperk11} caption='Login page.' />
+        <StoryShot src={travelperk26} caption='Hotel search.' />
+        <StoryShot srcList={[travelperk12, travelperk13]} rows={2} caption='Hotel search components.' />
+        <StoryShot src={travelperk25} caption='Company settings.' />
+        <StoryShot src={travelperk14} caption='Reporting page.' />
       </StorySection>
     </div>
   )
