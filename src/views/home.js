@@ -139,21 +139,12 @@ const Home = () => {
 						</Text>
 
 						<Container top={1} width='lg'>
-							<Text size='size1'>
+							<Text size='size0'>
 								Product designer focused on
 								<br />
 								modular design and development
 								<br />
 							</Text>
-							<Spacer top={1}>
-								<Text size='size0' dimmed>
-									Previously I designed products and built
-									<br />
-									design systems for Typeform and Travelperk.
-									<br />
-									Currently I'm <CustomLink href='https://www.linkedin.com/in/hihayk' target='_blank' color='white'>open for new opportunities.</CustomLink>
-								</Text>
-							</Spacer>
 						</Container>
 					</Intro>
 				</Animate>
