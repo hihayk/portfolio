@@ -1,8 +1,6 @@
 import React from 'react'
 import StorySection, { StorySections } from '../components/story-section'
-import ImageSection from '../components/image-section'
 import StoryShot from '../components/story-shot'
-import bicefal1 from '../assets/images/bicefal1-hayk-an-design.png'
 import bicefal3 from '../assets/images/bicefal3-hayk-an-design.png'
 import bicefal2 from '../assets/images/bicefal2-hayk-an-design.png'
 

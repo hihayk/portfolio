@@ -1,6 +1,5 @@
 import React from 'react'
 import StorySection, { StorySections } from '../components/story-section'
-import ImageSection from '../components/image-section'
 import StoryShot from '../components/story-shot'
 import CustomLink from '../components/custom-link'
 import scale1 from '../assets/images/scale1-hayk-an-design.png'

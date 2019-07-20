@@ -1,6 +1,5 @@
 import React from 'react'
 import StorySection, { StorySections } from '../components/story-section'
-import ImageSection from '../components/image-section'
 import StoryShot from '../components/story-shot'
 import sequence1 from '../assets/images/sequence1-hayk-an-design.png'
 import sequence3 from '../assets/images/sequence3-hayk-an-design.png'
