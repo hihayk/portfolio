@@ -21,7 +21,7 @@ injectGlobal`
 	}
 
 	:root {
-		--pagePadding: calc(3vw + 24px);
+		--pagePadding: calc(3vw + 18px);
 	}
 
 	body {
