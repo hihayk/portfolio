@@ -12,7 +12,7 @@ import Animate from '../components/animate'
 const About = (props) => {
   return(
     <div>
-      <Header />
+      <Header useCase='header' />
       <Spacer bottom={32} smBottom={16} />
 
       <Animate duration={0.8}>

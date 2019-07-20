@@ -8,7 +8,6 @@ import Dropdown from '../components/dropdown'
 import Header from '../components/header'
 import Animate from '../components/animate'
 import styled from 'styled-components'
-import { breakpoints } from '../styles/variables'
 
 const ProjectContainer = styled.div`
   min-height: 70vh;
@@ -19,11 +18,7 @@ const SubtitleWrapper = styled.div`
 `
 
 const PageContainer = styled.div`
-  padding: 0 64px;
-
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 0 32px;
-	}
+  padding: 0 var(--pagePadding);
 `
 
 const ProjectsDropdownTrigger = () => {
@@ -50,7 +45,7 @@ const Project = (props) => {
 	return(
     <div>
   		<ProjectContainer>
-  			<Header />
+  			<Header useCase='header' />
   			<Spacer bottom={32} smBottom={16} />
 
         <Animate duration={0.8}>
@@ -132,9 +127,7 @@ const Project = (props) => {
         </Animate>
   		</ProjectContainer>
 
-      <Spacer bottom={4}>
-				<Header notFixed hideName hideProjects contactLabel='Contact' aboutLabel='About' dimmed />
-			</Spacer>
+			<Header notFixed hideName hideProjects contactLabel='Contact' aboutLabel='About' dimmed useCase='footer' />
     </div>
 	)
 }

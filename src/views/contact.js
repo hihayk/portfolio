@@ -9,7 +9,7 @@ import Header from '../components/header'
 const System = () => {
   return(
     <div>
-      <Header />
+      <Header useCase='header' />
       <Spacer bottom={32} smBottom={16} />
 
       <Animate duration={0.8}>

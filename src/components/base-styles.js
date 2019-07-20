@@ -20,6 +20,10 @@ injectGlobal`
 		font-weight: 700;
 	}
 
+	:root {
+		--pagePadding: calc(3vw + 24px);
+	}
+
 	body {
 		margin: 0;
 	  padding: 0;

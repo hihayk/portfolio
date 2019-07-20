@@ -14,14 +14,10 @@ export const themeStyles = {
 }
 
 const StorySectionWrapper = styled.div`
-  padding: 64px 64px 128px 64px;
+  padding: var(--pagePadding) var(--pagePadding) calc(var(--pagePadding) * 2) var(--pagePadding);
   
   color: ${props => themeStyles[props.theme].color};
   background-color: ${props => props.backgroundColor || themeStyles[props.theme].backgroundColor};
-  
-  @media (max-width: ${breakpoints.sm}) {
-    padding: 32px 32px 64px 32px;
-	}
 
   h2,
   h3,

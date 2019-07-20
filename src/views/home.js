@@ -27,7 +27,7 @@ const MainSection = styled.div`
 	flex-grow: 1;
 	display: flex;
 	align-items: flex-end;
-	padding: 56px 64px;
+	padding: var(--pagePadding);
 	
 	@media (min-width: ${homeBreakpoint}) {
 		height: 100vh;
@@ -38,7 +38,7 @@ const MainSection = styled.div`
 	}
 	
 	@media (max-width: ${homeBreakpoint}) {
-		padding: ${circleWidth * 1 + 96}px 32px 32px 32px;
+		padding: ${circleWidth * 1 + 96}px var(--pagePadding) var(--pagePadding) var(--pagePadding);
 	}
 
 	&:after {
@@ -75,17 +75,13 @@ const ProjectsSection = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	padding: 56px 64px;
+	padding: var(--pagePadding);
 	
 	@media (min-width: ${breakpoints.lg}) {
 		width: 50%;
 		flex-shrink: 0;
 	}
-	
-	@media (max-width: ${homeBreakpoint}) {
-		padding: 32px;
-	}
-	
+
 	@media (min-width: ${homeBreakpoint}) {
 		height: 100vh;
 	}
@@ -152,7 +148,7 @@ const Home = () => {
 
 			<ProjectsSection>
 
-				<Header hideName disableProjects noPadding size='size1' notFixed primary/>
+				<Header hideName disableProjects size='size1' notFixed primary useCase='home' />
 
 				<Animate>
 					<ProjectsList id='projectLinksWrapper'>
