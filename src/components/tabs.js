@@ -44,7 +44,6 @@ class Tabs extends React.Component {
     this.setState ({
       activeTab: tabName
     })
-    console.log(this.state.activeTab)
   }
   
   render () {
