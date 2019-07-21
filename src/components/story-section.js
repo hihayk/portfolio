@@ -28,13 +28,13 @@ const StorySectionWrapper = styled.div`
 
   h2 {
     margin: 0;
-    padding-top: var(--space3);
+    padding-top: var(--space4);
     ${textSizesStyles.size2};
   }
   
   h3 {
     margin: 0;
-    padding-top: var(--space2);
+    padding-top: var(--space3);
     ${textSizesStyles.size1};
   }
   
@@ -49,7 +49,7 @@ const StorySectionWrapper = styled.div`
   }
 
   .TabsWrapper {
-    padding-top: var(--space2);
+    padding-top: var(--space3);
   }
 `
 
