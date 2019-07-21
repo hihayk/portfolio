@@ -17,23 +17,23 @@ export const colors = {
 
 export const textSizes = {
   sizeN1: {
-    fontSize: '0.875rem',
+    fontSize: '14px',
     lineHeight: '1.5',
   },
   size0: {
-    fontSize: '1.125rem',
+    fontSize: 'calc(0.25vw + 14px)',
     lineHeight: '1.5',
   },
   size1: {
-    fontSize: 'calc(1vw + 16px)',
-    lineHeight: '1.1',
+    fontSize: 'calc(0.6vw + 16px)',
+    lineHeight: '1.2',
   },
   size2: {
-    fontSize: 'calc(1vw + 24px)',
-    lineHeight: '1.1',
+    fontSize: 'calc(0.6vw + 24px)',
+    lineHeight: '1.2',
   },
   size3: {
-    fontSize: 'calc(1vw + 32px)',
+    fontSize: 'calc(0.6vw + 32px)',
     lineHeight: '1.1',
   },
   huge: {

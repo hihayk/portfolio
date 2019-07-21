@@ -83,7 +83,7 @@ const Header = (props) => {
                   Projects
                 </Text>
                 : <Dropdown triggerContent={(<CustomLink tag='span' primary={props.primary} dimmed={props.dimmed}>{props.projectsLabel}</CustomLink>)}>
-                  <Spacer top={1}>
+                  <Spacer top='var(--space1)'>
                     <ProjectsMenu />
                   </Spacer>
                 </Dropdown>

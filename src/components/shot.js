@@ -6,29 +6,20 @@ import { breakpoints } from '../styles/variables'
 const boxedStyles = css`
 	background-color: ${props => props.boxedBg ? props.boxedBg : '#F5F5F5'};
 	border-radius: 8px;
-	margin-left: 64px;
-	margin-right: 64px;
-	padding-left: 64px;
-	padding-right: 64px;
-	padding-top: 64px;
-	padding-bottom: 64px;
-
-	@media (max-width: ${breakpoints.md}) {
-		margin-left: 0;
-		margin-right: 0;
-		padding-left: 32px;
-		padding-right: 32px;
-		padding-top: 32px;
-		padding-bottom: 32px;
-	}
+	margin-left: var(--space4);
+	margin-right: var(--space4);
+	padding-left: var(--space4);
+	padding-right: var(--space4);
+	padding-top: var(--space4);
+	padding-bottom: var(--space4);
 `
 
 const ShotWrapper = styled.div`
 	${props => props.boxed && boxedStyles};
-	margin-bottom: 64px;
+	margin-bottom: var(--space4);
 
 	@media (max-width: ${breakpoints.md}) {
-		margin-bottom: 32px;
+		margin-bottom: var(--space3);
 	}
 `
 const Image = styled.img`
@@ -44,11 +35,7 @@ const ImageWrapper = styled.div`
 const ImageRow = styled.div`
   display: grid;
 	grid-template-columns: repeat(${props => props.rows}, 1fr);
-	grid-gap: 32px;
-
-	@media (max-width: ${breakpoints.md}) {
-		grid-gap: 16px;
-	}
+	grid-gap: var(--space3);
 `
 const ImageColumn = styled.div`
 `
@@ -56,11 +43,11 @@ const Caption = styled(Text)`
 	max-width: 640px;
 `
 const CaptionWrapper = styled.div`
-	margin: 32px auto 0 auto;
+	margin: var(--space3) auto 0 auto;
 	max-width: 1280px;
 
 	@media (max-width: ${breakpoints.md}) {
-		margin: 16px auto 0 auto;
+		margin: var(--space2) auto 0 auto;
 	}
 `
 

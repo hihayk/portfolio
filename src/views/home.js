@@ -154,7 +154,7 @@ const Home = () => {
 					<ProjectsList id='projectLinksWrapper'>
 
 						{projects.map((project, index) => (
-							<Spacer bottom={projects.length === index + 1 ? 0 : 1} key={index}>
+							<Spacer bottom={projects.length === index + 1 ? 0 : 'var(--space1)'} key={index}>
 								<Link to={project.path} key={index}>
 									<CustomLink
 										size='size3'

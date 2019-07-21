@@ -10,7 +10,7 @@ const System = () => {
   return(
     <div>
       <Header useCase='header' />
-      <Spacer bottom={32} smBottom={16} />
+      <Spacer bottom='calc(var(--pagePadding) * 4)'/>
 
       <Animate duration={0.8}>
         <Container fullPage>
@@ -32,7 +32,7 @@ const System = () => {
 
         <Container fullPage>
           <Container width='lg'>
-            <Spacer bottom={8} />
+            <Spacer bottom='var(--space4)' />
             <Text size='size1' weight='bold' tag='h2'>
               Find me on
             </Text>
@@ -48,7 +48,7 @@ const System = () => {
           </Container>
         </Container>
 
-        <Spacer bottom={8} />
+        <Spacer bottom='var(--space1)' />
 
       </Animate>
     </div>

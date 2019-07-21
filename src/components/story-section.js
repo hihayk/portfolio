@@ -28,27 +28,19 @@ const StorySectionWrapper = styled.div`
 
   h2 {
     margin: 0;
-    padding-top: 64px;
+    padding-top: var(--space3);
     ${textSizesStyles.size2};
-
-    @media (max-width: ${breakpoints.md}) {
-      padding-top: 32px;
-    }
   }
   
   h3 {
     margin: 0;
-    padding-top: 32px;
+    padding-top: var(--space2);
     ${textSizesStyles.size1};
-
-    @media (max-width: ${breakpoints.sm}) {
-      padding-top: 24px;
-    }
   }
   
   p {
     margin: 0;
-    padding-top: 8px;
+    padding-top: var(--space1);
     opacity: 0.7;
   }
   
@@ -57,11 +49,7 @@ const StorySectionWrapper = styled.div`
   }
 
   .TabsWrapper {
-    padding-top: 32px;
-    
-    @media (max-width: ${breakpoints.md}) {
-      padding-top: 16px;
-    }
+    padding-top: var(--space2);
   }
 `
 
@@ -70,7 +58,7 @@ StorySectionWrapper.defaultProps = {
 }
 
 const StoryContent = styled.div`
-  max-width: 1128px;
+  max-width: calc(1280px - var(--pagePadding));
   margin: 0 auto;
 `
 

@@ -46,20 +46,20 @@ const Project = (props) => {
     <div>
   		<ProjectContainer>
   			<Header useCase='header' />
-  			<Spacer bottom={32} smBottom={16} />
+  			<Spacer bottom='calc(var(--pagePadding) * 4)'/>
 
         <Animate duration={0.8}>
     			<Container fullPage>
-            <Spacer bottom={16} smBottom={8}>
-      				<Spacer bottom={1}>
+            <Spacer bottom='var(--space4)'>
+      				<Spacer bottom='var(--space1)'>
       					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
-      						<Spacer top={1}>
+      						<Spacer top='var(--space1)'>
       							<ProjectsMenu />
       						</Spacer>
       					</Dropdown>
       				</Spacer>
 
-      				<Spacer bottom={2}>
+      				<Spacer bottom='var(--space2)'>
       					<Text size='size3' weight='bold' tag='h1'>
 									{props.title}
       					</Text>
@@ -71,14 +71,14 @@ const Project = (props) => {
       				</Spacer>
 
       				<Container width='lg'>
-      					<Spacer bottom={2}>
+      					<Spacer bottom='var(--space2)'>
       						<Text tag='p'>
       							{props.description}
       						</Text>
       					</Spacer>
 
                 {props.role
-                  ? <Spacer bottom={2}>
+                  ? <Spacer bottom='var(--space2)'>
         							<Text dimmed>my role{props.inTeam ? ' (in team)' : ''}:</Text>
         							<Text>{props.role}</Text>
         					</Spacer>
@@ -119,7 +119,7 @@ const Project = (props) => {
 					{props.children}
 					
 					<PageContainer>
-						<Spacer top={8} bottom={8}>
+						<Spacer top='var(--pagePadding)' bottom='var(--pagePadding)'>
 							<ProjectsMenu />
 						</Spacer>
 					</PageContainer>

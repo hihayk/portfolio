@@ -8,12 +8,13 @@ import Dropdown from '../components/dropdown'
 import CustomLink from '../components/custom-link'
 import Header from '../components/header'
 import Animate from '../components/animate'
+import { textSizes } from '../styles/variables';
 
 const About = (props) => {
   return(
     <div>
       <Header useCase='header' />
-      <Spacer bottom={32} smBottom={16} />
+      <Spacer bottom='calc(var(--pagePadding) * 4)'/>
 
       <Animate duration={0.8}>
         <Container fullPage>
@@ -36,7 +37,7 @@ const About = (props) => {
 
         </Container>
 
-        <Spacer bottom={4} smBottom={2} />
+        <Spacer bottom='var(--space3)' />
 
         <Container fullPage>
           <Container width='lg'>
@@ -53,7 +54,7 @@ const About = (props) => {
             </Container>
           </Container>
 
-          <Spacer bottom={8} smBottom={4} />
+          <Spacer bottom='var(--space4)' />
 
           <Text size='huge'>
             A/m
@@ -70,22 +71,32 @@ const About = (props) => {
             </Container>
           </Container>
 
-          <Spacer bottom={8} />
+          <Spacer bottom='var(--space3)' />
 
-          <Distribute vertical space={8}>
+
+          <Distribute vertical space='var(--space4)'>
+            <Distribute vertical space='var(--space1)'>
+              <div style={{ background: 'pink', height: 'var(--space1)', width: 'var(--space1)' }} />
+              <div style={{ background: 'pink', height: 'var(--space2)', width: 'var(--space2)' }} />
+              <div style={{ background: 'pink', height: 'var(--space3)', width: 'var(--space3)' }} />
+              <div style={{ background: 'pink', height: 'var(--space4)', width: 'var(--space4)' }} />
+              <div style={{ background: 'pink', height: 'var(--space5)', width: 'var(--space5)' }} />
+            </Distribute>
+
             <div>
               <Text dimmed>Text</Text>
-              <Spacer bottom={1} />
-              <Text size='size3'>40/44 — size3</Text>
-              <Text size='size2'>32/40 — size2</Text>
-              <Text size='size1'>24/32 — size1</Text>
-              <Text size='size0'>18/24 — size0</Text>
-              <Text size='sizeN1'>14/20 — sizeN1</Text>
+              <Spacer bottom='var(--space1)' />
+              
+              {Object.entries(textSizes).map(([key, value], index) => (
+                <Spacer bottom='var(--space1)' key={index}>
+                  <Text size={key}>{key}: {value.fontSize}</Text>
+                </Spacer>
+              ))}
             </div>
 
             <div>
               <Text dimmed>Dropdown</Text>
-              <Spacer bottom={1} />
+              <Spacer bottom='var(--space1)' />
               <Dropdown
                 triggerContent='Trigger'
               >
@@ -95,7 +106,7 @@ const About = (props) => {
 
             <div>
               <Text dimmed>Link</Text>
-              <Spacer bottom={1} />
+              <Spacer bottom='var(--space1)' />
               <CustomLink>Link on hover</CustomLink>
               <br />
               <CustomLink primary>Link on hover primary</CustomLink>
@@ -107,7 +118,7 @@ const About = (props) => {
 
             <div>
               <Text dimmed>Spread</Text>
-              <Spacer bottom={1} />
+              <Spacer bottom='var(--space1)' />
               <Spread>
                 <div>A</div>
                 <div>B</div>
@@ -117,8 +128,8 @@ const About = (props) => {
 
             <div>
               <Text dimmed>Distribute</Text>
-              <Spacer bottom={1} />
-              <Distribute space={4}>
+              <Spacer bottom='var(--space1)' />
+              <Distribute space='var(--space3)'>
                 <div>A</div>
                 <div>B</div>
                 <div>C</div>
@@ -127,14 +138,14 @@ const About = (props) => {
 
             <div>
               <Text dimmed>Spacer</Text>
-              <Spacer bottom={1} />
-              <Spacer right={2} inline>
+              <Spacer bottom='var(--space1)' />
+              <Spacer right='var(--space2)' inline>
                 <span>A</span>
               </Spacer>
-              <Spacer right={4} inline>
+              <Spacer right='var(--space3)' inline>
                 <span>B</span>
               </Spacer>
-              <Spacer right={8} inline>
+              <Spacer right='var(--space4)' inline>
                 <span>C</span>
               </Spacer>
               <Spacer inline>
