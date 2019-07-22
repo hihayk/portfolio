@@ -20,6 +20,19 @@ injectGlobal`
 		font-weight: 700;
 	}
 
+	:root {
+		--ratio: 0.625vw;
+		
+		--space1: calc( calc(var(--ratio)/2 + 4px) );
+		
+		--space2: calc( var(--space1) * 2 );
+		--space3: calc( var(--space2) * 2 );
+		--space4: calc( var(--space3) * 2 );
+		--space5: calc( var(--space4) * 2 );
+		
+		--pagePadding: calc( calc(var(--ratio) * 6) + 16px );
+	}
+
 	body {
 		margin: 0;
 	  padding: 0;

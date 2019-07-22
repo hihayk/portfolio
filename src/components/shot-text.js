@@ -6,12 +6,12 @@ import { breakpoints } from '../styles/variables'
 const ShotTextWrapper = styled.div`
   padding: 0 128px;
   max-width: ${1280 + 128 * 2}px;
-  margin: 0 auto 64px auto;
+  margin: 0 auto var(--space4) auto;
 
   @media (max-width: ${breakpoints.md}) {
 		max-width: auto;
-    padding: 0 32px;
-    margin: 0 auto 32px auto;
+    padding: 0 var(--space3);
+    margin: 0 auto var(--space3) auto;
 	}
 `
 

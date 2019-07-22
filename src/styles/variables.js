@@ -17,125 +17,59 @@ export const colors = {
 
 export const textSizes = {
   sizeN1: {
-    smallScreen: {
-      fontSize: '12px',
-      lineHeight: '18px',
-    },
-    mediumScreen: {
-      fontSize: '14px',
-      lineHeight: '20px',
-    },
+    fontSize: '14px',
+    lineHeight: '1.5',
   },
   size0: {
-    smallScreen: {
-      fontSize: '14px',
-      lineHeight: '20px',
-    },
-    mediumScreen: {
-      fontSize: '18px',
-      lineHeight: '27px',
-    },
+    fontSize: 'calc(0.25vw + 14px)',
+    lineHeight: '1.5',
   },
   size1: {
-    smallScreen: {
-      fontSize: '18px',
-      lineHeight: '24px',
-    },
-    mediumScreen: {
-      fontSize: '24px',
-      lineHeight: '32px',
-    },
+    fontSize: 'calc(0.6vw + 16px)',
+    lineHeight: '1.2',
   },
   size2: {
-    smallScreen: {
-      fontSize: '24px',
-      lineHeight: '32px',
-    },
-    mediumScreen: {
-      fontSize: '32px',
-      lineHeight: '40px',
-    },
+    fontSize: 'calc(0.6vw + 24px)',
+    lineHeight: '1.2',
   },
   size3: {
-    smallScreen: {
-      fontSize: '32px',
-      lineHeight: '36px',
-    },
-    mediumScreen: {
-      fontSize: '40px',
-      lineHeight: '44px',
-    },
+    fontSize: 'calc(0.6vw + 32px)',
+    lineHeight: '1.1',
   },
   huge: {
-    smallScreen: {
-      fontSize: '144px',
-      lineHeight: '144px',
-    },
-    mediumScreen: {
-      fontSize: '144px',
-      lineHeight: '144px',
-    },
+    fontSize: '9rem',
+    lineHeight: '1',
   },
 }
 
 export const textSizesStyles = {
   sizeN1: css`
-    font-size: ${textSizes.sizeN1.mediumScreen.fontSize};
-    line-height: ${textSizes.sizeN1.mediumScreen.lineHeight};
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.sizeN1.smallScreen.fontSize};
-      line-height: ${textSizes.sizeN1.smallScreen.lineHeight};
-    }
+    font-size: ${textSizes.sizeN1.fontSize};
+    line-height: ${textSizes.sizeN1.lineHeight};
   `,
   size0: css`
-    font-size: ${textSizes.size0.mediumScreen.fontSize};
-    line-height: ${textSizes.size0.mediumScreen.lineHeight};
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.size0.smallScreen.fontSize};
-      line-height: ${textSizes.size0.smallScreen.lineHeight};
-    }
+    font-size: ${textSizes.size0.fontSize};
+    line-height: ${textSizes.size0.lineHeight};
   `,
   size1: css`
-    font-size: ${textSizes.size1.mediumScreen.fontSize};
-    line-height: ${textSizes.size1.mediumScreen.lineHeight};
+    font-size: ${textSizes.size1.fontSize};
+    line-height: ${textSizes.size1.lineHeight};
     letter-spacing: -0.02em;
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.size1.smallScreen.fontSize};
-      line-height: ${textSizes.size1.smallScreen.lineHeight};
-    }
   `,
   size2: css`
-    font-size: ${textSizes.size2.mediumScreen.fontSize};
-    line-height: ${textSizes.size2.mediumScreen.lineHeight};
+    font-size: ${textSizes.size2.fontSize};
+    line-height: ${textSizes.size2.lineHeight};
     letter-spacing: -0.03em;
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.size2.smallScreen.fontSize};
-      line-height: ${textSizes.size2.smallScreen.lineHeight};
-    }
   `,
   size3: css`
-    font-size: ${textSizes.size3.mediumScreen.fontSize};
-    line-height: ${textSizes.size3.mediumScreen.lineHeight};
+    font-size: ${textSizes.size3.fontSize};
+    line-height: ${textSizes.size3.lineHeight};
     letter-spacing: -0.03em;
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.size3.smallScreen.fontSize};
-      line-height: ${textSizes.size3.smallScreen.lineHeight};
-    }
   `,
   huge: css`
-    font-size: ${textSizes.huge.mediumScreen.fontSize};
-    line-height: ${textSizes.huge.mediumScreen.lineHeight};
+    font-size: ${textSizes.huge.fontSize};
+    line-height: ${textSizes.huge.lineHeight};
     letter-spacing: -0.05em;
     opacity: .2;
-    
-    @media (max-width: ${breakpoints.sm}) {
-      font-size: ${textSizes.huge.smallScreen.fontSize};
-      line-height: ${textSizes.huge.smallScreen.lineHeight};
-    }
   `,
 }

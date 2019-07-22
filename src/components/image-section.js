@@ -7,7 +7,7 @@ const ImageSectionWrapper = styled.div`
   align-items: flex-start;
 
   @media (min-width: ${breakpoints.md}) {
-    padding: 32px 0;
+    padding: var(--space2) 0;
   }
 
   @media (max-width: ${breakpoints.md}) {
@@ -17,16 +17,12 @@ const ImageSectionWrapper = styled.div`
 
 const ChildrenWrapper = styled.div`
   @media (min-width: ${breakpoints.md}) {
-		padding-right: 32px;
+		padding-right: var(--space2);
 	}
 `
 
 const Image = styled.img`
-  padding-top: 32px;
-
-  @media (max-width: ${breakpoints.md}) {
-    padding-top: 16px;
-  }
+  padding-top: var(--space3);
 `
 
 const ImageSection = ({ children, imgSrc }) => (

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { colors, textSizesStyles, breakpoints } from '../styles/variables'
+import { colors, textSizesStyles } from '../styles/variables'
 
 const TabsWrapper = styled.div`
   display: flex;
@@ -8,11 +8,7 @@ const TabsWrapper = styled.div`
 `
 
 const Tab = styled.div`
-  padding: 8px 16px;
-
-  @media (max-width: ${breakpoints.md}) {
-    padding: 6px 8px;
-  }
+  padding: var(--space1) var(--space2);
 
   ${props => !props.active && `
     cursor: pointer;

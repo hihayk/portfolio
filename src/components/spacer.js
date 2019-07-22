@@ -1,19 +1,41 @@
 import styled from 'styled-components'
-import { breakpoints } from '../styles/variables'
 
-const Spacer = styled.div`
-	${props => props.top ? `padding-top: ${props.top * 8}px` : ''};
-	${props => props.bottom ? `padding-bottom: ${props.bottom * 8}px` : ''};
-	${props => props.left ? `padding-left: ${props.left * 8}px` : ''};
-	${props => props.right ? `padding-right: ${props.right * 8}px` : ''};
-	${props => props.inline ? `display: inline-block` : ''};
+const getSpaceCss = (props) => {
+	let paddingSide
+	let paddingValue
 
-	@media (max-width: ${breakpoints.sm}) {
-		${props => props.smTop ? `padding-top: ${props.smTop * 8}px` : ''};
-		${props => props.smBottom ? `padding-bottom: ${props.smBottom * 8}px` : ''};
-		${props => props.smLeft ? `padding-left: ${props.smLeft * 8}px` : ''};
-		${props => props.smRight ? `padding-right: ${props.smRight * 8}px` : ''};
+	if(props.top) {
+		paddingSide = 'top'
+		paddingValue = isNaN(props.top) ? props.top : `${props.top * 8}px`
+
+		return `padding-${paddingSide}: ${paddingValue}`
 	}
+	
+	if(props.right) {
+		paddingSide = 'right'
+		paddingValue = isNaN(props.right) ? props.right : `${props.right * 8}px`
+
+		return `padding-${paddingSide}: ${paddingValue}`
+	}
+	
+	if(props.bottom) {
+		paddingSide = 'bottom'
+		paddingValue = isNaN(props.bottom) ? props.bottom : `${props.bottom * 8}px`
+
+		return `padding-${paddingSide}: ${paddingValue}`
+	}
+	
+	if(props.left) {
+		paddingSide = 'left'
+		paddingValue = isNaN(props.left) ? props.left : `${props.left * 8}px`
+
+		return `padding-${paddingSide}: ${paddingValue}`
+	}
+}
+
+const Spacer = styled.div`	
+	${props => props.inline ? `display: inline-block` : ''};
+	${props => getSpaceCss(props)};
 `
 
 export default Spacer
