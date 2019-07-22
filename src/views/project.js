@@ -105,8 +105,8 @@ const Project = (props) => {
 								{props.links && (
 									<div>
 										{props.links.map((item, index) => (
-											<div>
-												<CustomLink href={item} key={index} target='_blank' lineOnHover={false} withArrow>{getVisibleUrl(item)}</CustomLink>
+											<div key={index}>
+												<CustomLink href={item} target='_blank' lineOnHover={false} withArrow>{getVisibleUrl(item)}</CustomLink>
 												<br />
 											</div>
 										))}

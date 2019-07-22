@@ -22,7 +22,7 @@ const ChildrenWrapper = styled.div`
 `
 
 const Image = styled.img`
-  padding-top: var(--space2);
+  padding-top: var(--space3);
 `
 
 const ImageSection = ({ children, imgSrc }) => (

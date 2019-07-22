@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { textSizesStyles, breakpoints, colors } from '../styles/variables'
+import { textSizesStyles, colors } from '../styles/variables'
 
 export const themeStyles = {
   dark: {
@@ -34,7 +34,7 @@ const StorySectionWrapper = styled.div`
   
   h3 {
     margin: 0;
-    padding-top: var(--space3);
+    padding-top: var(--space4);
     ${textSizesStyles.size1};
   }
   
