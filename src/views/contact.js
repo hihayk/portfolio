@@ -42,6 +42,8 @@ const System = () => {
             <br />
             <CustomLink size='size1' dimmed href='https://dribbble.com/hihayk' target='_blank'>dribbble</CustomLink>
             <br />
+            <CustomLink size='size1' dimmed href='https://www.youtube.com/channel/UCTYgfcj46qIidyGfuqhjQvw' target='_blank'>youtube</CustomLink>
+            <br />
             <CustomLink size='size1' dimmed href='https://www.linkedin.com/in/hihayk' target='_blank'>linkedin</CustomLink>
             <br />
             <CustomLink size='size1' dimmed href='https://www.designspiration.net/hayk/' target='_blank'>designspiration</CustomLink>
