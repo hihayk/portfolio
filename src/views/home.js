@@ -1,192 +1,209 @@
-import React from 'react'
-import styled from 'styled-components'
-import Text from '../components/text'
-import Container from '../components/container'
-import CustomLink from '../components/custom-link'
-import Header from '../components/header'
-import Animate from '../components/animate'
-import { Link } from 'react-router-dom'
-import projects from '../data/data'
-import { colors, breakpoints } from '../styles/variables'
-import Spacer from '../components/spacer'
+import React from "react";
+import styled from "styled-components";
+import Text from "../components/text";
+import Container from "../components/container";
+import CustomLink from "../components/custom-link";
+import Header from "../components/header";
+import Animate from "../components/animate";
+import { Link } from "react-router-dom";
+import projects from "../data/data";
+import { colors, breakpoints } from "../styles/variables";
+import Spacer from "../components/spacer";
 
-const circleWidth = '240'
-const homeBreakpoint = '1080px'
+const circleWidth = "240";
+const homeBreakpoint = "1080px";
 
 const MainContainer = styled.div`
-	display: flex;
+  display: flex;
 
-	@media (max-width: ${homeBreakpoint}) {
-		flex-direction: column;
-	}
-`
-const MainSection = styled.div`
-	position: relative;
-	background-color: ${colors.red};
-	flex-shrink: 0;
-	flex-grow: 1;
-	display: flex;
-	align-items: flex-end;
-	padding: var(--pagePadding);
-	
-	@media (min-width: ${homeBreakpoint}) {
-		height: 100vh;
-	}
-	
-	@media (min-width: ${breakpoints.lg}) {
-		width: 50%;
-	}
-	
-	@media (max-width: ${homeBreakpoint}) {
-		padding: ${circleWidth * 1 + 96}px var(--pagePadding) var(--pagePadding) var(--pagePadding);
-	}
-
-	&:after {
-		content: '';
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		display: block;
-		position: absolute;
-		width: ${circleWidth}px;
-		height: ${circleWidth}px;
-		border-radius: 50%;
-		background-color: white;
-
-		@media (max-width: ${homeBreakpoint}) {
-			top: 32px;
-			bottom: auto;
-		}
-	}
-
-	*::-moz-selection {
-  	color: white;
-  	background-color: white;
+  @media (max-width: ${homeBreakpoint}) {
+    flex-direction: column;
   }
-	*::selection {
-		color: white;
-		background-color: white;
-	}
-`
+`;
+const MainSection = styled.div`
+  position: relative;
+  background-color: ${colors.red};
+  flex-shrink: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--pagePadding);
+
+  @media (min-width: ${homeBreakpoint}) {
+    height: 100vh;
+  }
+
+  @media (min-width: ${breakpoints.lg}) {
+    width: 50%;
+  }
+
+  @media (max-width: ${homeBreakpoint}) {
+    padding: ${circleWidth * 1 + 96}px var(--pagePadding) var(--pagePadding)
+      var(--pagePadding);
+  }
+
+  &:after {
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    width: ${circleWidth}px;
+    height: ${circleWidth}px;
+    border-radius: 50%;
+    background-color: white;
+
+    @media (max-width: ${homeBreakpoint}) {
+      top: 32px;
+      bottom: auto;
+    }
+  }
+
+  *::-moz-selection {
+    color: white;
+    background-color: white;
+  }
+  *::selection {
+    color: white;
+    background-color: white;
+  }
+`;
 const ProjectsSection = styled.div`
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: var(--pagePadding);
-	
-	@media (min-width: ${breakpoints.lg}) {
-		width: 50%;
-		flex-shrink: 0;
-	}
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--pagePadding);
 
-	@media (min-width: ${homeBreakpoint}) {
-		height: 100vh;
-	}
+  @media (min-width: ${breakpoints.lg}) {
+    width: 50%;
+    flex-shrink: 0;
+  }
 
-	&:after {
-		content: '';
-		right: 0;
-		top: 0;
-		bottom: 0;
-		margin: auto;
-		display: block;
-		position: absolute;
-		width: ${circleWidth / 2}px;
-		height: ${circleWidth}px;
-		border-radius: ${circleWidth}px 0 0 ${circleWidth}px;
-		background-color: ${colors.red};
+  @media (min-width: ${homeBreakpoint}) {
+    height: 100vh;
+  }
 
-		@media (max-width: ${homeBreakpoint}) {
-			bottom: 0;
-			top: auto;
-			left: 0;
-			right: 0;
-			width: ${circleWidth}px;
-			height: ${circleWidth / 2}px;
-			border-radius: ${circleWidth}px ${circleWidth}px 0 0;
-		}
-	}
-`
+  &:after {
+    content: "";
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: block;
+    position: absolute;
+    width: ${circleWidth / 2}px;
+    height: ${circleWidth}px;
+    border-radius: ${circleWidth}px 0 0 ${circleWidth}px;
+    background-color: ${colors.red};
+
+    @media (max-width: ${homeBreakpoint}) {
+      bottom: 0;
+      top: auto;
+      left: 0;
+      right: 0;
+      width: ${circleWidth}px;
+      height: ${circleWidth / 2}px;
+      border-radius: ${circleWidth}px ${circleWidth}px 0 0;
+    }
+  }
+`;
 const Intro = styled.div`
-	color: white;
-`
+  color: white;
+`;
 
 const ProjectsList = styled.div`
-	padding: ${circleWidth / 2}px 0 ${circleWidth / 2 + 32}px 0;
+  padding: ${circleWidth / 2}px 0 ${circleWidth / 2 + 32}px 0;
 
-	@media (min-width: ${homeBreakpoint}) {
-		padding: 0 ${circleWidth / 2}px 0 0;
-	}
-`
+  @media (min-width: ${homeBreakpoint}) {
+    padding: 0 ${circleWidth / 2}px 0 0;
+  }
+`;
 
 const Home = () => {
-	return(
-		<MainContainer>
-			<MainSection>
-				<Animate down>
-					<Intro>
-						<Text size='size3' tag='h1'>
-							<Text size='size3' tag='span' weight='bold'>Hayk An</Text>
-							<br />
-							— design & code
-						</Text>
+  return (
+    <MainContainer>
+      <MainSection>
+        <Animate down>
+          <Intro>
+            <Text size="size3" tag="h1">
+              <Text size="size3" tag="span" weight="bold">
+                Hayk An
+              </Text>
+              <br />— design & code
+            </Text>
 
-						<Container top={1} width='lg'>
-							<Text size='size0'>
-								Product designer focused on
-								<br />
-								modular design and development
-								<br />
-							</Text>
-						</Container>
-					</Intro>
-				</Animate>
-			</MainSection>
+            <Container top={1} width="lg">
+              <Text size="size0">
+                Product designer focused on
+                <br />
+                modular design and development
+                <br />
+              </Text>
+            </Container>
+          </Intro>
+        </Animate>
+      </MainSection>
 
-			<ProjectsSection>
+      <ProjectsSection>
+        <Header
+          hideName
+          disableProjects
+          size="size1"
+          notFixed
+          primary
+          useCase="home"
+        />
 
-				<Header hideName disableProjects size='size1' notFixed primary useCase='home' />
+        <Animate>
+          <ProjectsList id="projectLinksWrapper">
+            <Spacer bottom={1}>
+              <CustomLink
+                size="size3"
+                lineOnHover
+                tickLine
+                primary
+                target="_blank"
+                href="https://hihayk.github.io/shaper"
+              >
+                Shaper
+              </CustomLink>
+            </Spacer>
+            {projects.map((project, index) => (
+              <Spacer bottom={1} key={index}>
+                <Link to={project.path} key={index}>
+                  <CustomLink
+                    size="size3"
+                    tag="span"
+                    lineOnHover
+                    tickLine
+                    primary
+                  >
+                    {project.title}
+                  </CustomLink>
+                </Link>
+              </Spacer>
+            ))}
+            <CustomLink
+              size="size3"
+              lineOnHover
+              tickLine
+              primary
+              target="_blank"
+              href="https://hihayk.github.io/"
+            >
+              More
+            </CustomLink>
+          </ProjectsList>
+        </Animate>
 
-				<Animate>
-					<ProjectsList id='projectLinksWrapper'>
+        <Text size="size1">&nbsp;</Text>
+      </ProjectsSection>
+    </MainContainer>
+  );
+};
 
-						{projects.map((project, index) => (
-							<Spacer bottom={1} key={index}>
-								<Link to={project.path} key={index}>
-									<CustomLink
-										size='size3'
-										tag='span'
-										lineOnHover
-										tickLine
-										primary
-										>
-										{project.title}
-									</CustomLink>
-								</Link>
-							</Spacer>
-						))}
-						<CustomLink
-							size='size3'
-							lineOnHover
-							tickLine
-							primary
-							target="_blank"
-							href="https://hihayk.github.io/"
-						>
-							More
-						</CustomLink>
-
-					</ProjectsList>
-				</Animate>
-
-				<Text size='size1'>&nbsp;</Text>
-
-			</ProjectsSection>
-		</MainContainer>
-	)
-}
-
-export default Home
+export default Home;
