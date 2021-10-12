@@ -193,6 +193,16 @@ const Home = () => {
               tickLine
               primary
               target="_blank"
+              href="https://hihayk.github.io/matter"
+            >
+              Matter
+            </CustomLink>
+            <CustomLink
+              size="size3"
+              lineOnHover
+              tickLine
+              primary
+              target="_blank"
               href="https://hihayk.github.io/"
             >
               More
