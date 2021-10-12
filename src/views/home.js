@@ -187,16 +187,18 @@ const Home = () => {
                 </Link>
               </Spacer>
             ))}
-            <CustomLink
-              size="size3"
-              lineOnHover
-              tickLine
-              primary
-              target="_blank"
-              href="https://hihayk.github.io/matter"
-            >
-              Matter
-            </CustomLink>
+            <Spacer bottom={1}>
+              <CustomLink
+                size="size3"
+                lineOnHover
+                tickLine
+                primary
+                target="_blank"
+                href="https://hihayk.github.io/matter"
+                >
+                Matter
+              </CustomLink>
+            </Spacer>
             <CustomLink
               size="size3"
               lineOnHover
