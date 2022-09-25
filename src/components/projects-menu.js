@@ -10,6 +10,41 @@ import styled from 'styled-components'
 const MenuWrapper = styled.div`
 `
 
+const otherProjects = [
+  {
+    url: `https://hihayk.github.io/poco/`,
+    title: 'Poco'
+  },
+  {
+    url: `http://versalversal.com/`,
+    title: 'Versal'
+  },
+  {
+    url: `http://elenaguilar.com/`,
+    title: 'Elena Aguilar'
+  },
+  {
+    url: `https://hihayk.github.io/distribute/`,
+    title: 'Distribute'
+  },
+  {
+    url: `http://css2sass.herokuapp.com/`,
+    title: 'CSS2SASS'
+  },
+  {
+    url: `http://dromnu.space/`,
+    title: 'Drömnu'
+  },
+  {
+    url: `https://hihayk.github.io/granularsynths/`,
+    title: 'Granular Synths'
+  },
+  {
+    url: `https://hihayk.github.io/ride/`,
+    title: 'Ride'
+  },
+]
+
 const ProjectsMenu = () => {
   return(
     <MenuWrapper>
@@ -33,21 +68,11 @@ const ProjectsMenu = () => {
         <Text dimmed>Other</Text>
       </Spacer>
 
-      <CustomLink href='https://hihayk.github.io/poco/' target='_blank'>Poco</CustomLink>
-      <br />
-      <CustomLink href='http://versalversal.com/' target='_blank'>Versal</CustomLink>
-      <br />
-      <CustomLink href='http://elenaguilar.com/' target='_blank'>Elena Aguilar</CustomLink>
-      <br />
-      <CustomLink href='https://hihayk.github.io/distribute/' target='_blank'>Distribute</CustomLink>
-      <br />
-      <CustomLink href='http://css2sass.herokuapp.com/' target='_blank'>CSS2SASS</CustomLink>
-      <br />
-      <CustomLink href='http://dromnu.space/' target='_blank'>Drömnu</CustomLink>
-      <br />
-      <CustomLink href='https://hihayk.github.io/granularsynths/' target='_blank'>Granular Synths</CustomLink>
-      <br />
-      <CustomLink href='https://hihayk.github.io/ride/' target='_blank'>Ride</CustomLink>
+      {otherProjects.map((item, index) => (
+        <div key={index}>
+          <CustomLink href={item.url} target='_blank'>{item.title}</CustomLink>
+        </div>
+      ))}
     </MenuWrapper>
   )
 }

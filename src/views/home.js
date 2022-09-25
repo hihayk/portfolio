@@ -123,6 +123,19 @@ const ProjectsList = styled.div`
   }
 `;
 
+const HomeLink = ({ href, children }) => (
+  <CustomLink
+    size="size3"
+    lineOnHover
+    tickLine
+    primary
+    target="_blank"
+    href={href}
+  >
+    {children}
+  </CustomLink>
+)
+
 const Home = () => {
   return (
     <MainContainer>
@@ -161,54 +174,27 @@ const Home = () => {
         <Animate>
           <ProjectsList id="projectLinksWrapper">
             <Spacer bottom={1}>
-              <CustomLink
-                size="size3"
-                lineOnHover
-                tickLine
-                primary
-                target="_blank"
-                href="https://hihayk.github.io/shaper"
-              >
+              <HomeLink href="https://hihayk.github.io/shaper">
                 Shaper
-              </CustomLink>
+              </HomeLink>
             </Spacer>
             {projects.map((project, index) => (
               <Spacer bottom={1} key={index}>
                 <Link to={project.path} key={index}>
-                  <CustomLink
-                    size="size3"
-                    tag="span"
-                    lineOnHover
-                    tickLine
-                    primary
-                  >
+                  <HomeLink>
                     {project.title}
-                  </CustomLink>
+                  </HomeLink>
                 </Link>
               </Spacer>
             ))}
             <Spacer bottom={1}>
-              <CustomLink
-                size="size3"
-                lineOnHover
-                tickLine
-                primary
-                target="_blank"
-                href="https://hihayk.github.io/matter"
-                >
+              <HomeLink href="https://hihayk.github.io/matter">
                 Matter
-              </CustomLink>
+              </HomeLink>
             </Spacer>
-            <CustomLink
-              size="size3"
-              lineOnHover
-              tickLine
-              primary
-              target="_blank"
-              href="https://hihayk.github.io/"
-            >
+            <HomeLink href="https://hihayk.github.io/">
               More
-            </CustomLink>
+            </HomeLink>
           </ProjectsList>
         </Animate>
 
