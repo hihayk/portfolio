@@ -14,8 +14,8 @@ export const themeStyles = {
 }
 
 const StorySectionWrapper = styled.div`
-  padding: var(--pagePadding) var(--pagePadding) calc(var(--pagePadding) * 2) var(--pagePadding);
-  
+  padding: var(--pagePadding) 0 calc(var(--pagePadding) * 2) 0;
+
   color: ${props => themeStyles[props.theme].color};
   background-color: ${props => props.backgroundColor || themeStyles[props.theme].backgroundColor};
 
@@ -31,19 +31,19 @@ const StorySectionWrapper = styled.div`
     padding-top: var(--space4);
     ${textSizesStyles.size2};
   }
-  
+
   h3 {
     margin: 0;
     padding-top: var(--space4);
     ${textSizesStyles.size1};
   }
-  
+
   p {
     margin: 0;
     padding-top: var(--space1);
     opacity: 0.7;
   }
-  
+
   figcaption {
     opacity: 0.5;
   }
@@ -58,17 +58,16 @@ StorySectionWrapper.defaultProps = {
 }
 
 const StoryContent = styled.div`
-  max-width: calc(1280px - var(--pagePadding));
-  margin: 0 auto;
+
 `
 
 export const StorySections = styled.div`
-  
+
 `
 
-const StorySection = ({ children, section, backgroundColor, theme }) => (
+const StorySection = ({ children, section, backgroundColor, hasFullWidth, theme }) => (
   <StorySectionWrapper section={section} backgroundColor={backgroundColor} theme={theme}>
-    <StoryContent>
+    <StoryContent hasFullWidth={hasFullWidth}>
       {children}
     </StoryContent>
   </StorySectionWrapper>

@@ -8,6 +8,7 @@ const CustomLinkWrapper = styled.span`
 	position: relative;
 	color: ${props => props.primary ? colors.red : props.color};
 	text-decoration: none;
+	white-space: nowrap;
 	${props => !props.lineOnHover ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-1px'} 0 ${props.primary ? colors.redLight : 'rgba(0,0,0,.2)'}` : ''};
 	${props => props.dimmed ? 'opacity: .7' : ''};
 

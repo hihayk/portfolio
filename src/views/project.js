@@ -8,6 +8,13 @@ import Dropdown from '../components/dropdown'
 import Header from '../components/header'
 import Animate from '../components/animate'
 import styled from 'styled-components'
+import { colors, textSizesStyles } from '../styles/variables'
+
+const RoleTitle = styled.div`
+  ${textSizesStyles.sizeN1};
+  font-weight: bold;
+  text-transform: uppercase;
+`
 
 const ProjectContainer = styled.div`
   min-height: 70vh;
@@ -63,7 +70,7 @@ const Project = (props) => {
       					<Text size='size3' weight='bold' tag='h1'>
 									{props.title}
       					</Text>
-								<SubtitleWrapper>								
+								<SubtitleWrapper>
                 <Text size='size3' dimmed tag='h2'>
       						{props.subtitle}
       					</Text>
@@ -85,12 +92,32 @@ const Project = (props) => {
                   : null
 								}
 
+                {props.roleTags && (
+                  <div>
+                    <RoleTitle>Role</RoleTitle>
+								    {props.roleTags.map((item, index) => (
+                      <div key={index}>
+                        {item}
+                      </div>
+                    ))}
+                  </div>
+                )}
 
+                {props.collaborators && (
+                  <div>
+                    <span>In collaboration with: </span>
+                    {props.collaborators.map((item, index) => (
+                      <CustomLink key={index} href={item.link}>
+                        {item.name}
+                      </CustomLink>
+                    ))}
+                  </div>
+                )}
 
                 {props.contributors && (
 									<Text dimmed>main contributors:</Text>
 								)}
-								
+
 								{props.contributors && props.contributors.map(( contributor ) => (
 									<Spacer>
 										<CustomLink target='_blank' href={'https://github.com/' + contributor.githubUsername}>@{contributor.githubUsername}</CustomLink> — <Text tag='span' dimmed>{contributor.role}</Text>
@@ -101,7 +128,7 @@ const Project = (props) => {
                   ? <CustomLink href={props.link} target='_blank' lineOnHover={false} withArrow>{getVisibleUrl(props.link)}</CustomLink>
                   : null
 								}
-								
+
 								{props.links && (
 									<div>
 										{props.links.map((item, index) => (
@@ -117,7 +144,7 @@ const Project = (props) => {
     			</Container>
 
 					{props.children}
-					
+
 					<PageContainer>
 						<Spacer top='var(--pagePadding)' bottom='var(--pagePadding)'>
 							<ProjectsMenu />

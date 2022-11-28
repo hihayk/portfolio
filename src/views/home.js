@@ -123,7 +123,7 @@ const ProjectsList = styled.div`
   }
 `;
 
-const HomeLink = ({ href, children }) => (
+export const HomeLink = ({ href, children }) => (
   <CustomLink
     size="size3"
     lineOnHover

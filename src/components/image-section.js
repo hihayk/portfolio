@@ -12,13 +12,13 @@ const ImageSectionWrapper = styled.div`
 
   @media (max-width: ${breakpoints.md}) {
     flex-direction: column;
-	}
+  }
 `
 
 const ChildrenWrapper = styled.div`
   @media (min-width: ${breakpoints.md}) {
-		padding-right: var(--space2);
-	}
+    padding-right: var(--space2);
+  }
 `
 
 const Image = styled.img`

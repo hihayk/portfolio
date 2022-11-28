@@ -10,6 +10,7 @@ const ShotWrapper = styled.div`
 `
 const Image = styled.img`
 	display: block;
+	width: 100%;
 `
 const ImageWrapper = styled.div`
 	max-width: 1280px;
@@ -17,8 +18,8 @@ const ImageWrapper = styled.div`
 `
 const ImageRow = styled.div`
   display: grid;
-	grid-template-columns: repeat(${props => props.rows}, 1fr);
-	grid-gap: 4px;
+	grid-template-columns: ${props => props.rows};
+	grid-gap: ${({ gap }) => gap};
 `
 const ImageColumn = styled.div`
 `
@@ -31,35 +32,53 @@ const CaptionWrapper = styled.div`
 	max-width: 1280px;
 `
 
-const StoryShot = (props) => {
+const StoryShot = ({
+	srcList2,
+	srcFolder,
+	srcList,
+	backgroundImage,
+	src,
+	rows,
+	noShadow,
+	caption,
+  gap = '4px',
+}) => {
 	const srcListAmount = () => {
-		if(props.srcList) {
-			return props.srcList.length
+		if(srcList) {
+			return srcList.length
 		} else {
 			return null
 		}
 	}
 
+  const isNumber = value => typeof value === 'number';
+  const rowsValue = isNumber(rows) ? `repeat(${rows}, 1fr)` : rows;
+
 	return(
-		<ShotWrapper className='ShotWrapper' srcList={props.srcList} backgroundImage={props.backgroundImage}>
-			{props.src && (
+		<ShotWrapper className='ShotWrapper' srcList={srcList} backgroundImage={backgroundImage}>
+			{src && (
 				<ImageWrapper>
-					<Image src={props.src} alt='hayk-an-design' noShadow={props.noShadow} />
+					<Image src={src} alt='hayk-an-design' noShadow={noShadow} />
 				</ImageWrapper>
 			)}
 
-      <ImageRow rows={props.rows || srcListAmount()}>
-        {props.srcList && props.srcList.map(( srcListItem, index ) => (
-					<ImageColumn rows={props.rows || srcListAmount()} key={index}>
-						<Image src={srcListItem} alt='hayk-an-design' noShadow={props.noShadow} />
+      <ImageRow rows={rowsValue || srcListAmount()} gap={gap}>
+        {srcList && srcList.map(( srcListItem, index ) => (
+					<div key={index}>
+						<Image src={srcListItem} alt='hayk-an-design' noShadow={noShadow} />
+					</div>
+        ))}
+        {srcList2 && srcList2.map(( srcListItem, index ) => (
+					<ImageColumn rows={rows || srcListAmount()} key={index}>
+						<Image src={require(`../assets/images/${srcFolder}/${srcListItem}`)} alt='hayk-an-design' noShadow={noShadow} />
 					</ImageColumn>
         ))}
       </ImageRow>
 
-			{props.caption
+			{caption
 				? <CaptionWrapper>
 					<Caption>
-						{props.caption}
+						{caption}
 					</Caption>
 				</CaptionWrapper>
 				: null

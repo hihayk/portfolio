@@ -5,10 +5,7 @@ import Text from '../components/text'
 import Spacer from '../components/spacer'
 import Distribute from '../components/distribute'
 import { Link } from 'react-router-dom'
-import styled from 'styled-components'
-
-const MenuWrapper = styled.div`
-`
+import { HomeLink } from '../views/home'
 
 const otherProjects = [
   {
@@ -47,7 +44,7 @@ const otherProjects = [
 
 const ProjectsMenu = () => {
   return(
-    <MenuWrapper>
+    <div>
       <Distribute space={1} vertical>
 
         {projects.map((project, index) => (
@@ -73,7 +70,7 @@ const ProjectsMenu = () => {
           <CustomLink href={item.url} target='_blank'>{item.title}</CustomLink>
         </div>
       ))}
-    </MenuWrapper>
+    </div>
   )
 }
 

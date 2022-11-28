@@ -27,8 +27,10 @@ class App extends Component {
                   link={project.link}
                   links={project.links}
                   role={project.role}
+                  roleTags={project.roleTags}
                   inTeam={project.inTeam}
                   contributors={project.contributors}
+                  collaborators={project.collaborators}
                 >
                   {project.content}
                 </Project>
