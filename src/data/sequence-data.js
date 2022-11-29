@@ -20,8 +20,8 @@ export const sequenceData = {
           <StoryShot src={sequence4} />
         </SubSection>
 
-        <SubSection hasFullWidth>
-          <StoryShot srcList={[ sequence3, sequence5 ]} />
+        <SubSection >
+          <StoryShot srcList={[ sequence3, sequence5 ]} rows={2} />
         </SubSection>
       </StorySection>
     </div>
