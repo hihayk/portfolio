@@ -6,7 +6,7 @@ import Dropdown from '../components/dropdown'
 import Text from '../components/text'
 import Spacer from '../components/spacer'
 import { Link } from 'react-router-dom'
-import styled, { injectGlobal, keyframes } from 'styled-components'
+import styled, { createGlobalStyle, keyframes } from 'styled-components'
 
 const highlightProjectLinksAnimation = keyframes`
   35% {
@@ -14,7 +14,7 @@ const highlightProjectLinksAnimation = keyframes`
   }
 `
 
-injectGlobal`
+const HeaderGlobalStyles = createGlobalStyle`
   .highlightProjectLinksWrapper {
     animation: ${highlightProjectLinksAnimation} .3s ease-in-out
   }
@@ -54,6 +54,7 @@ const highlightProjectLinks = () => {
 const Header = (props) => {
   return (
     <HeaderWrapper size={props.size} notFixed={props.notFixed} useCase={props.useCase}>
+      <HeaderGlobalStyles />
       {props.hideName
         ? null
         : <MainSection>

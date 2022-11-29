@@ -1,4 +1,5 @@
-import styled, { injectGlobal } from 'styled-components'
+import React from 'react'
+import styled, { createGlobalStyle, injectGlobal } from 'styled-components'
 import { colors, textSizesStyles } from '../styles/variables'
 
 import AtlasGrotesk400Woff from '../assets/fonts/AtlasGrotesk-400.woff'
@@ -6,7 +7,7 @@ import AtlasGrotesk400Woff2 from '../assets/fonts/AtlasGrotesk-400.woff2'
 import AtlasGrotesk700Woff from '../assets/fonts/AtlasGrotesk-700.woff'
 import AtlasGrotesk700Woff2 from '../assets/fonts/AtlasGrotesk-700.woff2'
 
-injectGlobal`
+const GlobalStyles = createGlobalStyle`
 	@font-face {
 		font-family: 'AtlasGrotesk';
 		src: url('${AtlasGrotesk400Woff2}') format('woff2'),
@@ -39,12 +40,12 @@ injectGlobal`
   }
 
   ::-moz-selection {
-  	color: ${colors.red};
-  	background-color: ${colors.red};
+  	color: white;
+  	background-color: black;
   }
 	::selection {
-		color: ${colors.red};
-		background-color: ${colors.red};
+		color: white;
+		background-color: black;
 	}
 
 	*,
@@ -61,7 +62,8 @@ injectGlobal`
     margin: 0;
 	}
 `
-const BaseStyles = styled.div`
+
+const Root = styled.div`
 	font-family: 'AtlasGrotesk', -apple-system, BlinkMacSystemFont, sans-serif;
 	color: ${colors.body};
 	${textSizesStyles.size0};
@@ -69,5 +71,12 @@ const BaseStyles = styled.div`
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 `
+
+const BaseStyles = ({children}) => (
+	<Root>
+		<GlobalStyles />
+		{children}
+	</Root>
+)
 
 export default BaseStyles
