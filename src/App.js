@@ -1,7 +1,6 @@
-import React, { Component, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import Home from './views/home'
 import About from './views/about'
-import Contact from './views/contact'
 import Project from './views/project'
 import BaseStyles from './components/base-styles'
 import ScrollToTop from './components/scroll-to-top'
@@ -38,7 +37,6 @@ const App = () => {
         <ScrollToTop>
           <Route exact path="/" component={Home} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/contact" component={Contact} />
 
           {projects.map((project, index) => (
             <Route exact path={project.path} key={index} render={(props) => (

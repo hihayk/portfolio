@@ -1,12 +1,9 @@
 import React from 'react'
 import Text from '../components/text'
 import Distribute from '../components/distribute'
-import Spread from '../components/spread'
 import Spacer from '../components/spacer'
 import Container from '../components/container'
-import Dropdown from '../components/dropdown'
-import CustomLink from '../components/custom-link'
-import Nav from '../components/header'
+import Nav from '../components/nav'
 import Animate from '../components/animate'
 import { textSizes } from '../styles/variables';
 
@@ -33,13 +30,13 @@ const About = () => {
           </Container>
 
         </Container>
-
+        
         <Spacer bottom='var(--space3)' />
 
         <Container fullPage>
-          <Container width='lg'>
+        <Container width='lg'>
             <Container width='lg'>
-              <Text size='size1'>
+              <Text size='size1' weight="bold">
                 what i actually do
               </Text>
               <Text size='size1'>
@@ -51,8 +48,34 @@ const About = () => {
               </Text>
             </Container>
           </Container>
+        </Container>
 
-          <Spacer bottom='var(--space4)' />
+        <Spacer bottom='var(--space3)' />
+
+        <Container fullPage>
+          <Text size='size1' weight="bold">
+            contact
+          </Text>
+          <Text size='size1'>
+            say@hihayk.com
+          </Text>
+          <Container width='lg'>
+            <Text size='size1'>
+              <a href='https://github.com/hihayk' target='_blank'>github</a><br/>
+              <a href='https://twitter.com/hihayk' target='_blank'>twitter</a><br/>
+              <a href='https://www.linkedin.com/in/hihayk' target='_blank'>linkedin</a><br/>
+              <a href='https://dribbble.com/hihayk' target='_blank'>dribbble</a><br/>
+            </Text>
+          </Container>
+        </Container>
+
+
+        <Spacer bottom='var(--space3)' />
+
+        <Container fullPage>
+          
+
+          
 
           <Text size='huge' outline>
             M
@@ -89,38 +112,6 @@ const About = () => {
                   <Text size={key}>{key}: {value.fontSize}</Text>
                 </Spacer>
               ))}
-            </div>
-
-            <div>
-              <Text dimmed>Dropdown</Text>
-              <Spacer bottom='var(--space1)' />
-              <Dropdown
-                triggerContent='Trigger'
-              >
-                Content
-              </Dropdown>
-            </div>
-
-            <div>
-              <Text dimmed>Link</Text>
-              <Spacer bottom='var(--space1)' />
-              <CustomLink>Link on hover</CustomLink>
-              <br />
-              <CustomLink primary>Link on hover primary</CustomLink>
-              <br />
-              <CustomLink lineOnHover={false}>Link</CustomLink>
-              <br />
-              <CustomLink primary lineOnHover={false}>Link primary</CustomLink>
-            </div>
-
-            <div>
-              <Text dimmed>Spread</Text>
-              <Spacer bottom='var(--space1)' />
-              <Spread>
-                <div>A</div>
-                <div>B</div>
-                <div>C</div>
-              </Spread>
             </div>
 
             <div>

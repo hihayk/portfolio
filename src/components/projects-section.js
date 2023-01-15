@@ -4,7 +4,7 @@ import Text from "../components/text";
 import Animate from "../components/animate";
 import { Link } from "react-router-dom";
 import projects from "../data/data";
-import { SimpleNav } from "./header";
+import { SimpleNav } from "./nav";
 
 const homeBreakpoint = "1080px";
 
