@@ -6,21 +6,13 @@ const CustomLinkWrapper = styled.span`
 	${props => textSizesStyles[props.size]};
 	display: ${props => props.block ? 'block' : 'inline-block'};
 	position: relative;
-	color: ${props => props.primary ? colors.red : props.color};
-	text-decoration: none;
-	white-space: nowrap;
-	${props => !props.lineOnHover ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-1px'} 0 ${props.primary ? colors.redLight : 'rgba(0,0,0,.2)'}` : ''};
-	${props => props.dimmed ? 'opacity: .7' : ''};
+	color: var(--body);
 
-	&:hover {
-		${props => props.lineOnHover && props.underlineColor ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-1px'} 0 ${props.underlineColor}` : ''};
-		${props => props.lineOnHover && !props.underlineColor ? `box-shadow: inset 0 ${props.tickLine ? '-4px' : '-1px'} 0 ${props.primary ? colors.redLight : 'rgba(0,0,0,.2)'}` : ''};
-	}
+	
 `
 
 const A = styled.a`
 	color: inherit;
-	text-decoration: none;
 	display: inline-block;
 `
 const Arrow = styled.svg`

@@ -3,9 +3,7 @@ import Container from '../components/container'
 import Text from '../components/text'
 import Spacer from '../components/spacer'
 import CustomLink from '../components/custom-link'
-import ProjectsMenu from '../components/projects-menu'
-import Dropdown from '../components/dropdown'
-import Header from '../components/header'
+import Nav from '../components/header'
 import Animate from '../components/animate'
 import styled from 'styled-components'
 import { colors, textSizesStyles } from '../styles/variables'
@@ -24,15 +22,11 @@ const SubtitleWrapper = styled.div`
   max-width: 664px;
 `
 
-const PageContainer = styled.div`
-  padding: 0 var(--pagePadding);
+const ChildrenWrapper = styled.div`
+  h2, h3 {
+		font-weight: 700;
+	}
 `
-
-const ProjectsDropdownTrigger = () => {
-  return(
-    <CustomLink lineOnHover>Projects /</CustomLink>
-  )
-}
 
 let getVisibleUrl = (url) => {
 	let finalUrl
@@ -52,26 +46,23 @@ const Project = (props) => {
 	return(
     <div>
   		<ProjectContainer>
-  			<Header useCase='header' />
-  			<Spacer bottom='calc(var(--pagePadding) * 4)'/>
+				<Nav />
+  			<Spacer bottom='calc(var(--pagePadding) * 2)'/>
 
         <Animate duration={0.8}>
     			<Container fullPage>
             <Spacer bottom='var(--space4)'>
-      				<Spacer bottom='var(--space1)'>
-      					<Dropdown triggerContent={<ProjectsDropdownTrigger />}>
-      						<Spacer top='var(--space1)'>
-      							<ProjectsMenu />
-      						</Spacer>
-      					</Dropdown>
-      				</Spacer>
-
       				<Spacer bottom='var(--space2)'>
       					<Text size='size3' weight='bold' tag='h1'>
 									{props.title}
+									{props.titleSuffix && (
+										<Text tag="span" outline color={colors.body}>
+											{' ' + props.titleSuffix}
+										</Text>
+									)}
       					</Text>
 								<SubtitleWrapper>
-                <Text size='size3' dimmed tag='h2'>
+                <Text size='size3' tag='h2'>
       						{props.subtitle}
       					</Text>
 								</SubtitleWrapper>
@@ -143,18 +134,14 @@ const Project = (props) => {
             </Spacer>
     			</Container>
 
-					{props.children}
-
-					<PageContainer>
-						<Spacer top='var(--pagePadding)' bottom='var(--pagePadding)'>
-							<ProjectsMenu />
-						</Spacer>
-					</PageContainer>
+					<ChildrenWrapper>
+						{props.children}
+					</ChildrenWrapper>
 
         </Animate>
+				<Nav />
   		</ProjectContainer>
 
-			<Header notFixed hideName hideProjects contactLabel='Contact' aboutLabel='About' dimmed useCase='footer' />
     </div>
 	)
 }

@@ -19,7 +19,7 @@ import SubSection from '../components/sub-section'
 export const travelperkData = {
   path: '/travelperk',
   title: 'Travelperk',
-  subtitle: 'Product Design and System',
+  subtitle: 'Product Design and Design System',
   role: (
     <div>
       Design and develop the design system

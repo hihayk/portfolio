@@ -27,9 +27,9 @@ const specTabs = [
 
 export const typeformData = {
   path: '/typeform',
-  title: 'Typeform',
-  subtitle: 'Design System',
-  description: 'Typeform is a tool to create surveys that are beautiful and fun to complete. Every month its users built and share millions of surveys.',
+  title: 'KITT',
+  titleSuffix: 'Typeform Design System',
+  roleTags: ['UI architecture', 'Design', 'Frontend development', 'Documentation website'],
   role: (
     <div>
       Create and mantain the design system.

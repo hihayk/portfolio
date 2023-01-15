@@ -1,0 +1,122 @@
+@font-face {
+  font-family: 'AtlasGrotesk';
+  src: url('./assets/fonts/AtlasGrotesk-400.woff2') format('woff2'),
+       url('./assets/fonts/AtlasGrotesk-400.woff') format('woff');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'AtlasGrotesk';
+  src: url('./assets/fonts/AtlasGrotesk-700.woff2') format('woff2'),
+       url('./assets/fonts/AtlasGrotesk-700.woff') format('woff');
+  font-weight: 700;
+}
+
+:root {
+  --ratio: 0.625vw;
+  
+  --space1: calc( calc(var(--ratio)/2 + 4px) );
+  
+  --space2: calc( var(--space1) * 2 );
+  --space3: calc( var(--space2) * 2 );
+  --space4: calc( var(--space3) * 2 );
+  --space5: calc( var(--space4) * 2 );
+  
+  --pagePadding: calc( calc(var(--ratio) * 6) + 16px );
+}
+
+:root {
+  --sizeN1: 14px;
+  --size0: calc(0.25vw + 14px);
+  --size1: calc(0.6vw + 16px);
+  --size2: calc(0.6vw + 24px);
+  --size3: calc(0.6vw + 32px);
+  --huge: 9rem;
+}
+
+:root {
+  --red: hsl(0 48% 54%);
+  --white: hsl(0 0% 100%);
+  --body: hsl(0 0% 0%);
+
+  --c1: var(--body);
+  --c2: var(--white);
+
+  --circleWidth: 240px;
+}
+
+body.home {
+  --c1: var(--red);
+  --c2: var(--white);
+  --body: var(--c1);
+
+}
+
+body.home[data-theme='minus'] {
+  --c1: var(--white);
+  --c2: var(--red);
+}
+
+body.home[data-theme='minus'] [data-theme='invert'] {
+  --c1: var(--red);
+  --c2: var(--white);
+}
+
+body.home [data-theme='invert'] {
+  --c1: var(--white);
+  --c2: var(--red);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: var(--size0);
+  color: var(--body);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  line-height: calc(16px + 0.65em);
+  letter-spacing: calc(1px - 0.05em);
+}
+
+::-moz-selection {
+  color: white;
+  background-color: black;
+}
+::selection {
+  color: white;
+  background-color: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-underline-position: under;
+	text-decoration: none;
+
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: unset;
+}

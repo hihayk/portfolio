@@ -17,59 +17,42 @@ export const colors = {
 
 export const textSizes = {
   sizeN1: {
-    fontSize: '14px',
-    lineHeight: '1.5',
+    fontSize: 'var(--sizeN1)',
   },
   size0: {
-    fontSize: 'calc(0.25vw + 14px)',
-    lineHeight: '1.5',
+    fontSize: 'var(--size0)',
   },
   size1: {
-    fontSize: 'calc(0.6vw + 16px)',
-    lineHeight: '1.2',
+    fontSize: 'var(--size1)',
   },
   size2: {
-    fontSize: 'calc(0.6vw + 24px)',
-    lineHeight: '1.2',
+    fontSize: 'var(--size2)',
   },
   size3: {
-    fontSize: 'calc(0.6vw + 32px)',
-    lineHeight: '1.1',
+    fontSize: 'var(--size3)',
   },
   huge: {
-    fontSize: '9rem',
-    lineHeight: '1',
+    fontSize: 'var(--huge)',
   },
 }
 
 export const textSizesStyles = {
   sizeN1: css`
     font-size: ${textSizes.sizeN1.fontSize};
-    line-height: ${textSizes.sizeN1.lineHeight};
   `,
   size0: css`
     font-size: ${textSizes.size0.fontSize};
-    line-height: ${textSizes.size0.lineHeight};
   `,
   size1: css`
     font-size: ${textSizes.size1.fontSize};
-    line-height: ${textSizes.size1.lineHeight};
-    letter-spacing: -0.02em;
   `,
   size2: css`
     font-size: ${textSizes.size2.fontSize};
-    line-height: ${textSizes.size2.lineHeight};
-    letter-spacing: -0.03em;
   `,
   size3: css`
     font-size: ${textSizes.size3.fontSize};
-    line-height: ${textSizes.size3.lineHeight};
-    letter-spacing: -0.03em;
   `,
   huge: css`
     font-size: ${textSizes.huge.fontSize};
-    line-height: ${textSizes.huge.lineHeight};
-    letter-spacing: -0.05em;
-    opacity: .2;
   `,
 }

@@ -6,15 +6,15 @@ import Spacer from '../components/spacer'
 import Container from '../components/container'
 import Dropdown from '../components/dropdown'
 import CustomLink from '../components/custom-link'
-import Header from '../components/header'
+import Nav from '../components/header'
 import Animate from '../components/animate'
 import { textSizes } from '../styles/variables';
 
-const About = (props) => {
+const About = () => {
   return(
     <div>
-      <Header useCase='header' />
-      <Spacer bottom='calc(var(--pagePadding) * 4)'/>
+      <Nav />
+      <Spacer bottom='calc(var(--pagePadding) * 2)'/>
 
       <Animate duration={0.8}>
         <Container fullPage>
@@ -23,16 +23,9 @@ const About = (props) => {
           </Text>
 
           <Container width='lg'>
-            <Text size='size3' weight='bold' tag='h1' >
-              Hey there, I'm Hayk
+            <Text size='size1' dimmed >
+              i design and develop modular products. i'm always exploring new ways to improve UI design and development process. i believe code is the ultimate and most powerful design tool.
             </Text>
-            <Text size='size3'>
-              Designer and music producer
-            </Text>
-            <Text size='size3' dimmed >
-              I design and develop modular products
-            </Text>
-
           </Container>
 
         </Container>
@@ -42,31 +35,32 @@ const About = (props) => {
         <Container fullPage>
           <Container width='lg'>
             <Container width='lg'>
-              <Text size='size1' weight='bold' tag='h2'>
-                Also...
+              <Text size='size1'>
+                what i actually do
               </Text>
-              <Text size='size1' dimmed>
-                occasionally I teach front-end
-              </Text>
-              <Text size='size1' dimmed>
-                and talk about design
+              <Text size='size1'>
+                ❤ building minimal design systems for complex products
+                ❤ obssessing over CSS 
+                ❤ React.js
+                ❤ Build design tools
+                ❤ Figma
               </Text>
             </Container>
           </Container>
 
           <Spacer bottom='var(--space4)' />
 
-          <Text size='huge'>
-            A/m
+          <Text size='huge' outline>
+            M
           </Text>
 
           <Container width='lg'>
             <Container width='lg'>
               <Text size='size1' weight='bold' tag='h2'>
-                The modules that form this website
+                the modules that form this website
               </Text>
               <Text size='size1' dimmed>
-                This website is built with a small design system and developed with React, here are some of its components:
+                this website is built with a small design system and developed with React, here are some of its components:
               </Text>
             </Container>
           </Container>
@@ -75,16 +69,15 @@ const About = (props) => {
 
 
           <Distribute vertical space='var(--space4)'>
+            <Text size="size1">Text</Text>
             <Distribute vertical space='var(--space1)'>
-              <div style={{ background: 'pink', height: 'var(--space1)', width: 'var(--space1)' }} />
-              <div style={{ background: 'pink', height: 'var(--space2)', width: 'var(--space2)' }} />
-              <div style={{ background: 'pink', height: 'var(--space3)', width: 'var(--space3)' }} />
-              <div style={{ background: 'pink', height: 'var(--space4)', width: 'var(--space4)' }} />
-              <div style={{ background: 'pink', height: 'var(--space5)', width: 'var(--space5)' }} />
+              {[1, 2, 3, 4, 5].map((space, index) => (
+                <div key={index} style={{ background: 'currentColor', height: `var(--space${space})`, width: `var(--space${space})` }} />
+              ))}
             </Distribute>
 
             <div>
-              <Text dimmed>Text</Text>
+              <Text>Text</Text>
               <Spacer bottom='var(--space1)' />
               
               {Object.entries(textSizes).map(([key, value], index) => (
@@ -155,6 +148,7 @@ const About = (props) => {
           </Distribute>
         </Container>
       </Animate>
+      <Nav />
     </div>
   )
 }
