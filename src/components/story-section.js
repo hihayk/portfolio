@@ -5,7 +5,7 @@ import { textSizesStyles, colors } from '../styles/variables'
 export const themeStyles = {
   dark: {
     color: 'white',
-    backgroundColor: '#282828',
+    backgroundColor: 'var(--body)',
   },
   light: {
     color: colors.body,

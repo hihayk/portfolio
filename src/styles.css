@@ -36,7 +36,7 @@
 :root {
   --red: hsl(0 48% 54%);
   --white: hsl(0 0% 100%);
-  --body: hsl(0 0% 0%);
+  --body: hsl(0 0% 8%);
 
   --c1: var(--body);
   --c2: var(--white);
@@ -98,7 +98,7 @@ body {
   box-sizing: border-box;
 }
 
-img {
+img, video {
   max-width: 100%;
 }
 

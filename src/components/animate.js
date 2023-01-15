@@ -2,21 +2,17 @@ import styled, {keyframes} from 'styled-components'
 
 const animateDown = keyframes`
 	0% {
-		transform: translateY(-32px);
 		opacity: 0;
 	}
 	100% {
-		transform: translateY(0);
 		opacity: 1;
 	}
 `
 const animateUp = keyframes`
 	0% {
-		transform: translateY(32px);
 		opacity: 0;
 	}
 	100% {
-		transform: translateY(0);
 		opacity: 1;
 	}
 `

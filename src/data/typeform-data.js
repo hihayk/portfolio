@@ -30,13 +30,6 @@ export const typeformData = {
   title: 'KITT',
   titleSuffix: 'Typeform Design System',
   roleTags: ['UI architecture', 'Design', 'Frontend development', 'Documentation website'],
-  role: (
-    <div>
-      Create and mantain the design system.
-      <br />
-      Develop the design system with React.
-    </div>
-  ),
   content: (
     <div>
       <StorySection theme='dark'>
@@ -109,8 +102,9 @@ export const typeformData = {
           </p>
 
           <StoryShot
-            srcList={[
-              require('../assets/images/typeform/icons-preview.svg'),
+            srcFolder="typeform"
+            srcList2={[
+              'icons-preview.svg',
             ]}
             rows={1}
           />
@@ -119,7 +113,6 @@ export const typeformData = {
               require('../assets/images/typeform/icons.png'),
             ]}
             caption='Custom icon set.'
-            rows={1}
           />
 
           <h3>Choosing a Typeface</h3>
@@ -127,10 +120,10 @@ export const typeformData = {
             We needed a typeface that is functional but still has character. After some exploration and testing, we chose the wonderful GT America by Grilli Type.
           </p>
           <StoryShot
-            srcList={[
-              require('../assets/images/typeform/type.svg'),
+            srcFolder="typeform"
+            srcList2={[
+              'type.svg',
             ]}
-            rows={1}
           />
 
           <h3>Components</h3>

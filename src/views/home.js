@@ -86,21 +86,14 @@ const Home = () => {
         <Animate down>
           <Intro>
             <Text size="size3" tag="h1" weight="bold">
-              <Text size="size3" tag="span">
-                Hayk An
-              </Text>
-              <br />
-              <Text size="size3" tag="span" outline color="var(--c2)">
-                design & code
-              </Text>
+              <Text size="size1" tag="span">
+                hayk an
+              </Text>              
             </Text>
 
-            <Container top={1} width="lg">
-              <Text size="size0">
-                Product designer focused on
-                <br />
-                modular design and development
-                <br />
+            <Container  width="lg">
+              <Text size="size1">
+                modular designer and developer
               </Text>
             </Container>
           </Intro>

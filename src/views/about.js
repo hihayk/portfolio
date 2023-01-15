@@ -23,8 +23,12 @@ const About = () => {
           </Text>
 
           <Container width='lg'>
-            <Text size='size1' dimmed >
-              i design and develop modular products. i'm always exploring new ways to improve UI design and development process. i believe code is the ultimate and most powerful design tool.
+            <Text size='size1' dimmed>
+              i design and develop modular products. constantly exploring ways to make design-dev process smoother. code is my favorite design tool.
+            </Text>
+
+            <Text size='size1' dimmed>
+              my design work is heavily inspired by my music production machines.
             </Text>
           </Container>
 
@@ -42,8 +46,8 @@ const About = () => {
                 ❤ building minimal design systems for complex products
                 ❤ obssessing over CSS 
                 ❤ React.js
-                ❤ Build design tools
-                ❤ Figma
+                ❤ building design tools
+                ❤ wrestling with Figma to make it behave like CSS
               </Text>
             </Container>
           </Container>

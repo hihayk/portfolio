@@ -49,7 +49,7 @@ const Project = (props) => {
 				<Nav />
   			<Spacer bottom='calc(var(--pagePadding) * 2)'/>
 
-        <Animate duration={0.8}>
+        <Animate duration={0}>
     			<Container fullPage>
             <Spacer bottom='var(--space4)'>
       				<Spacer bottom='var(--space2)'>
