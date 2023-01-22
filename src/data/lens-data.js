@@ -5,7 +5,7 @@ import SubSection from '../components/sub-section'
 
 const srcFolder = 'lens'
 
-export const LensData = {
+export const lensData = {
   path: '/lens-design-system',
   title: 'Lens',
   titleSuffix: 'Loom Design System',

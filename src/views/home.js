@@ -10,7 +10,7 @@ const homeBreakpoint = "1080px";
 
 const MainContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1.3fr;
+  grid-template-columns: 1fr 1.37fr;
 
   @media (max-width: ${homeBreakpoint}) {
     grid-template-columns: 1fr;
