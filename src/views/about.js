@@ -40,11 +40,11 @@ const About = () => {
                 what i actually do
               </Text>
               <Text size='size1'>
-                ❤ building minimal design systems for complex products
-                ❤ obssessing over CSS 
-                ❤ React.js
-                ❤ building design tools
-                ❤ wrestling with Figma to make it behave like CSS
+                ❤︎ building minimal design systems for complex products
+                ❤︎ obssessing over CSS 
+                ❤︎ React.js
+                ❤︎ building design tools
+                ❤︎ wrestling with Figma to make it behave like CSS
               </Text>
             </Container>
           </Container>
