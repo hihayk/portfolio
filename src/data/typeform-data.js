@@ -185,8 +185,9 @@ export const typeformData = {
           </p>
 
           <StoryShot
-            srcList={[
-              require('../assets/images/typeform/ds-process.svg'),
+            srcFolder="typeform"
+            srcList2={[
+              'ds-process.svg',
             ]}
             align='left'
             rows={1}
