@@ -30,7 +30,6 @@
   --size1: calc(0.6vw + 16px);
   --size2: calc(0.6vw + 24px);
   --size3: calc(0.6vw + 32px);
-  --huge: 9rem;
 }
 
 :root {

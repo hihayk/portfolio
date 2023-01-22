@@ -1,24 +1,30 @@
 import React from 'react'
-import styled, { createGlobalStyle, injectGlobal } from 'styled-components'
-import { colors, textSizesStyles } from '../styles/variables'
+import { createGlobalStyle } from 'styled-components'
 
-import AtlasGrotesk400Woff from '../assets/fonts/AtlasGrotesk-400.woff'
-import AtlasGrotesk400Woff2 from '../assets/fonts/AtlasGrotesk-400.woff2'
-import AtlasGrotesk700Woff from '../assets/fonts/AtlasGrotesk-700.woff'
-import AtlasGrotesk700Woff2 from '../assets/fonts/AtlasGrotesk-700.woff2'
+const spaces = [1, 2, 3, 4, 5]
+
+const sides = {
+  top: 't',
+  right: 'r',
+  bottom: 'b',
+  left: 'l',
+};
 
 const GlobalStyles = createGlobalStyle`
-	
-`
-
-const Root = styled.div`
-`
+  ${spaces.map(space => {
+    return Object.entries(sides).map(([side, shorthand]) => `
+      .m${shorthand}-${space} {
+        margin-${side}: var(--space${space});
+      }
+    `).join('');
+  }).join('')}
+`;
 
 const BaseStyles = ({children}) => (
-	<Root>
+	<>
 		<GlobalStyles />
 		{children}
-	</Root>
+	</>
 )
 
 export default BaseStyles

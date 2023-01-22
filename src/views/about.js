@@ -1,21 +1,21 @@
 import React from 'react'
 import Text from '../components/text'
 import Distribute from '../components/distribute'
-import Spacer from '../components/spacer'
 import Container from '../components/container'
 import Nav from '../components/nav'
 import Animate from '../components/animate'
 import { textSizes } from '../styles/variables';
 
+const letterSize = `calc(var(--size3) * 3)`
+
 const About = () => {
   return(
     <div>
-      <Nav />
-      <Spacer bottom='calc(var(--pagePadding) * 2)'/>
+      <Nav style={{  marginBottom: 'calc(var(--pagePadding) * 2)' }}/>
 
       <Animate duration={0.8}>
-        <Container fullPage>
-          <Text size='huge'>
+        <Container fullPage className="mb-3">
+          <Text size={letterSize}>
             A
           </Text>
 
@@ -30,11 +30,9 @@ const About = () => {
           </Container>
 
         </Container>
-        
-        <Spacer bottom='var(--space3)' />
 
         <Container fullPage>
-        <Container width='lg'>
+        <Container width='lg' className="mb-3">
             <Container width='lg'>
               <Text size='size1' weight="bold">
                 what i actually do
@@ -50,9 +48,7 @@ const About = () => {
           </Container>
         </Container>
 
-        <Spacer bottom='var(--space3)' />
-
-        <Container fullPage>
+        <Container fullPage className="mb-3">
           <Text size='size1' weight="bold">
             contact
           </Text>
@@ -69,19 +65,13 @@ const About = () => {
           </Container>
         </Container>
 
+        <Container fullPage className="mt-4 mb-4">
 
-        <Spacer bottom='var(--space3)' />
-
-        <Container fullPage>
-          
-
-          
-
-          <Text size='huge' outline>
+          <Text size={letterSize} outline>
             M
           </Text>
 
-          <Container width='lg'>
+          <Container width='lg' className="mb-3">
             <Container width='lg'>
               <Text size='size1' weight='bold' tag='h2'>
                 the modules that form this website
@@ -92,55 +82,26 @@ const About = () => {
             </Container>
           </Container>
 
-          <Spacer bottom='var(--space3)' />
-
-
-          <Distribute vertical space='var(--space4)'>
-            <Text size="size1">Text</Text>
+          <>
+            <div className="mb-1">
+              <Text size="size1">Space</Text>
+            </div>
             <Distribute vertical space='var(--space1)'>
               {[1, 2, 3, 4, 5].map((space, index) => (
                 <div key={index} style={{ background: 'currentColor', height: `var(--space${space})`, width: `var(--space${space})` }} />
               ))}
             </Distribute>
 
-            <div>
-              <Text>Text</Text>
-              <Spacer bottom='var(--space1)' />
-              
-              {Object.entries(textSizes).map(([key, value], index) => (
-                <Spacer bottom='var(--space1)' key={index}>
-                  <Text size={key}>{key}: {value.fontSize}</Text>
-                </Spacer>
-              ))}
+            <div className="mb-1 mt-3">
+              <Text size="size1">Text</Text>
             </div>
-
-            <div>
-              <Text dimmed>Distribute</Text>
-              <Spacer bottom='var(--space1)' />
-              <Distribute space='var(--space3)'>
-                <div>A</div>
-                <div>B</div>
-                <div>C</div>
-              </Distribute>
-            </div>
-
-            <div>
-              <Text dimmed>Spacer</Text>
-              <Spacer bottom='var(--space1)' />
-              <Spacer right='var(--space2)' inline>
-                <span>A</span>
-              </Spacer>
-              <Spacer right='var(--space3)' inline>
-                <span>B</span>
-              </Spacer>
-              <Spacer right='var(--space4)' inline>
-                <span>C</span>
-              </Spacer>
-              <Spacer inline>
-                <span>D</span>
-              </Spacer>
-            </div>
-          </Distribute>
+            
+            {Object.entries(textSizes).map(([key, value], index) => (
+              <div className="mb-1" key={index}>
+                <Text size={key}>{key}: {value.fontSize}</Text>
+              </div>
+            ))}
+          </>
         </Container>
       </Animate>
       <Nav />

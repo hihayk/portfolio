@@ -1,5 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
+import { textSizes } from '../styles/variables'
+
+const getTextSize = (size) => {
+	if(size in textSizes) {
+		return `var(--${size})`
+	}
+	return size
+}
 
 const Text = ({children, tag, ...props}) => {
 	let component
@@ -17,7 +25,7 @@ const Text = ({children, tag, ...props}) => {
 					color: transparent;
 				`
 			};
-			font-size: ${props => `var(--${props.size})`};
+			font-size: ${props => getTextSize(props.size)};
 			margin: 0;
 		`
 

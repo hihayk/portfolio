@@ -17,9 +17,9 @@ const Root = styled.nav`
   }
 `;
 
-const Nav = () => {
+const Nav = ({ ...props }) => {
   return (
-    <Root>
+    <Root {...props}>
       <Link to="/">hayk an</Link>
       <Link to="/">projects</Link>
       <Link to="/about">A</Link>

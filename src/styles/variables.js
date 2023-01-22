@@ -31,9 +31,6 @@ export const textSizes = {
   size3: {
     fontSize: 'var(--size3)',
   },
-  huge: {
-    fontSize: 'var(--huge)',
-  },
 }
 
 export const textSizesStyles = {
@@ -51,8 +48,5 @@ export const textSizesStyles = {
   `,
   size3: css`
     font-size: ${textSizes.size3.fontSize};
-  `,
-  huge: css`
-    font-size: ${textSizes.huge.fontSize};
   `,
 }

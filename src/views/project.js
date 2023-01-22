@@ -1,7 +1,6 @@
 import React from 'react'
 import Container from '../components/container'
 import Text from '../components/text'
-import Spacer from '../components/spacer'
 import CustomLink from '../components/custom-link'
 import Nav from '../components/nav'
 import Animate from '../components/animate'
@@ -46,40 +45,37 @@ const Project = (props) => {
 	return(
     <div>
   		<ProjectContainer>
-				<Nav />
-  			<Spacer bottom='calc(var(--pagePadding) * 2)'/>
+				<Nav style={{  marginBottom: 'calc(var(--pagePadding) * 2)' }}/>
 
         <Animate duration={0}>
     			<Container fullPage>
-            <Spacer bottom='var(--space4)'>
-      				<Spacer bottom='var(--space2)'>
-      					<Text size='size3' weight='bold' tag='h1'>
-									{props.title}
-									{props.titleSuffix && (
-										<Text tag="span" outline color={colors.body}>
-											{' ' + props.titleSuffix}
-										</Text>
-									)}
-      					</Text>
-								<SubtitleWrapper>
-                <Text size='size3' tag='h2'>
-      						{props.subtitle}
-      					</Text>
-								</SubtitleWrapper>
-      				</Spacer>
+            
+							<Text size='size3' weight='bold' tag='h1'>
+								{props.title}
+								{props.titleSuffix && (
+									<Text tag="span" outline color={colors.body}>
+										{' ' + props.titleSuffix}
+									</Text>
+								)}
+							</Text>
+							<SubtitleWrapper>
+							<Text size='size3' tag='h2'>
+								{props.subtitle}
+							</Text>
+							</SubtitleWrapper>
 
-      				<Container width='lg'>
-      					<Spacer bottom='var(--space2)'>
+      				<Container width='lg' className="mt-2">
+      					<div className="mt-2">
       						<Text tag='p'>
       							{props.description}
       						</Text>
-      					</Spacer>
+      					</div>
 
                 {props.role
-                  ? <Spacer bottom='var(--space2)'>
+                  ? <div className="mt-2">
         							<Text dimmed>my role{props.inTeam ? ' (in team)' : ''}:</Text>
         							<Text>{props.role}</Text>
-        					</Spacer>
+        					</div>
                   : null
 								}
 
@@ -110,9 +106,9 @@ const Project = (props) => {
 								)}
 
 								{props.contributors && props.contributors.map(( contributor ) => (
-									<Spacer>
+									<div>
 										<CustomLink target='_blank' href={'https://github.com/' + contributor.githubUsername}>@{contributor.githubUsername}</CustomLink> — <Text tag='span' dimmed>{contributor.role}</Text>
-									</Spacer>
+									</div>
 								))}
 
                 {props.link
@@ -131,10 +127,10 @@ const Project = (props) => {
 									</div>
 								)}
       				</Container>
-            </Spacer>
+            
     			</Container>
 
-					<ChildrenWrapper>
+					<ChildrenWrapper className="mt-4">
 						{props.children}
 					</ChildrenWrapper>
 
