@@ -35,7 +35,6 @@ export const travelperkData = {
 
           <p>When I joined the team, the product was in its early stages. Some new features were in the design process but not in development. We couldn't predict in which direction the product would grow and the only assumption was that we would have more features in the future. I saw an opportunity to simplify our designs and make sure these are easy to develop for our high paced team.</p>
 
-
           <ImageSection imgSrc={travelperk10}>
             <h3>Understanding development</h3>
 
