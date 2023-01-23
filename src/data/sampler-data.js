@@ -84,7 +84,7 @@ export const samplerData = {
   path: '/sampler-typeform-design-system',
   title: 'Sampler',
   titleSuffix: 'Typeform Design System',
-  subtitle: 'Typeform forms debuild with a dedicated Design System',
+  subtitle: 'Typeform forms rebuild with a dedicated Design System',
   roleTags: ['UI architecture', 'Design', 'Frontend development', 'Documentation website'],
   content: (
     <StorySection theme='dark'>
